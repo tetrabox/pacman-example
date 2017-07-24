@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.gemoc.gemoc_language_workbench.engine_addon">
+      <Addon
+            AddonGroupId="Sequential.AddonGroup"
+            Class="org.tetrabox.example.pacman.view.PacManView"
+            Default="false"
+            Name="Pac-Man View"
+            ShortDescription="Graphical view for the Pac-Man DSL"
+            id="org.tetrabox.example.pacman.view">
+      </Addon>
+   </extension>
+
+</plugin>

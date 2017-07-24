@@ -1,0 +1,1504 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="xpacmanscenario" nsURI="http://org.tetrabox.example.pacman.xpacman/scenario/" nsPrefix="xpacmanscenario">
+  <eSubpackages name="XPacmanArbiter" nsURI="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanArbiter/" nsPrefix="XPacmanArbiter">
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanArbiter">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eTypeArguments eClassifier="//XPacmanArbiter/XPacmanArbiterState"/>
+        <eTypeArguments eClassifier="//XPacmanArbiter/XPacmanArbiterTransition"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//Arbiter"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanArbiterState">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eTypeArguments eClassifier="//XPacmanArbiter/XPacmanArbiterTransition"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ArbiterState"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanArbiterTransition">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eTypeArguments eClassifier="//XPacmanArbiter/XPacmanArbiterState"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ArbiterTransition"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="XPacmanEvent" nsURI="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanEvent/" nsPrefix="XPacmanEvent">
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanEvent" abstract="true">
+      <eTypeParameters name="T"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eTypeParameter="//XPacmanEvent/XPacmanEvent/T"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//Event"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanDownEvent">
+      <eGenericSuperTypes eClassifier="//XPacmanEvent/XPacmanEvent">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanLeftEvent">
+      <eGenericSuperTypes eClassifier="//XPacmanEvent/XPacmanEvent">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanRightEvent">
+      <eGenericSuperTypes eClassifier="//XPacmanEvent/XPacmanEvent">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanUpEvent">
+      <eGenericSuperTypes eClassifier="//XPacmanEvent/XPacmanEvent">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="XPacmanProperty" nsURI="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanProperty/" nsPrefix="XPacmanProperty">
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanEnterNextTileProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;enterNextTile&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostEnterNextTileProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.GHOST.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;enterNextTile&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityChangeDirectionProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;changeDirection&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanLeftProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;left&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanRightProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;right&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanEatPelletProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;eatPellet&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanUpProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;up&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanInitializeProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;initialize&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityModifySpeedProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;modifySpeed&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardInitializeModelProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.BOARD.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;initializeModel&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityInitializeProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;initialize&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanChangeDirectionProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;changeDirection&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityUpdateProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;update&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardResetProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.BOARD.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;reset&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanDownProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;down&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityEnterNextTileProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;enterNextTile&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanKillProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;kill&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardUpdateProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.BOARD.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;update&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostChangeTargetTileProperty">
+      <eOperations name="getOperation">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="java.util.Iterator&lt;EOperation> it = org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.GHOST.getEOperations().iterator();&#xA;EOperation result = null;&#xA;while (it.hasNext() &amp;&amp; result == null) {&#xA;&#x9;EOperation op = it.next();&#xA;&#x9;if (op.getName().equals(&quot;changeTargetTile&quot;)) {&#xA;&#x9;&#x9;result = op;&#xA;&#x9;}&#xA;}&#xA;return result;&#xA;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EOperation"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStepProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanAbstractProperty" abstract="true">
+      <eSuperTypes href="http://www.gemoc.org/property#//AbstractProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanTemporalProperty" abstract="true">
+      <eSuperTypes href="http://www.gemoc.org/property#//TemporalProperty"/>
+      <eSuperTypes href="#//XPacmanProperty/XPacmanAbstractProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanProperty" abstract="true">
+      <eSuperTypes href="http://www.gemoc.org/property#//Property"/>
+      <eSuperTypes href="#//XPacmanProperty/XPacmanAbstractProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanStateProperty" abstract="true">
+      <eTypeParameters name="T"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eTypeParameter="//XPacmanProperty/XPacmanStateProperty/T"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StateProperty"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanStepProperty" abstract="true">
+      <eTypeParameters name="T"/>
+      <eGenericSuperTypes>
+        <eTypeArguments eTypeParameter="//XPacmanProperty/XPacmanStepProperty/T"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StepProperty"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileProperty" abstract="true">
+      <eTypeParameters name="T">
+        <eBounds>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eBounds>
+      </eTypeParameters>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStateProperty">
+        <eTypeArguments eTypeParameter="//XPacmanProperty/TileProperty/T"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UnaryTileProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//UnaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BinaryTileProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BinaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileTopProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__TOP;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileRightProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__RIGHT;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileBottomProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__BOTTOM;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileLeftProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__LEFT;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileXProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__X;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileYProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__Y;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TilePassableProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__PASSABLE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BooleanAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileInitialPelletProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__INITIAL_PELLET;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileHasPelletProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.TILE__HAS_PELLET;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BooleanAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardProperty" abstract="true">
+      <eTypeParameters name="T">
+        <eBounds>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eBounds>
+      </eTypeParameters>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStateProperty">
+        <eTypeArguments eTypeParameter="//XPacmanProperty/BoardProperty/T"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UnaryBoardProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/BoardProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/BoardProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//UnaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BinaryBoardProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/BoardProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/BoardProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BinaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TileBoardContainerProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return null;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/TileProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/BoardProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//ContainerReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardTilesProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.BOARD__TILES;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/BoardProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//ManyReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityBoardContainerProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return null;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/BoardProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//ContainerReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityProperty" abstract="true">
+      <eTypeParameters name="T">
+        <eBounds>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eBounds>
+      </eTypeParameters>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanStateProperty">
+        <eTypeArguments eTypeParameter="//XPacmanProperty/EntityProperty/T"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UnaryEntityProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/EntityProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//UnaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BinaryEntityProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/EntityProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BinaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityInitialTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__INITIAL_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntitySpeedProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__SPEED;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityDirectionProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__DIRECTION;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityCurrentTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__CURRENT_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityNextTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__NEXT_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardEntitiesProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.BOARD__ENTITIES;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/BoardProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/EntityProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//ManyReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanProperty" abstract="true">
+      <eTypeParameters name="T">
+        <eBounds>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eBounds>
+      </eTypeParameters>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments eTypeParameter="//XPacmanProperty/PacmanProperty/T"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UnaryPacmanProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/PacmanProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//UnaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BinaryPacmanProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/PacmanProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BinaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanInitialTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__INITIAL_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanSpeedProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__SPEED;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanDirectionProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__DIRECTION;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanCurrentTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__CURRENT_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanNextTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__NEXT_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanInitialLivesProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN__INITIAL_LIVES;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanPelletsEatenProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN__PELLETS_EATEN;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanLivesProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.PACMAN__LIVES;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/PacmanProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostProperty" abstract="true">
+      <eTypeParameters name="T">
+        <eBounds>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eBounds>
+      </eTypeParameters>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/EntityProperty">
+        <eTypeArguments eTypeParameter="//XPacmanProperty/GhostProperty/T"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UnaryGhostProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/GhostProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//UnaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BinaryGhostProperty">
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/GhostProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//BinaryProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostInitialTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__INITIAL_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostSpeedProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__SPEED;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostDirectionProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__DIRECTION;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//IntegerAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostCurrentTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__CURRENT_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostNextTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.ENTITY__NEXT_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostNameProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.GHOST__NAME;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StringAttributeProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostPersonnalityProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.GHOST__PERSONNALITY;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostTargetTileProperty">
+      <eOperations name="getFeature">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="body" value="return org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage.Literals.GHOST__TARGET_TILE;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature"/>
+      </eOperations>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/GhostProperty">
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/TileProperty">
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Tile"/>
+          </eTypeArguments>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//SingleReferenceProperty"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanNextProperty">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanAbstractProperty"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//NextProperty"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanTemporalProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanUntilProperty">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanAbstractProperty"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//UntilProperty"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanTemporalProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanReleaseProperty">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanAbstractProperty"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//ReleaseProperty"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanTemporalProperty"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanNegationTemporalProperty">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanTemporalProperty"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//NegationTemporalProperty"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProperty/XPacmanTemporalProperty"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="XPacmanProvider" nsURI="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanProvider/" nsPrefix="XPacmanProvider">
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanProvider" abstract="true">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementProvider"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanReference">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementReference"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/PacmanProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PacmanQuery">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Pacman"/>
+          </eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StateProperty"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementQuery"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/PacmanProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostProvider" abstract="true">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementProvider"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostReference">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementReference"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/GhostProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GhostQuery">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Ghost"/>
+          </eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StateProperty"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementQuery"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/GhostProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityProvider" abstract="true">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementProvider"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityReference">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementReference"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/EntityProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EntityQuery">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Entity"/>
+          </eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StateProperty"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementQuery"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/EntityProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardProvider" abstract="true">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementProvider"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardReference">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementReference"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/BoardProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BoardQuery">
+      <eGenericSuperTypes>
+        <eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+        </eTypeArguments>
+        <eTypeArguments>
+          <eTypeArguments>
+            <eClassifier xsi:type="ecore:EClass" href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.ecore#//Board"/>
+          </eTypeArguments>
+          <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/property#//StateProperty"/>
+        </eTypeArguments>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ElementQuery"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanProvider/BoardProvider"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="XPacmanScenario" nsURI="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanScenario/" nsPrefix="XPacmanScenario">
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanScenario">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanScenario/XPacmanScenarioElement"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//Scenario"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanScenarioElement" abstract="true">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ScenarioElement"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanEventOccurrence">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanEvent/XPacmanEvent">
+          <eTypeArguments/>
+        </eTypeArguments>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//EventOccurrence"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanScenario/XPacmanScenarioElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanScenarioFSM">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eTypeArguments eClassifier="//XPacmanEvent/XPacmanEvent">
+          <eTypeArguments/>
+        </eTypeArguments>
+        <eTypeArguments eClassifier="//XPacmanScenario/XPacmanScenarioFSMState"/>
+        <eTypeArguments eClassifier="//XPacmanScenario/XPacmanScenarioFSMTransition"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ScenarioFSM"/>
+      </eGenericSuperTypes>
+      <eGenericSuperTypes eClassifier="//XPacmanScenario/XPacmanScenarioElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanScenarioFSMState">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanEvent/XPacmanEvent">
+          <eTypeArguments/>
+        </eTypeArguments>
+        <eTypeArguments eClassifier="//XPacmanScenario/XPacmanScenarioFSMTransition"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ScenarioFSMState"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="XPacmanScenarioFSMTransition">
+      <eGenericSuperTypes>
+        <eTypeArguments eClassifier="//XPacmanProperty/XPacmanProperty"/>
+        <eTypeArguments eClassifier="//XPacmanScenario/XPacmanScenarioFSMState"/>
+        <eClassifier xsi:type="ecore:EClass" href="http://www.gemoc.org/scenario#//ScenarioFSMTransition"/>
+      </eGenericSuperTypes>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

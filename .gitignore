@@ -8,7 +8,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 **/*.class
 **/xtend-gen/*
-**/qvto-gen/*
+**/gemoc-gen/*
 *._trace
 **/.metadata
 **/bin

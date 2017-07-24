@@ -1,0 +1,6 @@
+package org.tetrabox.example.pacman
+
+language XPacman {
+	syntax "platform:/resource/org.tetrabox.example.pacman.model/model/model.ecore"
+	with org.tetrabox.example.pacman.k3dsa.*
+}

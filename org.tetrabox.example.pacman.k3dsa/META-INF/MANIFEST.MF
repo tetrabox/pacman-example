@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: K3dsa
+Bundle-SymbolicName: org.tetrabox.example.pacman.k3dsa
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="3.2.1",
+ org.tetrabox.example.pacman.model;bundle-version="0.1.0",
+ fr.inria.diverse.event.commons.model;bundle-version="2.3.0",
+ fr.inria.diverse.melange;bundle-version="0.2.0"
+

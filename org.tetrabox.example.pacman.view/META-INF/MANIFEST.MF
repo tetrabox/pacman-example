@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.tetrabox.example.pacman.view
+Bundle-SymbolicName: org.tetrabox.example.pacman.view;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore,
+ org.gemoc.xdsmlframework.api;bundle-version="2.3.0",
+ fr.inria.diverse.trace.commons.model;bundle-version="2.3.0",
+ org.tetrabox.example.pacman.xpacman;bundle-version="0.1.0",
+ fr.inria.diverse.event.commons.model;bundle-version="2.3.0",
+ org.tetrabox.example.pacman.xpacman.eventmanager;bundle-version="0.1.0",
+ org.eclipse.emf.ecore.xmi

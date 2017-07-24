@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.tetrabox.example.pacman.xpacman.scenario/src/" modelPluginID="org.tetrabox.example.pacman.xpacman.scenario" modelName="XPacmanscenario" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/org.tetrabox.example.pacman.xpacman/model/XPacman.ecore</foreignModel>
+  <genPackages prefix="Xpacmanscenario" basePackage="org.tetrabox.example.pacman.xpacman.scenario" disposableProviderFactory="true" fileExtensions="xpacmans">
+    <ecorePackage href="XPacmanScenario.ecore#/"/>
+    <nestedGenPackages prefix="XPacmanArbiter" disposableProviderFactory="true">
+      <ecorePackage href="XPacmanScenario.ecore#//XPacmanArbiter"/>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanArbiter/XPacmanArbiter"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanArbiter/XPacmanArbiterState"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanArbiter/XPacmanArbiterTransition"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="XPacmanEvent" disposableProviderFactory="true">
+      <ecorePackage href="XPacmanScenario.ecore#//XPacmanEvent"/>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanEvent/XPacmanEvent/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanEvent/XPacmanEvent"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanEvent/PacmanDownEvent"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanEvent/PacmanLeftEvent"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanEvent/PacmanRightEvent"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanEvent/PacmanUpEvent"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="XPacmanProperty" disposableProviderFactory="true">
+      <ecorePackage href="XPacmanScenario.ecore#//XPacmanProperty"/>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanEnterNextTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanEnterNextTileProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostEnterNextTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostEnterNextTileProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityChangeDirectionProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityChangeDirectionProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanLeftProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanLeftProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanRightProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanRightProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanEatPelletProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanEatPelletProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanUpProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanUpProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanInitializeProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanInitializeProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityModifySpeedProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityModifySpeedProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BoardInitializeModelProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/BoardInitializeModelProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityInitializeProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityInitializeProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanChangeDirectionProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanChangeDirectionProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityUpdateProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityUpdateProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BoardResetProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/BoardResetProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanDownProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanDownProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityEnterNextTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityEnterNextTileProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanKillProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanKillProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BoardUpdateProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/BoardUpdateProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostChangeTargetTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostChangeTargetTileProperty/getOperation"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanAbstractProperty"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanTemporalProperty"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanProperty"/>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanStateProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanStateProperty"/>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanStepProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanStepProperty"/>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/TileProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/UnaryTileProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BinaryTileProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileTopProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileTopProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileRightProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileRightProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileBottomProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileBottomProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileLeftProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileLeftProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileXProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileXProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileYProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileYProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TilePassableProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TilePassableProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileInitialPelletProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileInitialPelletProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileHasPelletProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileHasPelletProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/BoardProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BoardProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/UnaryBoardProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BinaryBoardProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/TileBoardContainerProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/TileBoardContainerProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BoardTilesProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/BoardTilesProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityBoardContainerProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityBoardContainerProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/EntityProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/UnaryEntityProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BinaryEntityProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityInitialTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityInitialTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntitySpeedProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntitySpeedProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityDirectionProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityDirectionProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityCurrentTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityCurrentTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/EntityNextTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/EntityNextTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BoardEntitiesProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/BoardEntitiesProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/PacmanProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/UnaryPacmanProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BinaryPacmanProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanInitialTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanInitialTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanSpeedProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanSpeedProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanDirectionProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanDirectionProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanCurrentTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanCurrentTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanNextTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanNextTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanInitialLivesProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanInitialLivesProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanPelletsEatenProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanPelletsEatenProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/PacmanLivesProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/PacmanLivesProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses image="false">
+        <genTypeParameters>
+          <ecoreTypeParameter href="XPacmanScenario.ecore#//XPacmanProperty/GhostProperty/T"/>
+        </genTypeParameters>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/UnaryGhostProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/BinaryGhostProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostInitialTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostInitialTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostSpeedProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostSpeedProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostDirectionProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostDirectionProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostCurrentTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostCurrentTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostNextTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostNextTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostNameProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostNameProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostPersonnalityProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostPersonnalityProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/GhostTargetTileProperty"/>
+        <genOperations>
+          <ecoreOperation href="XPacmanScenario.ecore#//XPacmanProperty/GhostTargetTileProperty/getFeature"/>
+        </genOperations>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanNextProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanUntilProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanReleaseProperty"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProperty/XPacmanNegationTemporalProperty"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="XPacmanProvider" disposableProviderFactory="true">
+      <ecorePackage href="XPacmanScenario.ecore#//XPacmanProvider"/>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/PacmanProvider"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/PacmanReference"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/PacmanQuery"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/GhostProvider"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/GhostReference"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/GhostQuery"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/EntityProvider"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/EntityReference"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/EntityQuery"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/BoardProvider"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/BoardReference"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanProvider/BoardQuery"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="XPacmanScenario" disposableProviderFactory="true">
+      <ecorePackage href="XPacmanScenario.ecore#//XPacmanScenario"/>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanScenario/XPacmanScenario"/>
+      </genClasses>
+      <genClasses image="false">
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanScenario/XPacmanScenarioElement"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanScenario/XPacmanEventOccurrence"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanScenario/XPacmanScenarioFSM"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanScenario/XPacmanScenarioFSMState"/>
+      </genClasses>
+      <genClasses>
+        <ecoreClass href="XPacmanScenario.ecore#//XPacmanScenario/XPacmanScenarioFSMTransition"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <usedGenPackages href="../../../plugin/fr.inria.diverse.event.commons.model/model/property.genmodel#//property"/>
+  <usedGenPackages href="../../../plugin/fr.inria.diverse.event.commons.model/model/scenario.genmodel#//scenario"/>
+  <usedGenPackages href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.genmodel#//pacman"/>
+  <usedGenPackages href="../../../plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>
