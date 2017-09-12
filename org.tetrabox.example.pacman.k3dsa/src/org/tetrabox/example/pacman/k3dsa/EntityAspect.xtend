@@ -27,7 +27,7 @@ abstract class EntityAspect {
 	
 	public var PassableTile currentTile
 	
-	public var PassableTile nextTile
+	protected var PassableTile nextTile
 	
 	public var int xMoveProgress
 	
@@ -40,6 +40,13 @@ abstract class EntityAspect {
 		_self.currentTile = _self.initialTile
 		_self.nextTile = _self.computeNextTile
 		_self.speed = 100
+	}
+	
+	def void reset() {
+		_self.currentTile = _self.initialTile
+		_self.nextTile = _self.computeNextTile
+		_self.xMoveProgress = 0
+		_self.yMoveProgress = 0
 	}
 	
 	@Step

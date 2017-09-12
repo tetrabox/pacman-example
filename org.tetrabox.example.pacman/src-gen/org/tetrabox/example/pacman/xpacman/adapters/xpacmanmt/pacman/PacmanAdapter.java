@@ -157,14 +157,8 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public PassableTile getNextTile() {
-    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
-  }
-  
-  @Override
-  public void setNextTile(final PassableTile nextTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)nextTile).getAdaptee()
-    );
+  public void reset() {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.reset(adaptee);
   }
   
   @Override
@@ -232,8 +226,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return new java.lang.Integer(getDirection());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__CURRENT_TILE:
     		return getCurrentTile();
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__NEXT_TILE:
-    		return getNextTile();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__XMOVE_PROGRESS:
     		return new java.lang.Integer(getXMoveProgress());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__YMOVE_PROGRESS:
@@ -262,8 +254,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return getDirection() != DIRECTION_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__CURRENT_TILE:
     		return getCurrentTile() != null;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__NEXT_TILE:
-    		return getNextTile() != null;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__XMOVE_PROGRESS:
     		return getXMoveProgress() != XMOVE_PROGRESS_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__YMOVE_PROGRESS:
@@ -297,11 +287,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__CURRENT_TILE:
     		setCurrentTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
-    		 newValue);
-    		return;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__NEXT_TILE:
-    		setNextTile(
     		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;

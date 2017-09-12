@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getSpeed <em>Speed</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getCurrentTile <em>Current Tile</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getNextTile <em>Next Tile</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getXMoveProgress <em>XMove Progress</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getYMoveProgress <em>YMove Progress</em>}</li>
  * </ul>
@@ -132,32 +131,6 @@ public interface Entity extends EObject {
 	void setCurrentTile(PassableTile value);
 
 	/**
-	 * Returns the value of the '<em><b>Next Tile</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Next Tile</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next Tile</em>' reference.
-	 * @see #setNextTile(PassableTile)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity_NextTile()
-	 * @model
-	 * @generated
-	 */
-	PassableTile getNextTile();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getNextTile <em>Next Tile</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next Tile</em>' reference.
-	 * @see #getNextTile()
-	 * @generated
-	 */
-	void setNextTile(PassableTile value);
-
-	/**
 	 * Returns the value of the '<em><b>XMove Progress</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -216,6 +189,14 @@ public interface Entity extends EObject {
 	 * @generated
 	 */
 	void initialize();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void reset();
 
 	/**
 	 * <!-- begin-user-doc -->

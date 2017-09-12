@@ -359,17 +359,8 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_NextTile() {
-		return (EReference)entityEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getEntity_XMoveProgress() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -378,7 +369,7 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * @generated
 	 */
 	public EAttribute getEntity_YMoveProgress() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)entityEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -570,7 +561,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		createEAttribute(entityEClass, ENTITY__SPEED);
 		createEAttribute(entityEClass, ENTITY__DIRECTION);
 		createEReference(entityEClass, ENTITY__CURRENT_TILE);
-		createEReference(entityEClass, ENTITY__NEXT_TILE);
 		createEAttribute(entityEClass, ENTITY__XMOVE_PROGRESS);
 		createEAttribute(entityEClass, ENTITY__YMOVE_PROGRESS);
 
@@ -670,11 +660,12 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		initEAttribute(getEntity_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_Direction(), ecorePackage.getEInt(), "direction", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntity_CurrentTile(), this.getPassableTile(), null, "currentTile", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_NextTile(), this.getPassableTile(), null, "nextTile", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_XMoveProgress(), ecorePackage.getEInt(), "xMoveProgress", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_YMoveProgress(), ecorePackage.getEInt(), "yMoveProgress", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(entityEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(entityEClass, null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(entityEClass, null, "modifySpeed", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEIntegerObject(), "speed", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -845,6 +836,11 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		   new String[] {
 		   });	
 		addAnnotation
+		  (entityEClass.getEOperations().get(5), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getEntity_Speed(), 
 		   source, 
 		   new String[] {
@@ -856,11 +852,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		   });	
 		addAnnotation
 		  (getEntity_CurrentTile(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getEntity_NextTile(), 
 		   source, 
 		   new String[] {
 		   });	

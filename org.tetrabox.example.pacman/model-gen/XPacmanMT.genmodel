@@ -95,9 +95,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XPacmanMT.ecore#//Entity/currentTile"/>
       </genFeatures>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true">
-        <ecoreFeature xsi:type="ecore:EReference" href="XPacmanMT.ecore#//Entity/nextTile"/>
-      </genFeatures>
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XPacmanMT.ecore#//Entity/xMoveProgress"/>
       </genFeatures>
@@ -106,6 +103,9 @@
       </genFeatures>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Entity/initialize"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XPacmanMT.ecore#//Entity/reset"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Entity/modifySpeed"/>

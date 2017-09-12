@@ -223,22 +223,13 @@ public interface PacmanPackage extends EPackage {
 	int ENTITY__CURRENT_TILE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Next Tile</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__NEXT_TILE = 4;
-
-	/**
 	 * The feature id for the '<em><b>XMove Progress</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__XMOVE_PROGRESS = 5;
+	int ENTITY__XMOVE_PROGRESS = 4;
 
 	/**
 	 * The feature id for the '<em><b>YMove Progress</b></em>' attribute.
@@ -247,7 +238,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__YMOVE_PROGRESS = 6;
+	int ENTITY__YMOVE_PROGRESS = 5;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -256,7 +247,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = 7;
+	int ENTITY_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PacmanImpl <em>Pacman</em>}' class.
@@ -303,15 +294,6 @@ public interface PacmanPackage extends EPackage {
 	 * @ordered
 	 */
 	int PACMAN__CURRENT_TILE = ENTITY__CURRENT_TILE;
-
-	/**
-	 * The feature id for the '<em><b>Next Tile</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACMAN__NEXT_TILE = ENTITY__NEXT_TILE;
 
 	/**
 	 * The feature id for the '<em><b>XMove Progress</b></em>' attribute.
@@ -421,15 +403,6 @@ public interface PacmanPackage extends EPackage {
 	 * @ordered
 	 */
 	int GHOST__CURRENT_TILE = ENTITY__CURRENT_TILE;
-
-	/**
-	 * The feature id for the '<em><b>Next Tile</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GHOST__NEXT_TILE = ENTITY__NEXT_TILE;
 
 	/**
 	 * The feature id for the '<em><b>XMove Progress</b></em>' attribute.
@@ -1039,17 +1012,6 @@ public interface PacmanPackage extends EPackage {
 	EReference getEntity_CurrentTile();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getNextTile <em>Next Tile</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Next Tile</em>'.
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getNextTile()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EReference getEntity_NextTile();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getXMoveProgress <em>XMove Progress</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1411,14 +1373,6 @@ public interface PacmanPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENTITY__CURRENT_TILE = eINSTANCE.getEntity_CurrentTile();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Tile</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTITY__NEXT_TILE = eINSTANCE.getEntity_NextTile();
 
 		/**
 		 * The meta object literal for the '<em><b>XMove Progress</b></em>' attribute feature.

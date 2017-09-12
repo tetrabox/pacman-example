@@ -40,12 +40,7 @@ class BoardAspect {
 	
 	@Step
 	def void reset() {
-		_self.entities.forEach[
-			currentTile = initialTile
-			nextTile = computeNextTile
-			xMoveProgress = 0
-			yMoveProgress = 0
-		]
+		_self.entities.forEach[reset]
 	}
 	
 	@Main
