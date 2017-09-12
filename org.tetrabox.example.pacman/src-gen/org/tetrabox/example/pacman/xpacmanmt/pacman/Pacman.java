@@ -15,6 +15,7 @@ package org.tetrabox.example.pacman.xpacmanmt.pacman;
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#getInitialLives <em>Initial Lives</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#getPelletsEaten <em>Pellets Eaten</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#getLives <em>Lives</em>}</li>
+ *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#isEnergized <em>Energized</em>}</li>
  * </ul>
  *
  * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getPacman()
@@ -101,6 +102,32 @@ public interface Pacman extends Entity {
 	void setLives(int value);
 
 	/**
+	 * Returns the value of the '<em><b>Energized</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Energized</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Energized</em>' attribute.
+	 * @see #setEnergized(boolean)
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getPacman_Energized()
+	 * @model unique="false"
+	 * @generated
+	 */
+	boolean isEnergized();
+
+	/**
+	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#isEnergized <em>Energized</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Energized</em>' attribute.
+	 * @see #isEnergized()
+	 * @generated
+	 */
+	void setEnergized(boolean value);
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model
@@ -114,7 +141,23 @@ public interface Pacman extends Entity {
 	 * @model
 	 * @generated
 	 */
+	void update(long deltaTime);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
 	void changeDirection(Integer newDirection);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void energize();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,7 +197,7 @@ public interface Pacman extends Entity {
 	 * @model
 	 * @generated
 	 */
-	void enterNextTile();
+	boolean canTakeDirection(Integer direction);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,7 +205,7 @@ public interface Pacman extends Entity {
 	 * @model
 	 * @generated
 	 */
-	void eatPellet();
+	void enterNextTile();
 
 	/**
 	 * <!-- begin-user-doc -->

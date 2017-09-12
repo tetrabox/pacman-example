@@ -4,7 +4,7 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
 import org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.XPacmanMTAdaptersFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.Entity;
-import org.tetrabox.example.pacman.xpacmanmt.pacman.Tile;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile;
 
 @SuppressWarnings("all")
 public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabox.example.pacman.xpacmanmt.pacman.Entity {
@@ -16,14 +16,14 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
   }
   
   @Override
-  public Tile getInitialTile() {
-    return (Tile) adaptersFactory.createAdapter(adaptee.getInitialTile(), eResource);
+  public PassableTile getInitialTile() {
+    return (PassableTile) adaptersFactory.createAdapter(adaptee.getInitialTile(), eResource);
   }
   
   @Override
-  public void setInitialTile(final Tile o) {
+  public void setInitialTile(final PassableTile o) {
     if (o != null)
-    	adaptee.setInitialTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setInitialTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.PassableTileAdapter) o).getAdaptee());
     else adaptee.setInitialTile(null);
   }
   
@@ -34,13 +34,13 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
   }
   
   @Override
-  public Tile getCurrentTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee), eResource);
+  public PassableTile getCurrentTile() {
+    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee), eResource);
   }
   
   @Override
-  public void setCurrentTile(final Tile currentTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)currentTile).getAdaptee()
+  public void setCurrentTile(final PassableTile currentTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)currentTile).getAdaptee()
     );
   }
   
@@ -72,13 +72,13 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
   }
   
   @Override
-  public Tile getNextTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
+  public PassableTile getNextTile() {
+    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
   }
   
   @Override
-  public void setNextTile(final Tile nextTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)nextTile).getAdaptee()
+  public void setNextTile(final PassableTile nextTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)nextTile).getAdaptee()
     );
   }
   
@@ -99,9 +99,35 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
     );
   }
   
+  @Override
+  public int getXMoveProgress() {
+    return org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.xMoveProgress(adaptee);
+  }
+  
+  @Override
+  public void setXMoveProgress(final int xMoveProgress) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.xMoveProgress(adaptee, xMoveProgress
+    );
+  }
+  
+  @Override
+  public int getYMoveProgress() {
+    return org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.yMoveProgress(adaptee);
+  }
+  
+  @Override
+  public void setYMoveProgress(final int yMoveProgress) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.yMoveProgress(adaptee, yMoveProgress
+    );
+  }
+  
   protected final static int SPEED_EDEFAULT = 0;
   
   protected final static int DIRECTION_EDEFAULT = 0;
+  
+  protected final static int XMOVE_PROGRESS_EDEFAULT = 0;
+  
+  protected final static int YMOVE_PROGRESS_EDEFAULT = 0;
   
   @Override
   public EClass eClass() {
@@ -121,6 +147,10 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
     		return getCurrentTile();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__NEXT_TILE:
     		return getNextTile();
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__XMOVE_PROGRESS:
+    		return new java.lang.Integer(getXMoveProgress());
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__YMOVE_PROGRESS:
+    		return new java.lang.Integer(getYMoveProgress());
     }
     
     return super.eGet(featureID, resolve, coreType);
@@ -139,6 +169,10 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
     		return getCurrentTile() != null;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__NEXT_TILE:
     		return getNextTile() != null;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__XMOVE_PROGRESS:
+    		return getXMoveProgress() != XMOVE_PROGRESS_EDEFAULT;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__YMOVE_PROGRESS:
+    		return getYMoveProgress() != YMOVE_PROGRESS_EDEFAULT;
     }
     
     return super.eIsSet(featureID);
@@ -149,7 +183,7 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
     switch (featureID) {
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__INITIAL_TILE:
     		setInitialTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__SPEED:
@@ -160,13 +194,19 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__CURRENT_TILE:
     		setCurrentTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__NEXT_TILE:
     		setNextTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__XMOVE_PROGRESS:
+    		setXMoveProgress(((java.lang.Integer) newValue).intValue());
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.ENTITY__YMOVE_PROGRESS:
+    		setYMoveProgress(((java.lang.Integer) newValue).intValue());
     		return;
     }
     

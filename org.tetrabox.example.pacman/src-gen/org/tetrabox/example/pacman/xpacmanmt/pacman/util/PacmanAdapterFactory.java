@@ -68,8 +68,8 @@ public class PacmanAdapterFactory extends AdapterFactoryImpl {
 	protected PacmanSwitch<Adapter> modelSwitch =
 		new PacmanSwitch<Adapter>() {
 			@Override
-			public Adapter caseTile(Tile object) {
-				return createTileAdapter();
+			public Adapter caseAbstractTile(AbstractTile object) {
+				return createAbstractTileAdapter();
 			}
 			@Override
 			public Adapter caseBoard(Board object) {
@@ -86,6 +86,30 @@ public class PacmanAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGhost(Ghost object) {
 				return createGhostAdapter();
+			}
+			@Override
+			public Adapter casePassableTile(PassableTile object) {
+				return createPassableTileAdapter();
+			}
+			@Override
+			public Adapter caseTile(Tile object) {
+				return createTileAdapter();
+			}
+			@Override
+			public Adapter caseGhostHouseTile(GhostHouseTile object) {
+				return createGhostHouseTileAdapter();
+			}
+			@Override
+			public Adapter caseWallTile(WallTile object) {
+				return createWallTileAdapter();
+			}
+			@Override
+			public Adapter casePellet(Pellet object) {
+				return createPelletAdapter();
+			}
+			@Override
+			public Adapter caseSuperPellet(SuperPellet object) {
+				return createSuperPelletAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -106,6 +130,20 @@ public class PacmanAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile <em>Abstract Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile
+	 * @generated
+	 */
+	public Adapter createAbstractTileAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile <em>Tile</em>}'.
@@ -174,6 +212,76 @@ public class PacmanAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGhostAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile <em>Passable Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile
+	 * @generated
+	 */
+	public Adapter createPassableTileAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.GhostHouseTile <em>Ghost House Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.GhostHouseTile
+	 * @generated
+	 */
+	public Adapter createGhostHouseTileAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.WallTile <em>Wall Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.WallTile
+	 * @generated
+	 */
+	public Adapter createWallTileAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pellet <em>Pellet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Pellet
+	 * @generated
+	 */
+	public Adapter createPelletAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.SuperPellet <em>Super Pellet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.SuperPellet
+	 * @generated
+	 */
+	public Adapter createSuperPelletAdapter() {
 		return null;
 	}
 

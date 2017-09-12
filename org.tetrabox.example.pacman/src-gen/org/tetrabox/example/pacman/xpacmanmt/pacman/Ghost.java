@@ -22,7 +22,6 @@ package org.tetrabox.example.pacman.xpacmanmt.pacman;
  * @generated
  */
 public interface Ghost extends Entity {
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,12 +86,12 @@ public interface Ghost extends Entity {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target Tile</em>' reference.
-	 * @see #setTargetTile(Tile)
+	 * @see #setTargetTile(AbstractTile)
 	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getGhost_TargetTile()
 	 * @model
 	 * @generated
 	 */
-	Tile getTargetTile();
+	AbstractTile getTargetTile();
 
 	/**
 	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost#getTargetTile <em>Target Tile</em>}' reference.
@@ -102,7 +101,7 @@ public interface Ghost extends Entity {
 	 * @see #getTargetTile()
 	 * @generated
 	 */
-	void setTargetTile(Tile value);
+	void setTargetTile(AbstractTile value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,7 +109,55 @@ public interface Ghost extends Entity {
 	 * @model
 	 * @generated
 	 */
-	void changeTargetTile(Tile targetTile);
+	void initialize();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void update(long deltaTime);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void activate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enterChaseMode();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enterScatterMode();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enterFrightenedMode();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void changeTargetTile(AbstractTile targetTile);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,4 +166,5 @@ public interface Ghost extends Entity {
 	 * @generated
 	 */
 	void enterNextTile();
+
 } // Ghost

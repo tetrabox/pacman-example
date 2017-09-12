@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import pacman.AbstractTile;
 import pacman.Board;
 import pacman.Entity;
 import pacman.PacmanPackage;
-import pacman.Tile;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class BoardImpl extends MinimalEObjectImpl.Container implements Board {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Tile> tiles;
+	protected EList<AbstractTile> tiles;
 
 	/**
 	 * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
@@ -80,9 +80,9 @@ public class BoardImpl extends MinimalEObjectImpl.Container implements Board {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Tile> getTiles() {
+	public EList<AbstractTile> getTiles() {
 		if (tiles == null) {
-			tiles = new EObjectContainmentEList<Tile>(Tile.class, this, PacmanPackage.BOARD__TILES);
+			tiles = new EObjectContainmentEList<AbstractTile>(AbstractTile.class, this, PacmanPackage.BOARD__TILES);
 		}
 		return tiles;
 	}
@@ -142,7 +142,7 @@ public class BoardImpl extends MinimalEObjectImpl.Container implements Board {
 		switch (featureID) {
 			case PacmanPackage.BOARD__TILES:
 				getTiles().clear();
-				getTiles().addAll((Collection<? extends Tile>)newValue);
+				getTiles().addAll((Collection<? extends AbstractTile>)newValue);
 				return;
 			case PacmanPackage.BOARD__ENTITIES:
 				getEntities().clear();

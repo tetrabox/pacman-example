@@ -7,18 +7,23 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import pacman.AbstractTile;
 import pacman.Board;
 import pacman.Entity;
 import pacman.Ghost;
+import pacman.GhostHouseTile;
 import pacman.GhostPersonality;
 import pacman.Pacman;
 import pacman.PacmanFactory;
 import pacman.PacmanPackage;
+import pacman.PassableTile;
+import pacman.Pellet;
 import pacman.PelletType;
+import pacman.SuperPellet;
 import pacman.Tile;
+import pacman.WallTile;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +32,13 @@ import pacman.Tile;
  * @generated
  */
 public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass abstractTileEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,6 +73,41 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * @generated
 	 */
 	private EClass ghostEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass passableTileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ghostHouseTileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wallTileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pelletEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass superPelletEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,6 +189,69 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractTile() {
+		return abstractTileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractTile_Top() {
+		return (EReference)abstractTileEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractTile_Right() {
+		return (EReference)abstractTileEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractTile_Bottom() {
+		return (EReference)abstractTileEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractTile_Left() {
+		return (EReference)abstractTileEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTile_X() {
+		return (EAttribute)abstractTileEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTile_Y() {
+		return (EAttribute)abstractTileEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTile() {
 		return tileEClass;
 	}
@@ -151,71 +261,8 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTile_Top() {
-		return (EReference)tileEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTile_Right() {
-		return (EReference)tileEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTile_Bottom() {
-		return (EReference)tileEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTile_Left() {
-		return (EReference)tileEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTile_X() {
-		return (EAttribute)tileEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTile_Y() {
-		return (EAttribute)tileEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTile_Passable() {
-		return (EAttribute)tileEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getTile_InitialPellet() {
-		return (EAttribute)tileEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)tileEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -313,6 +360,51 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPassableTile() {
+		return passableTileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGhostHouseTile() {
+		return ghostHouseTileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWallTile() {
+		return wallTileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPellet() {
+		return pelletEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSuperPellet() {
+		return superPelletEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPelletType() {
 		return pelletTypeEEnum;
 	}
@@ -354,15 +446,13 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		tileEClass = createEClass(TILE);
-		createEReference(tileEClass, TILE__TOP);
-		createEReference(tileEClass, TILE__RIGHT);
-		createEReference(tileEClass, TILE__BOTTOM);
-		createEReference(tileEClass, TILE__LEFT);
-		createEAttribute(tileEClass, TILE__X);
-		createEAttribute(tileEClass, TILE__Y);
-		createEAttribute(tileEClass, TILE__PASSABLE);
-		createEAttribute(tileEClass, TILE__INITIAL_PELLET);
+		abstractTileEClass = createEClass(ABSTRACT_TILE);
+		createEReference(abstractTileEClass, ABSTRACT_TILE__TOP);
+		createEReference(abstractTileEClass, ABSTRACT_TILE__RIGHT);
+		createEReference(abstractTileEClass, ABSTRACT_TILE__BOTTOM);
+		createEReference(abstractTileEClass, ABSTRACT_TILE__LEFT);
+		createEAttribute(abstractTileEClass, ABSTRACT_TILE__X);
+		createEAttribute(abstractTileEClass, ABSTRACT_TILE__Y);
 
 		boardEClass = createEClass(BOARD);
 		createEReference(boardEClass, BOARD__TILES);
@@ -377,6 +467,19 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		ghostEClass = createEClass(GHOST);
 		createEAttribute(ghostEClass, GHOST__NAME);
 		createEAttribute(ghostEClass, GHOST__PERSONNALITY);
+
+		passableTileEClass = createEClass(PASSABLE_TILE);
+
+		tileEClass = createEClass(TILE);
+		createEAttribute(tileEClass, TILE__INITIAL_PELLET);
+
+		ghostHouseTileEClass = createEClass(GHOST_HOUSE_TILE);
+
+		wallTileEClass = createEClass(WALL_TILE);
+
+		pelletEClass = createEClass(PELLET);
+
+		superPelletEClass = createEClass(SUPER_PELLET);
 
 		// Create enums
 		pelletTypeEEnum = createEEnum(PELLET_TYPE);
@@ -413,24 +516,27 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		// Add supertypes to classes
 		pacmanEClass.getESuperTypes().add(this.getEntity());
 		ghostEClass.getESuperTypes().add(this.getEntity());
+		passableTileEClass.getESuperTypes().add(this.getAbstractTile());
+		tileEClass.getESuperTypes().add(this.getPassableTile());
+		ghostHouseTileEClass.getESuperTypes().add(this.getPassableTile());
+		wallTileEClass.getESuperTypes().add(this.getAbstractTile());
+		superPelletEClass.getESuperTypes().add(this.getPellet());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(tileEClass, Tile.class, "Tile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTile_Top(), this.getTile(), this.getTile_Bottom(), "top", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTile_Right(), this.getTile(), this.getTile_Left(), "right", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTile_Bottom(), this.getTile(), this.getTile_Top(), "bottom", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTile_Left(), this.getTile(), this.getTile_Right(), "left", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTile_X(), ecorePackage.getEInt(), "x", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTile_Y(), ecorePackage.getEInt(), "y", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTile_Passable(), ecorePackage.getEBoolean(), "passable", null, 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTile_InitialPellet(), this.getPelletType(), "initialPellet", "NO_PELLET", 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(abstractTileEClass, AbstractTile.class, "AbstractTile", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractTile_Top(), this.getAbstractTile(), this.getAbstractTile_Bottom(), "top", null, 0, 1, AbstractTile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTile_Right(), this.getAbstractTile(), this.getAbstractTile_Left(), "right", null, 0, 1, AbstractTile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTile_Bottom(), this.getAbstractTile(), this.getAbstractTile_Top(), "bottom", null, 0, 1, AbstractTile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAbstractTile_Left(), this.getAbstractTile(), this.getAbstractTile_Right(), "left", null, 0, 1, AbstractTile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTile_X(), ecorePackage.getEInt(), "x", null, 0, 1, AbstractTile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAbstractTile_Y(), ecorePackage.getEInt(), "y", null, 0, 1, AbstractTile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(boardEClass, Board.class, "Board", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBoard_Tiles(), this.getTile(), null, "tiles", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBoard_Tiles(), this.getAbstractTile(), null, "tiles", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBoard_Entities(), this.getEntity(), null, "entities", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entityEClass, Entity.class, "Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntity_InitialTile(), this.getTile(), null, "initialTile", null, 1, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntity_InitialTile(), this.getPassableTile(), null, "initialTile", null, 1, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pacmanEClass, Pacman.class, "Pacman", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPacman_InitialLives(), ecorePackage.getEInt(), "initialLives", null, 0, 1, Pacman.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -438,6 +544,19 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		initEClass(ghostEClass, Ghost.class, "Ghost", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGhost_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGhost_Personnality(), this.getGhostPersonality(), "personnality", null, 1, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(passableTileEClass, PassableTile.class, "PassableTile", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tileEClass, Tile.class, "Tile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTile_InitialPellet(), this.getPelletType(), "initialPellet", "NO_PELLET", 0, 1, Tile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ghostHouseTileEClass, GhostHouseTile.class, "GhostHouseTile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(wallTileEClass, WallTile.class, "WallTile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pelletEClass, Pellet.class, "Pellet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(superPelletEClass, SuperPellet.class, "SuperPellet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(pelletTypeEEnum, PelletType.class, "PelletType");
@@ -453,6 +572,30 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// aspect
+		createAspectAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>aspect</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createAspectAnnotations() {
+		String source = "aspect";	
+		addAnnotation
+		  (pelletEClass, 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (superPelletEClass, 
+		   source, 
+		   new String[] {
+		   });
 	}
 
 } //PacmanPackageImpl

@@ -31,12 +31,12 @@ public interface Entity extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Tile</em>' reference.
-	 * @see #setInitialTile(Tile)
+	 * @see #setInitialTile(PassableTile)
 	 * @see pacman.PacmanPackage#getEntity_InitialTile()
 	 * @model required="true"
 	 * @generated
 	 */
-	Tile getInitialTile();
+	PassableTile getInitialTile();
 
 	/**
 	 * Sets the value of the '{@link pacman.Entity#getInitialTile <em>Initial Tile</em>}' reference.
@@ -46,5 +46,5 @@ public interface Entity extends EObject {
 	 * @see #getInitialTile()
 	 * @generated
 	 */
-	void setInitialTile(Tile value);
+	void setInitialTile(PassableTile value);
 } // Entity

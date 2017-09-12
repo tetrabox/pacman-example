@@ -57,10 +57,16 @@ public class PacmanFactoryImpl extends EFactoryImpl implements PacmanFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case PacmanPackage.TILE: return createTile();
+			case PacmanPackage.ABSTRACT_TILE: return createAbstractTile();
 			case PacmanPackage.BOARD: return createBoard();
 			case PacmanPackage.PACMAN: return createPacman();
 			case PacmanPackage.GHOST: return createGhost();
+			case PacmanPackage.PASSABLE_TILE: return createPassableTile();
+			case PacmanPackage.TILE: return createTile();
+			case PacmanPackage.GHOST_HOUSE_TILE: return createGhostHouseTile();
+			case PacmanPackage.WALL_TILE: return createWallTile();
+			case PacmanPackage.PELLET: return createPellet();
+			case PacmanPackage.SUPER_PELLET: return createSuperPellet();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -105,6 +111,15 @@ public class PacmanFactoryImpl extends EFactoryImpl implements PacmanFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AbstractTile createAbstractTile() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Tile createTile() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
@@ -133,6 +148,51 @@ public class PacmanFactoryImpl extends EFactoryImpl implements PacmanFactory {
 	 * @generated
 	 */
 	public Ghost createGhost() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PassableTile createPassableTile() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GhostHouseTile createGhostHouseTile() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WallTile createWallTile() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pellet createPellet() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SuperPellet createSuperPellet() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 

@@ -5,12 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.tetrabox.example.pacman.xpacman.eventmanager.XPacmanEventManager;
 import org.tetrabox.example.pacman.xpacman.pacman.Board;
 import org.tetrabox.example.pacman.xpacman.pacman.Entity;
 import org.tetrabox.example.pacman.xpacman.pacman.Ghost;
+import org.tetrabox.example.pacman.xpacman.pacman.GhostHouseTile;
 import org.tetrabox.example.pacman.xpacman.pacman.Pacman;
 import org.tetrabox.example.pacman.xpacman.pacman.Tile;
+import org.tetrabox.example.pacman.xpacman.pacman.WallTile;
 
 import javafx.scene.Node;
 import javafx.scene.image.Image;
@@ -24,8 +25,6 @@ public class BoardView extends Pane {
 
 	private Board board;
 
-	private XPacmanEventManager eventManager;
-
 	private List<Rectangle> tiles = new ArrayList<>();
 	private Map<Tile, Circle> tileToPellet = new HashMap<>();
 	private Map<Entity, ImageView> entityToView = new HashMap<>();
@@ -38,9 +37,8 @@ public class BoardView extends Pane {
 	private Image red = new Image("red.png");
 	private Image pacman = new Image("pacman.png");
 
-	public BoardView(Board board, XPacmanEventManager eventManager) {
+	public BoardView(Board board) {
 		this.board = board;
-		this.eventManager = eventManager;
 	}
 
 	public void update() {
@@ -48,16 +46,23 @@ public class BoardView extends Pane {
 			board.getTiles().forEach(t -> {
 				final Rectangle r = new Rectangle(8 * t.getX(), 8 * t.getY(), 8, 8);
 				tiles.add(r);
-				r.setFill(t.isPassable() ? Color.BLACK : Color.BLUE);
-				switch (t.getInitialPellet()) {
-				case NO_PELLET:
-					break;
-				case PELLET:
-					tileToPellet.put(t, new Circle(8 * t.getX(), 8 * t.getY(), 1, Color.YELLOW));
-					break;
-				case SUPER_PELLET:
-					tileToPellet.put(t, new Circle(8 * t.getX(), 8 * t.getY(), 2, Color.ORANGE));
-					break;
+				if (t instanceof WallTile) {
+					r.setFill(Color.BLUE);
+				} else if (t instanceof GhostHouseTile) {
+					r.setFill(Color.PINK);
+				} else if (t instanceof Tile) {
+					final Tile tile = (Tile) t;
+					r.setFill(Color.BLACK);
+					switch (tile.getInitialPellet()) {
+					case NO_PELLET:
+						break;
+					case PELLET:
+						tileToPellet.put(tile, new Circle(8 * t.getX(), 8 * t.getY(), 1, Color.YELLOW));
+						break;
+					case SUPER_PELLET:
+						tileToPellet.put(tile, new Circle(8 * t.getX(), 8 * t.getY(), 2, Color.ORANGE));
+						break;
+					}
 				}
 			});
 			board.getEntities().forEach(e -> {
@@ -112,7 +117,7 @@ public class BoardView extends Pane {
 			initialized = true;
 		}
 		board.getTiles().forEach(t -> {
-			if (tileToPellet.containsKey(t) && !t.isHasPellet()) {
+			if (tileToPellet.containsKey(t) && ((Tile) t).getPellet() == null) {
 				final Circle c = tileToPellet.remove(t);
 				getChildren().remove(c);
 			}

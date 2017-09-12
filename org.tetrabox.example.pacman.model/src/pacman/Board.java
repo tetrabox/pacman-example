@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Board extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Tiles</b></em>' containment reference list.
-	 * The list contents are of type {@link pacman.Tile}.
+	 * The list contents are of type {@link pacman.AbstractTile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Tiles</em>' containment reference list isn't clear,
@@ -38,7 +38,7 @@ public interface Board extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Tile> getTiles();
+	EList<AbstractTile> getTiles();
 
 	/**
 	 * Returns the value of the '<em><b>Entities</b></em>' containment reference list.

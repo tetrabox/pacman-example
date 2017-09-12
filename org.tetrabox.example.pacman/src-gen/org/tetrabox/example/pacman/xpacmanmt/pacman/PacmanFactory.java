@@ -22,6 +22,15 @@ public interface PacmanFactory extends EFactory {
 	PacmanFactory eINSTANCE = org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PacmanFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Abstract Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Abstract Tile</em>'.
+	 * @generated
+	 */
+	AbstractTile createAbstractTile();
+
+	/**
 	 * Returns a new object of class '<em>Tile</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,6 +65,51 @@ public interface PacmanFactory extends EFactory {
 	 * @generated
 	 */
 	Ghost createGhost();
+
+	/**
+	 * Returns a new object of class '<em>Passable Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Passable Tile</em>'.
+	 * @generated
+	 */
+	PassableTile createPassableTile();
+
+	/**
+	 * Returns a new object of class '<em>Ghost House Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ghost House Tile</em>'.
+	 * @generated
+	 */
+	GhostHouseTile createGhostHouseTile();
+
+	/**
+	 * Returns a new object of class '<em>Wall Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wall Tile</em>'.
+	 * @generated
+	 */
+	WallTile createWallTile();
+
+	/**
+	 * Returns a new object of class '<em>Pellet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pellet</em>'.
+	 * @generated
+	 */
+	Pellet createPellet();
+
+	/**
+	 * Returns a new object of class '<em>Super Pellet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Super Pellet</em>'.
+	 * @generated
+	 */
+	SuperPellet createSuperPellet();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -20,12 +20,13 @@ Require-Bundle: org.eclipse.xtend.lib;bundle-version="2.7.0";visibility:="privat
  fr.inria.diverse.melange.resource;bundle-version="0.1.0";visibility:="reexport",
  fr.inria.diverse.melange.adapters;bundle-version="0.1.0";visibility:="reexport",
  fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="0.0.0";visibility:="reexport",
- org.gemoc.xdsmlframework.api;bundle-version="0.0.0";visibility:="reexport",
- org.gemoc.execution.sequential.javaxdsml.api;bundle-version="0.0.0";visibility:="reexport",
- org.gemoc.executionframework.engine;bundle-version="0.0.0";visibility:="reexport",
- org.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
+ org.eclipse.gemoc.xdsmlframework.api;bundle-version="0.0.0";visibility:="reexport",
+ org.eclipse.gemoc.execution.sequential.javaxdsml.api;bundle-version="0.0.0";visibility:="reexport",
+ org.eclipse.gemoc.executionframework.engine;bundle-version="0.0.0";visibility:="reexport",
+ org.eclipse.gemoc.executionframework.extensions.sirius;bundle-version="0.0.0";visibility:=reexport,
  org.tetrabox.example.pacman.model;bundle-version="0.0.0";visibility:="reexport",
  org.tetrabox.example.pacman.k3dsa;bundle-version="0.0.0";visibility:="reexport",
  org.tetrabox.example.pacman.xpacman
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+

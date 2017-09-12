@@ -4,6 +4,9 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
 import org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.XPacmanMTAdaptersFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.Tile;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.Pellet;
 import org.tetrabox.example.pacman.xpacmanmt.pacman.PelletType;
 
 @SuppressWarnings("all")
@@ -36,16 +39,6 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
   }
   
   @Override
-  public boolean isPassable() {
-    return adaptee.isPassable();
-  }
-  
-  @Override
-  public void setPassable(final boolean o) {
-    adaptee.setPassable(o);
-  }
-  
-  @Override
   public PelletType getInitialPellet() {
     return org.tetrabox.example.pacman.xpacmanmt.pacman.PelletType.get(adaptee.getInitialPellet().getValue());
   }
@@ -56,61 +49,56 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
   }
   
   @Override
-  public org.tetrabox.example.pacman.xpacmanmt.pacman.Tile getTop() {
-    return (org.tetrabox.example.pacman.xpacmanmt.pacman.Tile) adaptersFactory.createAdapter(adaptee.getTop(), eResource);
+  public AbstractTile getTop() {
+    return (AbstractTile) adaptersFactory.createAdapter(adaptee.getTop(), eResource);
   }
   
   @Override
-  public void setTop(final org.tetrabox.example.pacman.xpacmanmt.pacman.Tile o) {
+  public void setTop(final AbstractTile o) {
     if (o != null)
-    	adaptee.setTop(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setTop(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.AbstractTileAdapter) o).getAdaptee());
     else adaptee.setTop(null);
   }
   
   @Override
-  public org.tetrabox.example.pacman.xpacmanmt.pacman.Tile getRight() {
-    return (org.tetrabox.example.pacman.xpacmanmt.pacman.Tile) adaptersFactory.createAdapter(adaptee.getRight(), eResource);
+  public AbstractTile getRight() {
+    return (AbstractTile) adaptersFactory.createAdapter(adaptee.getRight(), eResource);
   }
   
   @Override
-  public void setRight(final org.tetrabox.example.pacman.xpacmanmt.pacman.Tile o) {
+  public void setRight(final AbstractTile o) {
     if (o != null)
-    	adaptee.setRight(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setRight(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.AbstractTileAdapter) o).getAdaptee());
     else adaptee.setRight(null);
   }
   
   @Override
-  public org.tetrabox.example.pacman.xpacmanmt.pacman.Tile getBottom() {
-    return (org.tetrabox.example.pacman.xpacmanmt.pacman.Tile) adaptersFactory.createAdapter(adaptee.getBottom(), eResource);
+  public AbstractTile getBottom() {
+    return (AbstractTile) adaptersFactory.createAdapter(adaptee.getBottom(), eResource);
   }
   
   @Override
-  public void setBottom(final org.tetrabox.example.pacman.xpacmanmt.pacman.Tile o) {
+  public void setBottom(final AbstractTile o) {
     if (o != null)
-    	adaptee.setBottom(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setBottom(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.AbstractTileAdapter) o).getAdaptee());
     else adaptee.setBottom(null);
   }
   
   @Override
-  public org.tetrabox.example.pacman.xpacmanmt.pacman.Tile getLeft() {
-    return (org.tetrabox.example.pacman.xpacmanmt.pacman.Tile) adaptersFactory.createAdapter(adaptee.getLeft(), eResource);
+  public AbstractTile getLeft() {
+    return (AbstractTile) adaptersFactory.createAdapter(adaptee.getLeft(), eResource);
   }
   
   @Override
-  public void setLeft(final org.tetrabox.example.pacman.xpacmanmt.pacman.Tile o) {
+  public void setLeft(final AbstractTile o) {
     if (o != null)
-    	adaptee.setLeft(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setLeft(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.AbstractTileAdapter) o).getAdaptee());
     else adaptee.setLeft(null);
   }
   
   @Override
-  public boolean isHasPellet() {
-    return org.tetrabox.example.pacman.xpacman.aspects.TileAspect.hasPellet(adaptee);
-  }
-  
-  @Override
-  public void setHasPellet(final boolean hasPellet) {
-    org.tetrabox.example.pacman.xpacman.aspects.TileAspect.hasPellet(adaptee, hasPellet
+  public void eatPellet(final Pacman pacman) {
+    org.tetrabox.example.pacman.xpacman.aspects.TileAspect.eatPellet(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Pacman)((EObjectAdapter)pacman).getAdaptee()
     );
   }
   
@@ -119,15 +107,22 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
     org.tetrabox.example.pacman.xpacman.aspects.TileAspect.initialize(adaptee);
   }
   
+  @Override
+  public Pellet getPellet() {
+    return (Pellet) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.TileAspect.pellet(adaptee), eResource);
+  }
+  
+  @Override
+  public void setPellet(final Pellet pellet) {
+    org.tetrabox.example.pacman.xpacman.aspects.TileAspect.pellet(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Pellet)((EObjectAdapter)pellet).getAdaptee()
+    );
+  }
+  
   protected final static int X_EDEFAULT = 0;
   
   protected final static int Y_EDEFAULT = 0;
   
-  protected final static boolean PASSABLE_EDEFAULT = false;
-  
   protected final static PelletType INITIAL_PELLET_EDEFAULT = org.tetrabox.example.pacman.xpacmanmt.pacman.PelletType.NO_PELLET;
-  
-  protected final static boolean HAS_PELLET_EDEFAULT = false;
   
   @Override
   public EClass eClass() {
@@ -149,12 +144,10 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
     		return new java.lang.Integer(getX());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__Y:
     		return new java.lang.Integer(getY());
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__PASSABLE:
-    		return isPassable() ? Boolean.TRUE : Boolean.FALSE;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__INITIAL_PELLET:
     		return getInitialPellet();
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__HAS_PELLET:
-    		return isHasPellet() ? Boolean.TRUE : Boolean.FALSE;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__PELLET:
+    		return getPellet();
     }
     
     return super.eGet(featureID, resolve, coreType);
@@ -175,12 +168,10 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
     		return getX() != X_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__Y:
     		return getY() != Y_EDEFAULT;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__PASSABLE:
-    		return isPassable() != PASSABLE_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__INITIAL_PELLET:
     		return getInitialPellet() != INITIAL_PELLET_EDEFAULT;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__HAS_PELLET:
-    		return isHasPellet() != HAS_PELLET_EDEFAULT;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__PELLET:
+    		return getPellet() != null;
     }
     
     return super.eIsSet(featureID);
@@ -191,22 +182,22 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
     switch (featureID) {
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__TOP:
     		setTop(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__RIGHT:
     		setRight(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__BOTTOM:
     		setBottom(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__LEFT:
     		setLeft(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__X:
@@ -215,16 +206,15 @@ public class TileAdapter extends EObjectAdapter<Tile> implements org.tetrabox.ex
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__Y:
     		setY(((java.lang.Integer) newValue).intValue());
     		return;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__PASSABLE:
-    		setPassable(((java.lang.Boolean) newValue).booleanValue());
-    		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__INITIAL_PELLET:
     		setInitialPellet(
     		(org.tetrabox.example.pacman.xpacmanmt.pacman.PelletType)
     		 newValue);
     		return;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__HAS_PELLET:
-    		setHasPellet(((java.lang.Boolean) newValue).booleanValue());
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.TILE__PELLET:
+    		setPellet(
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Pellet)
+    		 newValue);
     		return;
     }
     

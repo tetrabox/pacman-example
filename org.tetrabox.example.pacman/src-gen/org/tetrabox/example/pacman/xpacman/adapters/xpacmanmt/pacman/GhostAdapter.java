@@ -4,8 +4,9 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
 import org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.XPacmanMTAdaptersFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.Ghost;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile;
 import org.tetrabox.example.pacman.xpacmanmt.pacman.GhostPersonality;
-import org.tetrabox.example.pacman.xpacmanmt.pacman.Tile;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile;
 
 @SuppressWarnings("all")
 public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost {
@@ -37,21 +38,36 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public Tile getInitialTile() {
-    return (Tile) adaptersFactory.createAdapter(adaptee.getInitialTile(), eResource);
+  public PassableTile getInitialTile() {
+    return (PassableTile) adaptersFactory.createAdapter(adaptee.getInitialTile(), eResource);
   }
   
   @Override
-  public void setInitialTile(final Tile o) {
+  public void setInitialTile(final PassableTile o) {
     if (o != null)
-    	adaptee.setInitialTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setInitialTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.PassableTileAdapter) o).getAdaptee());
     else adaptee.setInitialTile(null);
   }
   
   @Override
-  public void changeTargetTile(final Tile targetTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.changeTargetTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)targetTile).getAdaptee()
+  public void activate() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.activate(adaptee);
+  }
+  
+  @Override
+  public void changeTargetTile(final AbstractTile targetTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.changeTargetTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.AbstractTile)((EObjectAdapter)targetTile).getAdaptee()
     );
+  }
+  
+  @Override
+  public void enterChaseMode() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterChaseMode(adaptee);
+  }
+  
+  @Override
+  public void enterFrightenedMode() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterFrightenedMode(adaptee);
   }
   
   @Override
@@ -60,13 +76,29 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public Tile getTargetTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.targetTile(adaptee), eResource);
+  public void enterScatterMode() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterScatterMode(adaptee);
   }
   
   @Override
-  public void setTargetTile(final Tile targetTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.targetTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)targetTile).getAdaptee()
+  public void initialize() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.initialize(adaptee);
+  }
+  
+  @Override
+  public AbstractTile getTargetTile() {
+    return (AbstractTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.targetTile(adaptee), eResource);
+  }
+  
+  @Override
+  public void setTargetTile(final AbstractTile targetTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.targetTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.AbstractTile)((EObjectAdapter)targetTile).getAdaptee()
+    );
+  }
+  
+  @Override
+  public void update(final long deltaTime) {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.update(adaptee, deltaTime
     );
   }
   
@@ -77,13 +109,13 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public Tile getCurrentTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee), eResource);
+  public PassableTile getCurrentTile() {
+    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee), eResource);
   }
   
   @Override
-  public void setCurrentTile(final Tile currentTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)currentTile).getAdaptee()
+  public void setCurrentTile(final PassableTile currentTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)currentTile).getAdaptee()
     );
   }
   
@@ -99,24 +131,19 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public void initialize() {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.initialize(adaptee);
-  }
-  
-  @Override
   public void modifySpeed(final Integer speed) {
     org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.modifySpeed(adaptee, speed
     );
   }
   
   @Override
-  public Tile getNextTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
+  public PassableTile getNextTile() {
+    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
   }
   
   @Override
-  public void setNextTile(final Tile nextTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)nextTile).getAdaptee()
+  public void setNextTile(final PassableTile nextTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)nextTile).getAdaptee()
     );
   }
   
@@ -132,14 +159,34 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public void update(final long deltaTime) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.update(adaptee, deltaTime
+  public int getXMoveProgress() {
+    return org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.xMoveProgress(adaptee);
+  }
+  
+  @Override
+  public void setXMoveProgress(final int xMoveProgress) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.xMoveProgress(adaptee, xMoveProgress
+    );
+  }
+  
+  @Override
+  public int getYMoveProgress() {
+    return org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.yMoveProgress(adaptee);
+  }
+  
+  @Override
+  public void setYMoveProgress(final int yMoveProgress) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.yMoveProgress(adaptee, yMoveProgress
     );
   }
   
   protected final static int SPEED_EDEFAULT = 0;
   
   protected final static int DIRECTION_EDEFAULT = 0;
+  
+  protected final static int XMOVE_PROGRESS_EDEFAULT = 0;
+  
+  protected final static int YMOVE_PROGRESS_EDEFAULT = 0;
   
   protected final static String NAME_EDEFAULT = null;
   
@@ -163,6 +210,10 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		return getCurrentTile();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__NEXT_TILE:
     		return getNextTile();
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__XMOVE_PROGRESS:
+    		return new java.lang.Integer(getXMoveProgress());
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__YMOVE_PROGRESS:
+    		return new java.lang.Integer(getYMoveProgress());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__NAME:
     		return getName();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__PERSONNALITY:
@@ -187,6 +238,10 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		return getCurrentTile() != null;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__NEXT_TILE:
     		return getNextTile() != null;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__XMOVE_PROGRESS:
+    		return getXMoveProgress() != XMOVE_PROGRESS_EDEFAULT;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__YMOVE_PROGRESS:
+    		return getYMoveProgress() != YMOVE_PROGRESS_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__NAME:
     		return getName() != NAME_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__PERSONNALITY:
@@ -203,7 +258,7 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     switch (featureID) {
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__INITIAL_TILE:
     		setInitialTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__SPEED:
@@ -214,13 +269,19 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__CURRENT_TILE:
     		setCurrentTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__NEXT_TILE:
     		setNextTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__XMOVE_PROGRESS:
+    		setXMoveProgress(((java.lang.Integer) newValue).intValue());
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__YMOVE_PROGRESS:
+    		setYMoveProgress(((java.lang.Integer) newValue).intValue());
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__NAME:
     		setName(
@@ -234,7 +295,7 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__TARGET_TILE:
     		setTargetTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
     		 newValue);
     		return;
     }

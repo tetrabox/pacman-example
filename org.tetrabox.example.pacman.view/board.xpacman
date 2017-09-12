@@ -1,1016 +1,1016 @@
 <?xml version="1.0" encoding="ASCII"?>
 <pacman:Board xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pacman="http://org.tetrabox.example.pacman.xpacman/pacman/">
-  <tiles passable="true"/>
-  <tiles y="1" passable="true"/>
-  <tiles y="2" passable="true"/>
-  <tiles y="3"/>
-  <tiles y="4"/>
-  <tiles y="5"/>
-  <tiles y="6"/>
-  <tiles y="7"/>
-  <tiles y="8"/>
-  <tiles y="9"/>
-  <tiles y="10"/>
-  <tiles y="11"/>
-  <tiles y="12"/>
-  <tiles y="13" passable="true"/>
-  <tiles y="14" passable="true"/>
-  <tiles y="15" passable="true"/>
-  <tiles y="16"/>
-  <tiles y="17" passable="true"/>
-  <tiles y="18"/>
-  <tiles y="19" passable="true"/>
-  <tiles y="20" passable="true"/>
-  <tiles y="21" passable="true"/>
-  <tiles y="22"/>
-  <tiles y="23"/>
-  <tiles y="24"/>
-  <tiles y="25"/>
-  <tiles y="26"/>
-  <tiles y="27"/>
-  <tiles y="28"/>
-  <tiles y="29"/>
-  <tiles y="30"/>
-  <tiles y="31"/>
-  <tiles y="32"/>
-  <tiles y="33"/>
-  <tiles y="34" passable="true"/>
-  <tiles y="35" passable="true"/>
-  <tiles x="1" passable="true"/>
-  <tiles x="1" y="1" passable="true"/>
-  <tiles x="1" y="2" passable="true"/>
-  <tiles x="1" y="3"/>
-  <tiles x="1" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="5" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="6" passable="true" initialPellet="SUPER_PELLET"/>
-  <tiles x="1" y="7" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="9" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="10" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="12"/>
-  <tiles x="1" y="13" passable="true"/>
-  <tiles x="1" y="14" passable="true"/>
-  <tiles x="1" y="15" passable="true"/>
-  <tiles x="1" y="16"/>
-  <tiles x="1" y="17" passable="true"/>
-  <tiles x="1" y="18"/>
-  <tiles x="1" y="19" passable="true"/>
-  <tiles x="1" y="20" passable="true"/>
-  <tiles x="1" y="21" passable="true"/>
-  <tiles x="1" y="22"/>
-  <tiles x="1" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="24" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="25" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="26" passable="true" initialPellet="SUPER_PELLET"/>
-  <tiles x="1" y="27"/>
-  <tiles x="1" y="28"/>
-  <tiles x="1" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="30" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="31" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="1" y="33"/>
-  <tiles x="1" y="34" passable="true"/>
-  <tiles x="1" y="35" passable="true"/>
-  <tiles x="2" passable="true"/>
-  <tiles x="2" y="1" passable="true"/>
-  <tiles x="2" y="2" passable="true"/>
-  <tiles x="2" y="3"/>
-  <tiles x="2" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="5"/>
-  <tiles x="2" y="6"/>
-  <tiles x="2" y="7"/>
-  <tiles x="2" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="9"/>
-  <tiles x="2" y="10"/>
-  <tiles x="2" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="12"/>
-  <tiles x="2" y="13" passable="true"/>
-  <tiles x="2" y="14" passable="true"/>
-  <tiles x="2" y="15" passable="true"/>
-  <tiles x="2" y="16"/>
-  <tiles x="2" y="17" passable="true"/>
-  <tiles x="2" y="18"/>
-  <tiles x="2" y="19" passable="true"/>
-  <tiles x="2" y="20" passable="true"/>
-  <tiles x="2" y="21" passable="true"/>
-  <tiles x="2" y="22"/>
-  <tiles x="2" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="24"/>
-  <tiles x="2" y="25"/>
-  <tiles x="2" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="27"/>
-  <tiles x="2" y="28"/>
-  <tiles x="2" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="30"/>
-  <tiles x="2" y="31"/>
-  <tiles x="2" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="2" y="33"/>
-  <tiles x="2" y="34" passable="true"/>
-  <tiles x="2" y="35" passable="true"/>
-  <tiles x="3" passable="true"/>
-  <tiles x="3" y="1" passable="true"/>
-  <tiles x="3" y="2" passable="true"/>
-  <tiles x="3" y="3"/>
-  <tiles x="3" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="5"/>
-  <tiles x="3" y="6"/>
-  <tiles x="3" y="7"/>
-  <tiles x="3" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="9"/>
-  <tiles x="3" y="10"/>
-  <tiles x="3" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="12"/>
-  <tiles x="3" y="13" passable="true"/>
-  <tiles x="3" y="14" passable="true"/>
-  <tiles x="3" y="15" passable="true"/>
-  <tiles x="3" y="16"/>
-  <tiles x="3" y="17" passable="true"/>
-  <tiles x="3" y="18"/>
-  <tiles x="3" y="19" passable="true"/>
-  <tiles x="3" y="20" passable="true"/>
-  <tiles x="3" y="21" passable="true"/>
-  <tiles x="3" y="22"/>
-  <tiles x="3" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="24"/>
-  <tiles x="3" y="25"/>
-  <tiles x="3" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="27" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="28" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="30"/>
-  <tiles x="3" y="31"/>
-  <tiles x="3" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="3" y="33"/>
-  <tiles x="3" y="34" passable="true"/>
-  <tiles x="3" y="35" passable="true"/>
-  <tiles x="4" passable="true"/>
-  <tiles x="4" y="1" passable="true"/>
-  <tiles x="4" y="2" passable="true"/>
-  <tiles x="4" y="3"/>
-  <tiles x="4" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="4" y="5"/>
-  <tiles x="4" y="6"/>
-  <tiles x="4" y="7"/>
-  <tiles x="4" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="4" y="9"/>
-  <tiles x="4" y="10"/>
-  <tiles x="4" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="4" y="12"/>
-  <tiles x="4" y="13" passable="true"/>
-  <tiles x="4" y="14" passable="true"/>
-  <tiles x="4" y="15" passable="true"/>
-  <tiles x="4" y="16"/>
-  <tiles x="4" y="17" passable="true"/>
-  <tiles x="4" y="18"/>
-  <tiles x="4" y="19" passable="true"/>
-  <tiles x="4" y="20" passable="true"/>
-  <tiles x="4" y="21" passable="true"/>
-  <tiles x="4" y="22"/>
-  <tiles x="4" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="4" y="24"/>
-  <tiles x="4" y="25"/>
-  <tiles x="4" y="26"/>
-  <tiles x="4" y="27"/>
-  <tiles x="4" y="28"/>
-  <tiles x="4" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="4" y="30"/>
-  <tiles x="4" y="31"/>
-  <tiles x="4" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="4" y="33"/>
-  <tiles x="4" y="34" passable="true"/>
-  <tiles x="4" y="35" passable="true"/>
-  <tiles x="5" passable="true"/>
-  <tiles x="5" y="1" passable="true"/>
-  <tiles x="5" y="2" passable="true"/>
-  <tiles x="5" y="3"/>
-  <tiles x="5" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="5" y="5"/>
-  <tiles x="5" y="6"/>
-  <tiles x="5" y="7"/>
-  <tiles x="5" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="5" y="9"/>
-  <tiles x="5" y="10"/>
-  <tiles x="5" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="5" y="12"/>
-  <tiles x="5" y="13"/>
-  <tiles x="5" y="14"/>
-  <tiles x="5" y="15"/>
-  <tiles x="5" y="16"/>
-  <tiles x="5" y="17" passable="true"/>
-  <tiles x="5" y="18"/>
-  <tiles x="5" y="19"/>
-  <tiles x="5" y="20"/>
-  <tiles x="5" y="21"/>
-  <tiles x="5" y="22"/>
-  <tiles x="5" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="5" y="24"/>
-  <tiles x="5" y="25"/>
-  <tiles x="5" y="26"/>
-  <tiles x="5" y="27"/>
-  <tiles x="5" y="28"/>
-  <tiles x="5" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="5" y="30"/>
-  <tiles x="5" y="31"/>
-  <tiles x="5" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="5" y="33"/>
-  <tiles x="5" y="34" passable="true"/>
-  <tiles x="5" y="35" passable="true"/>
-  <tiles x="6" passable="true"/>
-  <tiles x="6" y="1" passable="true"/>
-  <tiles x="6" y="2" passable="true"/>
-  <tiles x="6" y="3"/>
-  <tiles x="6" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="5" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="6" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="7" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="9" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="10" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="12" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="13" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="14" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="15" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="16" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="17" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="18" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="19" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="20" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="21" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="22" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="24" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="25" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="27" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="28" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="30"/>
-  <tiles x="6" y="31"/>
-  <tiles x="6" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="6" y="33"/>
-  <tiles x="6" y="34" passable="true"/>
-  <tiles x="6" y="35" passable="true"/>
-  <tiles x="7" passable="true"/>
-  <tiles x="7" y="1" passable="true"/>
-  <tiles x="7" y="2" passable="true"/>
-  <tiles x="7" y="3"/>
-  <tiles x="7" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="7" y="5"/>
-  <tiles x="7" y="6"/>
-  <tiles x="7" y="7"/>
-  <tiles x="7" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="7" y="9"/>
-  <tiles x="7" y="10"/>
-  <tiles x="7" y="11"/>
-  <tiles x="7" y="12"/>
-  <tiles x="7" y="13"/>
-  <tiles x="7" y="14"/>
-  <tiles x="7" y="15"/>
-  <tiles x="7" y="16"/>
-  <tiles x="7" y="17" passable="true"/>
-  <tiles x="7" y="18"/>
-  <tiles x="7" y="19"/>
-  <tiles x="7" y="20"/>
-  <tiles x="7" y="21"/>
-  <tiles x="7" y="22"/>
-  <tiles x="7" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="7" y="24"/>
-  <tiles x="7" y="25"/>
-  <tiles x="7" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="7" y="27"/>
-  <tiles x="7" y="28"/>
-  <tiles x="7" y="29"/>
-  <tiles x="7" y="30"/>
-  <tiles x="7" y="31"/>
-  <tiles x="7" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="7" y="33"/>
-  <tiles x="7" y="34" passable="true"/>
-  <tiles x="7" y="35" passable="true"/>
-  <tiles x="8" passable="true"/>
-  <tiles x="8" y="1" passable="true"/>
-  <tiles x="8" y="2" passable="true"/>
-  <tiles x="8" y="3"/>
-  <tiles x="8" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="8" y="5"/>
-  <tiles x="8" y="6"/>
-  <tiles x="8" y="7"/>
-  <tiles x="8" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="8" y="9"/>
-  <tiles x="8" y="10"/>
-  <tiles x="8" y="11"/>
-  <tiles x="8" y="12"/>
-  <tiles x="8" y="13"/>
-  <tiles x="8" y="14"/>
-  <tiles x="8" y="15"/>
-  <tiles x="8" y="16"/>
-  <tiles x="8" y="17" passable="true"/>
-  <tiles x="8" y="18"/>
-  <tiles x="8" y="19"/>
-  <tiles x="8" y="20"/>
-  <tiles x="8" y="21"/>
-  <tiles x="8" y="22"/>
-  <tiles x="8" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="8" y="24"/>
-  <tiles x="8" y="25"/>
-  <tiles x="8" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="8" y="27"/>
-  <tiles x="8" y="28"/>
-  <tiles x="8" y="29"/>
-  <tiles x="8" y="30"/>
-  <tiles x="8" y="31"/>
-  <tiles x="8" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="8" y="33"/>
-  <tiles x="8" y="34" passable="true"/>
-  <tiles x="8" y="35" passable="true"/>
-  <tiles x="9" passable="true"/>
-  <tiles x="9" y="1" passable="true"/>
-  <tiles x="9" y="2" passable="true"/>
-  <tiles x="9" y="3"/>
-  <tiles x="9" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="5"/>
-  <tiles x="9" y="6"/>
-  <tiles x="9" y="7"/>
-  <tiles x="9" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="9" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="10" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="12"/>
-  <tiles x="9" y="13"/>
-  <tiles x="9" y="14" passable="true"/>
-  <tiles x="9" y="15" passable="true"/>
-  <tiles x="9" y="16" passable="true"/>
-  <tiles x="9" y="17" passable="true"/>
-  <tiles x="9" y="18" passable="true"/>
-  <tiles x="9" y="19" passable="true"/>
-  <tiles x="9" y="20" passable="true"/>
-  <tiles x="9" y="21" passable="true"/>
-  <tiles x="9" y="22" passable="true"/>
-  <tiles x="9" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="24"/>
-  <tiles x="9" y="25"/>
-  <tiles x="9" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="27" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="28" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="30"/>
-  <tiles x="9" y="31"/>
-  <tiles x="9" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="9" y="33"/>
-  <tiles x="9" y="34" passable="true"/>
-  <tiles x="9" y="35" passable="true"/>
-  <tiles x="10" passable="true"/>
-  <tiles x="10" y="1" passable="true"/>
-  <tiles x="10" y="2" passable="true"/>
-  <tiles x="10" y="3"/>
-  <tiles x="10" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="5"/>
-  <tiles x="10" y="6"/>
-  <tiles x="10" y="7"/>
-  <tiles x="10" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="9"/>
-  <tiles x="10" y="10"/>
-  <tiles x="10" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="12"/>
-  <tiles x="10" y="13"/>
-  <tiles x="10" y="14" passable="true"/>
-  <tiles x="10" y="15"/>
-  <tiles x="10" y="16"/>
-  <tiles x="10" y="17"/>
-  <tiles x="10" y="18"/>
-  <tiles x="10" y="19"/>
-  <tiles x="10" y="20" passable="true"/>
-  <tiles x="10" y="21"/>
-  <tiles x="10" y="22"/>
-  <tiles x="10" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="24"/>
-  <tiles x="10" y="25"/>
-  <tiles x="10" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="27"/>
-  <tiles x="10" y="28"/>
-  <tiles x="10" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="30"/>
-  <tiles x="10" y="31"/>
-  <tiles x="10" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="10" y="33"/>
-  <tiles x="10" y="34" passable="true"/>
-  <tiles x="10" y="35" passable="true"/>
-  <tiles x="11" passable="true"/>
-  <tiles x="11" y="1" passable="true"/>
-  <tiles x="11" y="2" passable="true"/>
-  <tiles x="11" y="3"/>
-  <tiles x="11" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="5"/>
-  <tiles x="11" y="6"/>
-  <tiles x="11" y="7"/>
-  <tiles x="11" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="9"/>
-  <tiles x="11" y="10"/>
-  <tiles x="11" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="12"/>
-  <tiles x="11" y="13"/>
-  <tiles x="11" y="14" passable="true"/>
-  <tiles x="11" y="15"/>
-  <tiles x="11" y="16" passable="true"/>
-  <tiles x="11" y="17" passable="true"/>
-  <tiles x="11" y="18" passable="true"/>
-  <tiles x="11" y="19"/>
-  <tiles x="11" y="20" passable="true"/>
-  <tiles x="11" y="21"/>
-  <tiles x="11" y="22"/>
-  <tiles x="11" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="24"/>
-  <tiles x="11" y="25"/>
-  <tiles x="11" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="27"/>
-  <tiles x="11" y="28"/>
-  <tiles x="11" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="30"/>
-  <tiles x="11" y="31"/>
-  <tiles x="11" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="11" y="33"/>
-  <tiles x="11" y="34" passable="true"/>
-  <tiles x="11" y="35" passable="true"/>
-  <tiles x="12" passable="true"/>
-  <tiles x="12" y="1" passable="true"/>
-  <tiles x="12" y="2" passable="true"/>
-  <tiles x="12" y="3"/>
-  <tiles x="12" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="5" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="6" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="7" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="9"/>
-  <tiles x="12" y="10"/>
-  <tiles x="12" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="12" passable="true"/>
-  <tiles x="12" y="13" passable="true"/>
-  <tiles x="12" y="14" passable="true"/>
-  <tiles x="12" y="15"/>
-  <tiles x="12" y="16" passable="true"/>
-  <tiles x="12" y="17" passable="true"/>
-  <tiles x="12" y="18" passable="true"/>
-  <tiles x="12" y="19"/>
-  <tiles x="12" y="20" passable="true"/>
-  <tiles x="12" y="21"/>
-  <tiles x="12" y="22"/>
-  <tiles x="12" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="24" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="25" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="27"/>
-  <tiles x="12" y="28"/>
-  <tiles x="12" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="30" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="31" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="12" y="33"/>
-  <tiles x="12" y="34" passable="true"/>
-  <tiles x="12" y="35" passable="true"/>
-  <tiles x="13" passable="true"/>
-  <tiles x="13" y="1" passable="true"/>
-  <tiles x="13" y="2" passable="true"/>
-  <tiles x="13" y="3"/>
-  <tiles x="13" y="4"/>
-  <tiles x="13" y="5"/>
-  <tiles x="13" y="6"/>
-  <tiles x="13" y="7"/>
-  <tiles x="13" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="13" y="9"/>
-  <tiles x="13" y="10"/>
-  <tiles x="13" y="11"/>
-  <tiles x="13" y="12"/>
-  <tiles x="13" y="13"/>
-  <tiles x="13" y="14" passable="true"/>
-  <tiles x="13" y="15" passable="true"/>
-  <tiles x="13" y="16" passable="true"/>
-  <tiles x="13" y="17" passable="true"/>
-  <tiles x="13" y="18" passable="true"/>
-  <tiles x="13" y="19"/>
-  <tiles x="13" y="20" passable="true"/>
-  <tiles x="13" y="21"/>
-  <tiles x="13" y="22"/>
-  <tiles x="13" y="23"/>
-  <tiles x="13" y="24"/>
-  <tiles x="13" y="25"/>
-  <tiles x="13" y="26" passable="true"/>
-  <tiles x="13" y="27"/>
-  <tiles x="13" y="28"/>
-  <tiles x="13" y="29"/>
-  <tiles x="13" y="30"/>
-  <tiles x="13" y="31"/>
-  <tiles x="13" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="13" y="33"/>
-  <tiles x="13" y="34" passable="true"/>
-  <tiles x="13" y="35" passable="true"/>
-  <tiles x="14" passable="true"/>
-  <tiles x="14" y="1" passable="true"/>
-  <tiles x="14" y="2" passable="true"/>
-  <tiles x="14" y="3"/>
-  <tiles x="14" y="4"/>
-  <tiles x="14" y="5"/>
-  <tiles x="14" y="6"/>
-  <tiles x="14" y="7"/>
-  <tiles x="14" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="14" y="9"/>
-  <tiles x="14" y="10"/>
-  <tiles x="14" y="11"/>
-  <tiles x="14" y="12"/>
-  <tiles x="14" y="13"/>
-  <tiles x="14" y="14" passable="true"/>
-  <tiles x="14" y="15" passable="true"/>
-  <tiles x="14" y="16" passable="true"/>
-  <tiles x="14" y="17" passable="true"/>
-  <tiles x="14" y="18" passable="true"/>
-  <tiles x="14" y="19"/>
-  <tiles x="14" y="20" passable="true"/>
-  <tiles x="14" y="21"/>
-  <tiles x="14" y="22"/>
-  <tiles x="14" y="23"/>
-  <tiles x="14" y="24"/>
-  <tiles x="14" y="25"/>
-  <tiles x="14" y="26" passable="true"/>
-  <tiles x="14" y="27"/>
-  <tiles x="14" y="28"/>
-  <tiles x="14" y="29"/>
-  <tiles x="14" y="30"/>
-  <tiles x="14" y="31"/>
-  <tiles x="14" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="14" y="33"/>
-  <tiles x="14" y="34" passable="true"/>
-  <tiles x="14" y="35" passable="true"/>
-  <tiles x="15" passable="true"/>
-  <tiles x="15" y="1" passable="true"/>
-  <tiles x="15" y="2" passable="true"/>
-  <tiles x="15" y="3"/>
-  <tiles x="15" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="5" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="6" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="7" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="9"/>
-  <tiles x="15" y="10"/>
-  <tiles x="15" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="12" passable="true"/>
-  <tiles x="15" y="13" passable="true"/>
-  <tiles x="15" y="14" passable="true"/>
-  <tiles x="15" y="15"/>
-  <tiles x="15" y="16" passable="true"/>
-  <tiles x="15" y="17" passable="true"/>
-  <tiles x="15" y="18" passable="true"/>
-  <tiles x="15" y="19"/>
-  <tiles x="15" y="20" passable="true"/>
-  <tiles x="15" y="21"/>
-  <tiles x="15" y="22"/>
-  <tiles x="15" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="24" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="25" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="27"/>
-  <tiles x="15" y="28"/>
-  <tiles x="15" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="30" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="31" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="15" y="33"/>
-  <tiles x="15" y="34" passable="true"/>
-  <tiles x="15" y="35" passable="true"/>
-  <tiles x="16" passable="true"/>
-  <tiles x="16" y="1" passable="true"/>
-  <tiles x="16" y="2" passable="true"/>
-  <tiles x="16" y="3"/>
-  <tiles x="16" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="5"/>
-  <tiles x="16" y="6"/>
-  <tiles x="16" y="7"/>
-  <tiles x="16" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="9"/>
-  <tiles x="16" y="10"/>
-  <tiles x="16" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="12"/>
-  <tiles x="16" y="13"/>
-  <tiles x="16" y="14" passable="true"/>
-  <tiles x="16" y="15"/>
-  <tiles x="16" y="16" passable="true"/>
-  <tiles x="16" y="17" passable="true"/>
-  <tiles x="16" y="18" passable="true"/>
-  <tiles x="16" y="19"/>
-  <tiles x="16" y="20" passable="true"/>
-  <tiles x="16" y="21"/>
-  <tiles x="16" y="22"/>
-  <tiles x="16" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="24"/>
-  <tiles x="16" y="25"/>
-  <tiles x="16" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="27"/>
-  <tiles x="16" y="28"/>
-  <tiles x="16" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="30"/>
-  <tiles x="16" y="31"/>
-  <tiles x="16" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="16" y="33"/>
-  <tiles x="16" y="34" passable="true"/>
-  <tiles x="16" y="35" passable="true"/>
-  <tiles x="17" passable="true"/>
-  <tiles x="17" y="1" passable="true"/>
-  <tiles x="17" y="2" passable="true"/>
-  <tiles x="17" y="3"/>
-  <tiles x="17" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="5"/>
-  <tiles x="17" y="6"/>
-  <tiles x="17" y="7"/>
-  <tiles x="17" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="9"/>
-  <tiles x="17" y="10"/>
-  <tiles x="17" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="12"/>
-  <tiles x="17" y="13"/>
-  <tiles x="17" y="14" passable="true"/>
-  <tiles x="17" y="15"/>
-  <tiles x="17" y="16"/>
-  <tiles x="17" y="17"/>
-  <tiles x="17" y="18"/>
-  <tiles x="17" y="19"/>
-  <tiles x="17" y="20" passable="true"/>
-  <tiles x="17" y="21"/>
-  <tiles x="17" y="22"/>
-  <tiles x="17" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="24"/>
-  <tiles x="17" y="25"/>
-  <tiles x="17" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="27"/>
-  <tiles x="17" y="28"/>
-  <tiles x="17" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="30"/>
-  <tiles x="17" y="31"/>
-  <tiles x="17" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="17" y="33"/>
-  <tiles x="17" y="34" passable="true"/>
-  <tiles x="17" y="35" passable="true"/>
-  <tiles x="18" passable="true"/>
-  <tiles x="18" y="1" passable="true"/>
-  <tiles x="18" y="2" passable="true"/>
-  <tiles x="18" y="3"/>
-  <tiles x="18" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="5"/>
-  <tiles x="18" y="6"/>
-  <tiles x="18" y="7"/>
-  <tiles x="18" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="9" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="10" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="12"/>
-  <tiles x="18" y="13"/>
-  <tiles x="18" y="14" passable="true"/>
-  <tiles x="18" y="15" passable="true"/>
-  <tiles x="18" y="16" passable="true"/>
-  <tiles x="18" y="17" passable="true"/>
-  <tiles x="18" y="18" passable="true"/>
-  <tiles x="18" y="19" passable="true"/>
-  <tiles x="18" y="20" passable="true"/>
-  <tiles x="18" y="21" passable="true"/>
-  <tiles x="18" y="22" passable="true"/>
-  <tiles x="18" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="24"/>
-  <tiles x="18" y="25"/>
-  <tiles x="18" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="27" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="28" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="30"/>
-  <tiles x="18" y="31"/>
-  <tiles x="18" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="18" y="33"/>
-  <tiles x="18" y="34" passable="true"/>
-  <tiles x="18" y="35" passable="true"/>
-  <tiles x="19" passable="true"/>
-  <tiles x="19" y="1" passable="true"/>
-  <tiles x="19" y="2" passable="true"/>
-  <tiles x="19" y="3"/>
-  <tiles x="19" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="19" y="5"/>
-  <tiles x="19" y="6"/>
-  <tiles x="19" y="7"/>
-  <tiles x="19" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="19" y="9"/>
-  <tiles x="19" y="10"/>
-  <tiles x="19" y="11"/>
-  <tiles x="19" y="12"/>
-  <tiles x="19" y="13"/>
-  <tiles x="19" y="14"/>
-  <tiles x="19" y="15"/>
-  <tiles x="19" y="16"/>
-  <tiles x="19" y="17" passable="true"/>
-  <tiles x="19" y="18"/>
-  <tiles x="19" y="19"/>
-  <tiles x="19" y="20"/>
-  <tiles x="19" y="21"/>
-  <tiles x="19" y="22"/>
-  <tiles x="19" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="19" y="24"/>
-  <tiles x="19" y="25"/>
-  <tiles x="19" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="19" y="27"/>
-  <tiles x="19" y="28"/>
-  <tiles x="19" y="29"/>
-  <tiles x="19" y="30"/>
-  <tiles x="19" y="31"/>
-  <tiles x="19" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="19" y="33"/>
-  <tiles x="19" y="34" passable="true"/>
-  <tiles x="19" y="35" passable="true"/>
-  <tiles x="20" passable="true"/>
-  <tiles x="20" y="1" passable="true"/>
-  <tiles x="20" y="2" passable="true"/>
-  <tiles x="20" y="3"/>
-  <tiles x="20" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="20" y="5"/>
-  <tiles x="20" y="6"/>
-  <tiles x="20" y="7"/>
-  <tiles x="20" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="20" y="9"/>
-  <tiles x="20" y="10"/>
-  <tiles x="20" y="11"/>
-  <tiles x="20" y="12"/>
-  <tiles x="20" y="13"/>
-  <tiles x="20" y="14"/>
-  <tiles x="20" y="15"/>
-  <tiles x="20" y="16"/>
-  <tiles x="20" y="17" passable="true"/>
-  <tiles x="20" y="18"/>
-  <tiles x="20" y="19"/>
-  <tiles x="20" y="20"/>
-  <tiles x="20" y="21"/>
-  <tiles x="20" y="22"/>
-  <tiles x="20" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="20" y="24"/>
-  <tiles x="20" y="25"/>
-  <tiles x="20" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="20" y="27"/>
-  <tiles x="20" y="28"/>
-  <tiles x="20" y="29"/>
-  <tiles x="20" y="30"/>
-  <tiles x="20" y="31"/>
-  <tiles x="20" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="20" y="33"/>
-  <tiles x="20" y="34" passable="true"/>
-  <tiles x="20" y="35" passable="true"/>
-  <tiles x="21" passable="true"/>
-  <tiles x="21" y="1" passable="true"/>
-  <tiles x="21" y="2" passable="true"/>
-  <tiles x="21" y="3"/>
-  <tiles x="21" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="5" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="6" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="7" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="9" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="10" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="12" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="13" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="14" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="15" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="16" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="17" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="18" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="19" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="20" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="21" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="22" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="24" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="25" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="27" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="28" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="30"/>
-  <tiles x="21" y="31"/>
-  <tiles x="21" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="21" y="33"/>
-  <tiles x="21" y="34" passable="true"/>
-  <tiles x="21" y="35" passable="true"/>
-  <tiles x="22" passable="true"/>
-  <tiles x="22" y="1" passable="true"/>
-  <tiles x="22" y="2" passable="true"/>
-  <tiles x="22" y="3"/>
-  <tiles x="22" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="22" y="5"/>
-  <tiles x="22" y="6"/>
-  <tiles x="22" y="7"/>
-  <tiles x="22" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="22" y="9"/>
-  <tiles x="22" y="10"/>
-  <tiles x="22" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="22" y="12"/>
-  <tiles x="22" y="13"/>
-  <tiles x="22" y="14"/>
-  <tiles x="22" y="15"/>
-  <tiles x="22" y="16"/>
-  <tiles x="22" y="17" passable="true"/>
-  <tiles x="22" y="18"/>
-  <tiles x="22" y="19"/>
-  <tiles x="22" y="20"/>
-  <tiles x="22" y="21"/>
-  <tiles x="22" y="22"/>
-  <tiles x="22" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="22" y="24"/>
-  <tiles x="22" y="25"/>
-  <tiles x="22" y="26"/>
-  <tiles x="22" y="27"/>
-  <tiles x="22" y="28"/>
-  <tiles x="22" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="22" y="30"/>
-  <tiles x="22" y="31"/>
-  <tiles x="22" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="22" y="33"/>
-  <tiles x="22" y="34" passable="true"/>
-  <tiles x="22" y="35" passable="true"/>
-  <tiles x="23" passable="true"/>
-  <tiles x="23" y="1" passable="true"/>
-  <tiles x="23" y="2" passable="true"/>
-  <tiles x="23" y="3"/>
-  <tiles x="23" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="23" y="5"/>
-  <tiles x="23" y="6"/>
-  <tiles x="23" y="7"/>
-  <tiles x="23" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="23" y="9"/>
-  <tiles x="23" y="10"/>
-  <tiles x="23" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="23" y="12"/>
-  <tiles x="23" y="13" passable="true"/>
-  <tiles x="23" y="14" passable="true"/>
-  <tiles x="23" y="15" passable="true"/>
-  <tiles x="23" y="16"/>
-  <tiles x="23" y="17" passable="true"/>
-  <tiles x="23" y="18"/>
-  <tiles x="23" y="19" passable="true"/>
-  <tiles x="23" y="20" passable="true"/>
-  <tiles x="23" y="21" passable="true"/>
-  <tiles x="23" y="22"/>
-  <tiles x="23" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="23" y="24"/>
-  <tiles x="23" y="25"/>
-  <tiles x="23" y="26"/>
-  <tiles x="23" y="27"/>
-  <tiles x="23" y="28"/>
-  <tiles x="23" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="23" y="30"/>
-  <tiles x="23" y="31"/>
-  <tiles x="23" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="23" y="33"/>
-  <tiles x="23" y="34" passable="true"/>
-  <tiles x="23" y="35" passable="true"/>
-  <tiles x="24" passable="true"/>
-  <tiles x="24" y="1" passable="true"/>
-  <tiles x="24" y="2" passable="true"/>
-  <tiles x="24" y="3"/>
-  <tiles x="24" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="5"/>
-  <tiles x="24" y="6"/>
-  <tiles x="24" y="7"/>
-  <tiles x="24" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="9"/>
-  <tiles x="24" y="10"/>
-  <tiles x="24" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="12"/>
-  <tiles x="24" y="13" passable="true"/>
-  <tiles x="24" y="14" passable="true"/>
-  <tiles x="24" y="15" passable="true"/>
-  <tiles x="24" y="16"/>
-  <tiles x="24" y="17" passable="true"/>
-  <tiles x="24" y="18"/>
-  <tiles x="24" y="19" passable="true"/>
-  <tiles x="24" y="20" passable="true"/>
-  <tiles x="24" y="21" passable="true"/>
-  <tiles x="24" y="22"/>
-  <tiles x="24" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="24"/>
-  <tiles x="24" y="25"/>
-  <tiles x="24" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="27" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="28" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="30"/>
-  <tiles x="24" y="31"/>
-  <tiles x="24" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="24" y="33"/>
-  <tiles x="24" y="34" passable="true"/>
-  <tiles x="24" y="35" passable="true"/>
-  <tiles x="25" passable="true"/>
-  <tiles x="25" y="1" passable="true"/>
-  <tiles x="25" y="2" passable="true"/>
-  <tiles x="25" y="3"/>
-  <tiles x="25" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="5"/>
-  <tiles x="25" y="6"/>
-  <tiles x="25" y="7"/>
-  <tiles x="25" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="9"/>
-  <tiles x="25" y="10"/>
-  <tiles x="25" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="12"/>
-  <tiles x="25" y="13" passable="true"/>
-  <tiles x="25" y="14" passable="true"/>
-  <tiles x="25" y="15" passable="true"/>
-  <tiles x="25" y="16"/>
-  <tiles x="25" y="17" passable="true"/>
-  <tiles x="25" y="18"/>
-  <tiles x="25" y="19" passable="true"/>
-  <tiles x="25" y="20" passable="true"/>
-  <tiles x="25" y="21" passable="true"/>
-  <tiles x="25" y="22"/>
-  <tiles x="25" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="24"/>
-  <tiles x="25" y="25"/>
-  <tiles x="25" y="26" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="27"/>
-  <tiles x="25" y="28"/>
-  <tiles x="25" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="30"/>
-  <tiles x="25" y="31"/>
-  <tiles x="25" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="25" y="33"/>
-  <tiles x="25" y="34" passable="true"/>
-  <tiles x="25" y="35" passable="true"/>
-  <tiles x="26" passable="true"/>
-  <tiles x="26" y="1" passable="true"/>
-  <tiles x="26" y="2" passable="true"/>
-  <tiles x="26" y="3"/>
-  <tiles x="26" y="4" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="5" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="6" passable="true" initialPellet="SUPER_PELLET"/>
-  <tiles x="26" y="7" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="8" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="9" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="10" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="11" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="12"/>
-  <tiles x="26" y="13" passable="true"/>
-  <tiles x="26" y="14" passable="true"/>
-  <tiles x="26" y="15" passable="true"/>
-  <tiles x="26" y="16"/>
-  <tiles x="26" y="17" passable="true"/>
-  <tiles x="26" y="18"/>
-  <tiles x="26" y="19" passable="true"/>
-  <tiles x="26" y="20" passable="true"/>
-  <tiles x="26" y="21" passable="true"/>
-  <tiles x="26" y="22"/>
-  <tiles x="26" y="23" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="24" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="25" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="26" passable="true" initialPellet="SUPER_PELLET"/>
-  <tiles x="26" y="27"/>
-  <tiles x="26" y="28"/>
-  <tiles x="26" y="29" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="30" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="31" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="32" passable="true" initialPellet="PELLET"/>
-  <tiles x="26" y="33"/>
-  <tiles x="26" y="34" passable="true"/>
-  <tiles x="26" y="35" passable="true"/>
-  <tiles x="27" passable="true"/>
-  <tiles x="27" y="1" passable="true"/>
-  <tiles x="27" y="2" passable="true"/>
-  <tiles x="27" y="3"/>
-  <tiles x="27" y="4"/>
-  <tiles x="27" y="5"/>
-  <tiles x="27" y="6"/>
-  <tiles x="27" y="7"/>
-  <tiles x="27" y="8"/>
-  <tiles x="27" y="9"/>
-  <tiles x="27" y="10"/>
-  <tiles x="27" y="11"/>
-  <tiles x="27" y="12"/>
-  <tiles x="27" y="13" passable="true"/>
-  <tiles x="27" y="14" passable="true"/>
-  <tiles x="27" y="15" passable="true"/>
-  <tiles x="27" y="16"/>
-  <tiles x="27" y="17" passable="true"/>
-  <tiles x="27" y="18"/>
-  <tiles x="27" y="19" passable="true"/>
-  <tiles x="27" y="20" passable="true"/>
-  <tiles x="27" y="21" passable="true"/>
-  <tiles x="27" y="22"/>
-  <tiles x="27" y="23"/>
-  <tiles x="27" y="24"/>
-  <tiles x="27" y="25"/>
-  <tiles x="27" y="26"/>
-  <tiles x="27" y="27"/>
-  <tiles x="27" y="28"/>
-  <tiles x="27" y="29"/>
-  <tiles x="27" y="30"/>
-  <tiles x="27" y="31"/>
-  <tiles x="27" y="32"/>
-  <tiles x="27" y="33"/>
-  <tiles x="27" y="34" passable="true"/>
-  <tiles x="27" y="35" passable="true"/>
-  <entities xsi:type="pacman:Pacman" initialTile="//@tiles.530" initialLives="3"/>
-  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.518"/>
-  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.485" personnality="SPEEDY"/>
-  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.413" personnality="BASHFUL"/>
-  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.557" personnality="POKEY"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.35" right="//@tiles.36" bottom="//@tiles.1" left="//@tiles.952"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.0" right="//@tiles.37" bottom="//@tiles.2" left="//@tiles.953" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.1" right="//@tiles.38" bottom="//@tiles.3" left="//@tiles.954" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.2" right="//@tiles.39" bottom="//@tiles.4" left="//@tiles.955" y="3"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.3" right="//@tiles.40" bottom="//@tiles.5" left="//@tiles.956" y="4"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.4" right="//@tiles.41" bottom="//@tiles.6" left="//@tiles.957" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.5" right="//@tiles.42" bottom="//@tiles.7" left="//@tiles.958" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.6" right="//@tiles.43" bottom="//@tiles.8" left="//@tiles.959" y="7"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.7" right="//@tiles.44" bottom="//@tiles.9" left="//@tiles.960" y="8"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.8" right="//@tiles.45" bottom="//@tiles.10" left="//@tiles.961" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.9" right="//@tiles.46" bottom="//@tiles.11" left="//@tiles.962" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.10" right="//@tiles.47" bottom="//@tiles.12" left="//@tiles.963" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.11" right="//@tiles.48" bottom="//@tiles.13" left="//@tiles.964" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.12" right="//@tiles.49" bottom="//@tiles.14" left="//@tiles.965" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.13" right="//@tiles.50" bottom="//@tiles.15" left="//@tiles.966" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.14" right="//@tiles.51" bottom="//@tiles.16" left="//@tiles.967" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.15" right="//@tiles.52" bottom="//@tiles.17" left="//@tiles.968" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.16" right="//@tiles.53" bottom="//@tiles.18" left="//@tiles.969" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.17" right="//@tiles.54" bottom="//@tiles.19" left="//@tiles.970" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.18" right="//@tiles.55" bottom="//@tiles.20" left="//@tiles.971" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.19" right="//@tiles.56" bottom="//@tiles.21" left="//@tiles.972" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.20" right="//@tiles.57" bottom="//@tiles.22" left="//@tiles.973" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.21" right="//@tiles.58" bottom="//@tiles.23" left="//@tiles.974" y="22"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.22" right="//@tiles.59" bottom="//@tiles.24" left="//@tiles.975" y="23"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.23" right="//@tiles.60" bottom="//@tiles.25" left="//@tiles.976" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.24" right="//@tiles.61" bottom="//@tiles.26" left="//@tiles.977" y="25"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.25" right="//@tiles.62" bottom="//@tiles.27" left="//@tiles.978" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.26" right="//@tiles.63" bottom="//@tiles.28" left="//@tiles.979" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.27" right="//@tiles.64" bottom="//@tiles.29" left="//@tiles.980" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.28" right="//@tiles.65" bottom="//@tiles.30" left="//@tiles.981" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.29" right="//@tiles.66" bottom="//@tiles.31" left="//@tiles.982" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.30" right="//@tiles.67" bottom="//@tiles.32" left="//@tiles.983" y="31"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.31" right="//@tiles.68" bottom="//@tiles.33" left="//@tiles.984" y="32"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.32" right="//@tiles.69" bottom="//@tiles.34" left="//@tiles.985" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.33" right="//@tiles.70" bottom="//@tiles.35" left="//@tiles.986" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.34" right="//@tiles.71" bottom="//@tiles.0" left="//@tiles.987" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.71" right="//@tiles.72" bottom="//@tiles.37" left="//@tiles.0" x="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.36" right="//@tiles.73" bottom="//@tiles.38" left="//@tiles.1" x="1" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.37" right="//@tiles.74" bottom="//@tiles.39" left="//@tiles.2" x="1" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.38" right="//@tiles.75" bottom="//@tiles.40" left="//@tiles.3" x="1" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.39" right="//@tiles.76" bottom="//@tiles.41" left="//@tiles.4" x="1" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.40" right="//@tiles.77" bottom="//@tiles.42" left="//@tiles.5" x="1" y="5" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.41" right="//@tiles.78" bottom="//@tiles.43" left="//@tiles.6" x="1" y="6" initialPellet="SUPER_PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.42" right="//@tiles.79" bottom="//@tiles.44" left="//@tiles.7" x="1" y="7" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.43" right="//@tiles.80" bottom="//@tiles.45" left="//@tiles.8" x="1" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.44" right="//@tiles.81" bottom="//@tiles.46" left="//@tiles.9" x="1" y="9" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.45" right="//@tiles.82" bottom="//@tiles.47" left="//@tiles.10" x="1" y="10" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.46" right="//@tiles.83" bottom="//@tiles.48" left="//@tiles.11" x="1" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.47" right="//@tiles.84" bottom="//@tiles.49" left="//@tiles.12" x="1" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.48" right="//@tiles.85" bottom="//@tiles.50" left="//@tiles.13" x="1" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.49" right="//@tiles.86" bottom="//@tiles.51" left="//@tiles.14" x="1" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.50" right="//@tiles.87" bottom="//@tiles.52" left="//@tiles.15" x="1" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.51" right="//@tiles.88" bottom="//@tiles.53" left="//@tiles.16" x="1" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.52" right="//@tiles.89" bottom="//@tiles.54" left="//@tiles.17" x="1" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.53" right="//@tiles.90" bottom="//@tiles.55" left="//@tiles.18" x="1" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.54" right="//@tiles.91" bottom="//@tiles.56" left="//@tiles.19" x="1" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.55" right="//@tiles.92" bottom="//@tiles.57" left="//@tiles.20" x="1" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.56" right="//@tiles.93" bottom="//@tiles.58" left="//@tiles.21" x="1" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.57" right="//@tiles.94" bottom="//@tiles.59" left="//@tiles.22" x="1" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.58" right="//@tiles.95" bottom="//@tiles.60" left="//@tiles.23" x="1" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.59" right="//@tiles.96" bottom="//@tiles.61" left="//@tiles.24" x="1" y="24" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.60" right="//@tiles.97" bottom="//@tiles.62" left="//@tiles.25" x="1" y="25" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.61" right="//@tiles.98" bottom="//@tiles.63" left="//@tiles.26" x="1" y="26" initialPellet="SUPER_PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.62" right="//@tiles.99" bottom="//@tiles.64" left="//@tiles.27" x="1" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.63" right="//@tiles.100" bottom="//@tiles.65" left="//@tiles.28" x="1" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.64" right="//@tiles.101" bottom="//@tiles.66" left="//@tiles.29" x="1" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.65" right="//@tiles.102" bottom="//@tiles.67" left="//@tiles.30" x="1" y="30" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.66" right="//@tiles.103" bottom="//@tiles.68" left="//@tiles.31" x="1" y="31" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.67" right="//@tiles.104" bottom="//@tiles.69" left="//@tiles.32" x="1" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.68" right="//@tiles.105" bottom="//@tiles.70" left="//@tiles.33" x="1" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.69" right="//@tiles.106" bottom="//@tiles.71" left="//@tiles.34" x="1" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.70" right="//@tiles.107" bottom="//@tiles.36" left="//@tiles.35" x="1" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.107" right="//@tiles.108" bottom="//@tiles.73" left="//@tiles.36" x="2"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.72" right="//@tiles.109" bottom="//@tiles.74" left="//@tiles.37" x="2" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.73" right="//@tiles.110" bottom="//@tiles.75" left="//@tiles.38" x="2" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.74" right="//@tiles.111" bottom="//@tiles.76" left="//@tiles.39" x="2" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.75" right="//@tiles.112" bottom="//@tiles.77" left="//@tiles.40" x="2" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.76" right="//@tiles.113" bottom="//@tiles.78" left="//@tiles.41" x="2" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.77" right="//@tiles.114" bottom="//@tiles.79" left="//@tiles.42" x="2" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.78" right="//@tiles.115" bottom="//@tiles.80" left="//@tiles.43" x="2" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.79" right="//@tiles.116" bottom="//@tiles.81" left="//@tiles.44" x="2" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.80" right="//@tiles.117" bottom="//@tiles.82" left="//@tiles.45" x="2" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.81" right="//@tiles.118" bottom="//@tiles.83" left="//@tiles.46" x="2" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.82" right="//@tiles.119" bottom="//@tiles.84" left="//@tiles.47" x="2" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.83" right="//@tiles.120" bottom="//@tiles.85" left="//@tiles.48" x="2" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.84" right="//@tiles.121" bottom="//@tiles.86" left="//@tiles.49" x="2" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.85" right="//@tiles.122" bottom="//@tiles.87" left="//@tiles.50" x="2" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.86" right="//@tiles.123" bottom="//@tiles.88" left="//@tiles.51" x="2" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.87" right="//@tiles.124" bottom="//@tiles.89" left="//@tiles.52" x="2" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.88" right="//@tiles.125" bottom="//@tiles.90" left="//@tiles.53" x="2" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.89" right="//@tiles.126" bottom="//@tiles.91" left="//@tiles.54" x="2" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.90" right="//@tiles.127" bottom="//@tiles.92" left="//@tiles.55" x="2" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.91" right="//@tiles.128" bottom="//@tiles.93" left="//@tiles.56" x="2" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.92" right="//@tiles.129" bottom="//@tiles.94" left="//@tiles.57" x="2" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.93" right="//@tiles.130" bottom="//@tiles.95" left="//@tiles.58" x="2" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.94" right="//@tiles.131" bottom="//@tiles.96" left="//@tiles.59" x="2" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.95" right="//@tiles.132" bottom="//@tiles.97" left="//@tiles.60" x="2" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.96" right="//@tiles.133" bottom="//@tiles.98" left="//@tiles.61" x="2" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.97" right="//@tiles.134" bottom="//@tiles.99" left="//@tiles.62" x="2" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.98" right="//@tiles.135" bottom="//@tiles.100" left="//@tiles.63" x="2" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.99" right="//@tiles.136" bottom="//@tiles.101" left="//@tiles.64" x="2" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.100" right="//@tiles.137" bottom="//@tiles.102" left="//@tiles.65" x="2" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.101" right="//@tiles.138" bottom="//@tiles.103" left="//@tiles.66" x="2" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.102" right="//@tiles.139" bottom="//@tiles.104" left="//@tiles.67" x="2" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.103" right="//@tiles.140" bottom="//@tiles.105" left="//@tiles.68" x="2" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.104" right="//@tiles.141" bottom="//@tiles.106" left="//@tiles.69" x="2" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.105" right="//@tiles.142" bottom="//@tiles.107" left="//@tiles.70" x="2" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.106" right="//@tiles.143" bottom="//@tiles.72" left="//@tiles.71" x="2" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.143" right="//@tiles.144" bottom="//@tiles.109" left="//@tiles.72" x="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.108" right="//@tiles.145" bottom="//@tiles.110" left="//@tiles.73" x="3" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.109" right="//@tiles.146" bottom="//@tiles.111" left="//@tiles.74" x="3" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.110" right="//@tiles.147" bottom="//@tiles.112" left="//@tiles.75" x="3" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.111" right="//@tiles.148" bottom="//@tiles.113" left="//@tiles.76" x="3" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.112" right="//@tiles.149" bottom="//@tiles.114" left="//@tiles.77" x="3" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.113" right="//@tiles.150" bottom="//@tiles.115" left="//@tiles.78" x="3" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.114" right="//@tiles.151" bottom="//@tiles.116" left="//@tiles.79" x="3" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.115" right="//@tiles.152" bottom="//@tiles.117" left="//@tiles.80" x="3" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.116" right="//@tiles.153" bottom="//@tiles.118" left="//@tiles.81" x="3" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.117" right="//@tiles.154" bottom="//@tiles.119" left="//@tiles.82" x="3" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.118" right="//@tiles.155" bottom="//@tiles.120" left="//@tiles.83" x="3" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.119" right="//@tiles.156" bottom="//@tiles.121" left="//@tiles.84" x="3" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.120" right="//@tiles.157" bottom="//@tiles.122" left="//@tiles.85" x="3" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.121" right="//@tiles.158" bottom="//@tiles.123" left="//@tiles.86" x="3" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.122" right="//@tiles.159" bottom="//@tiles.124" left="//@tiles.87" x="3" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.123" right="//@tiles.160" bottom="//@tiles.125" left="//@tiles.88" x="3" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.124" right="//@tiles.161" bottom="//@tiles.126" left="//@tiles.89" x="3" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.125" right="//@tiles.162" bottom="//@tiles.127" left="//@tiles.90" x="3" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.126" right="//@tiles.163" bottom="//@tiles.128" left="//@tiles.91" x="3" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.127" right="//@tiles.164" bottom="//@tiles.129" left="//@tiles.92" x="3" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.128" right="//@tiles.165" bottom="//@tiles.130" left="//@tiles.93" x="3" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.129" right="//@tiles.166" bottom="//@tiles.131" left="//@tiles.94" x="3" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.130" right="//@tiles.167" bottom="//@tiles.132" left="//@tiles.95" x="3" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.131" right="//@tiles.168" bottom="//@tiles.133" left="//@tiles.96" x="3" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.132" right="//@tiles.169" bottom="//@tiles.134" left="//@tiles.97" x="3" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.133" right="//@tiles.170" bottom="//@tiles.135" left="//@tiles.98" x="3" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.134" right="//@tiles.171" bottom="//@tiles.136" left="//@tiles.99" x="3" y="27" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.135" right="//@tiles.172" bottom="//@tiles.137" left="//@tiles.100" x="3" y="28" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.136" right="//@tiles.173" bottom="//@tiles.138" left="//@tiles.101" x="3" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.137" right="//@tiles.174" bottom="//@tiles.139" left="//@tiles.102" x="3" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.138" right="//@tiles.175" bottom="//@tiles.140" left="//@tiles.103" x="3" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.139" right="//@tiles.176" bottom="//@tiles.141" left="//@tiles.104" x="3" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.140" right="//@tiles.177" bottom="//@tiles.142" left="//@tiles.105" x="3" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.141" right="//@tiles.178" bottom="//@tiles.143" left="//@tiles.106" x="3" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.142" right="//@tiles.179" bottom="//@tiles.108" left="//@tiles.107" x="3" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.179" right="//@tiles.180" bottom="//@tiles.145" left="//@tiles.108" x="4"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.144" right="//@tiles.181" bottom="//@tiles.146" left="//@tiles.109" x="4" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.145" right="//@tiles.182" bottom="//@tiles.147" left="//@tiles.110" x="4" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.146" right="//@tiles.183" bottom="//@tiles.148" left="//@tiles.111" x="4" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.147" right="//@tiles.184" bottom="//@tiles.149" left="//@tiles.112" x="4" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.148" right="//@tiles.185" bottom="//@tiles.150" left="//@tiles.113" x="4" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.149" right="//@tiles.186" bottom="//@tiles.151" left="//@tiles.114" x="4" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.150" right="//@tiles.187" bottom="//@tiles.152" left="//@tiles.115" x="4" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.151" right="//@tiles.188" bottom="//@tiles.153" left="//@tiles.116" x="4" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.152" right="//@tiles.189" bottom="//@tiles.154" left="//@tiles.117" x="4" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.153" right="//@tiles.190" bottom="//@tiles.155" left="//@tiles.118" x="4" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.154" right="//@tiles.191" bottom="//@tiles.156" left="//@tiles.119" x="4" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.155" right="//@tiles.192" bottom="//@tiles.157" left="//@tiles.120" x="4" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.156" right="//@tiles.193" bottom="//@tiles.158" left="//@tiles.121" x="4" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.157" right="//@tiles.194" bottom="//@tiles.159" left="//@tiles.122" x="4" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.158" right="//@tiles.195" bottom="//@tiles.160" left="//@tiles.123" x="4" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.159" right="//@tiles.196" bottom="//@tiles.161" left="//@tiles.124" x="4" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.160" right="//@tiles.197" bottom="//@tiles.162" left="//@tiles.125" x="4" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.161" right="//@tiles.198" bottom="//@tiles.163" left="//@tiles.126" x="4" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.162" right="//@tiles.199" bottom="//@tiles.164" left="//@tiles.127" x="4" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.163" right="//@tiles.200" bottom="//@tiles.165" left="//@tiles.128" x="4" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.164" right="//@tiles.201" bottom="//@tiles.166" left="//@tiles.129" x="4" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.165" right="//@tiles.202" bottom="//@tiles.167" left="//@tiles.130" x="4" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.166" right="//@tiles.203" bottom="//@tiles.168" left="//@tiles.131" x="4" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.167" right="//@tiles.204" bottom="//@tiles.169" left="//@tiles.132" x="4" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.168" right="//@tiles.205" bottom="//@tiles.170" left="//@tiles.133" x="4" y="25"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.169" right="//@tiles.206" bottom="//@tiles.171" left="//@tiles.134" x="4" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.170" right="//@tiles.207" bottom="//@tiles.172" left="//@tiles.135" x="4" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.171" right="//@tiles.208" bottom="//@tiles.173" left="//@tiles.136" x="4" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.172" right="//@tiles.209" bottom="//@tiles.174" left="//@tiles.137" x="4" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.173" right="//@tiles.210" bottom="//@tiles.175" left="//@tiles.138" x="4" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.174" right="//@tiles.211" bottom="//@tiles.176" left="//@tiles.139" x="4" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.175" right="//@tiles.212" bottom="//@tiles.177" left="//@tiles.140" x="4" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.176" right="//@tiles.213" bottom="//@tiles.178" left="//@tiles.141" x="4" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.177" right="//@tiles.214" bottom="//@tiles.179" left="//@tiles.142" x="4" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.178" right="//@tiles.215" bottom="//@tiles.144" left="//@tiles.143" x="4" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.215" right="//@tiles.216" bottom="//@tiles.181" left="//@tiles.144" x="5"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.180" right="//@tiles.217" bottom="//@tiles.182" left="//@tiles.145" x="5" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.181" right="//@tiles.218" bottom="//@tiles.183" left="//@tiles.146" x="5" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.182" right="//@tiles.219" bottom="//@tiles.184" left="//@tiles.147" x="5" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.183" right="//@tiles.220" bottom="//@tiles.185" left="//@tiles.148" x="5" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.184" right="//@tiles.221" bottom="//@tiles.186" left="//@tiles.149" x="5" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.185" right="//@tiles.222" bottom="//@tiles.187" left="//@tiles.150" x="5" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.186" right="//@tiles.223" bottom="//@tiles.188" left="//@tiles.151" x="5" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.187" right="//@tiles.224" bottom="//@tiles.189" left="//@tiles.152" x="5" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.188" right="//@tiles.225" bottom="//@tiles.190" left="//@tiles.153" x="5" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.189" right="//@tiles.226" bottom="//@tiles.191" left="//@tiles.154" x="5" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.190" right="//@tiles.227" bottom="//@tiles.192" left="//@tiles.155" x="5" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.191" right="//@tiles.228" bottom="//@tiles.193" left="//@tiles.156" x="5" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.192" right="//@tiles.229" bottom="//@tiles.194" left="//@tiles.157" x="5" y="13"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.193" right="//@tiles.230" bottom="//@tiles.195" left="//@tiles.158" x="5" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.194" right="//@tiles.231" bottom="//@tiles.196" left="//@tiles.159" x="5" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.195" right="//@tiles.232" bottom="//@tiles.197" left="//@tiles.160" x="5" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.196" right="//@tiles.233" bottom="//@tiles.198" left="//@tiles.161" x="5" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.197" right="//@tiles.234" bottom="//@tiles.199" left="//@tiles.162" x="5" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.198" right="//@tiles.235" bottom="//@tiles.200" left="//@tiles.163" x="5" y="19"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.199" right="//@tiles.236" bottom="//@tiles.201" left="//@tiles.164" x="5" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.200" right="//@tiles.237" bottom="//@tiles.202" left="//@tiles.165" x="5" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.201" right="//@tiles.238" bottom="//@tiles.203" left="//@tiles.166" x="5" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.202" right="//@tiles.239" bottom="//@tiles.204" left="//@tiles.167" x="5" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.203" right="//@tiles.240" bottom="//@tiles.205" left="//@tiles.168" x="5" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.204" right="//@tiles.241" bottom="//@tiles.206" left="//@tiles.169" x="5" y="25"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.205" right="//@tiles.242" bottom="//@tiles.207" left="//@tiles.170" x="5" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.206" right="//@tiles.243" bottom="//@tiles.208" left="//@tiles.171" x="5" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.207" right="//@tiles.244" bottom="//@tiles.209" left="//@tiles.172" x="5" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.208" right="//@tiles.245" bottom="//@tiles.210" left="//@tiles.173" x="5" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.209" right="//@tiles.246" bottom="//@tiles.211" left="//@tiles.174" x="5" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.210" right="//@tiles.247" bottom="//@tiles.212" left="//@tiles.175" x="5" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.211" right="//@tiles.248" bottom="//@tiles.213" left="//@tiles.176" x="5" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.212" right="//@tiles.249" bottom="//@tiles.214" left="//@tiles.177" x="5" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.213" right="//@tiles.250" bottom="//@tiles.215" left="//@tiles.178" x="5" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.214" right="//@tiles.251" bottom="//@tiles.180" left="//@tiles.179" x="5" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.251" right="//@tiles.252" bottom="//@tiles.217" left="//@tiles.180" x="6"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.216" right="//@tiles.253" bottom="//@tiles.218" left="//@tiles.181" x="6" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.217" right="//@tiles.254" bottom="//@tiles.219" left="//@tiles.182" x="6" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.218" right="//@tiles.255" bottom="//@tiles.220" left="//@tiles.183" x="6" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.219" right="//@tiles.256" bottom="//@tiles.221" left="//@tiles.184" x="6" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.220" right="//@tiles.257" bottom="//@tiles.222" left="//@tiles.185" x="6" y="5" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.221" right="//@tiles.258" bottom="//@tiles.223" left="//@tiles.186" x="6" y="6" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.222" right="//@tiles.259" bottom="//@tiles.224" left="//@tiles.187" x="6" y="7" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.223" right="//@tiles.260" bottom="//@tiles.225" left="//@tiles.188" x="6" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.224" right="//@tiles.261" bottom="//@tiles.226" left="//@tiles.189" x="6" y="9" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.225" right="//@tiles.262" bottom="//@tiles.227" left="//@tiles.190" x="6" y="10" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.226" right="//@tiles.263" bottom="//@tiles.228" left="//@tiles.191" x="6" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.227" right="//@tiles.264" bottom="//@tiles.229" left="//@tiles.192" x="6" y="12" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.228" right="//@tiles.265" bottom="//@tiles.230" left="//@tiles.193" x="6" y="13" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.229" right="//@tiles.266" bottom="//@tiles.231" left="//@tiles.194" x="6" y="14" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.230" right="//@tiles.267" bottom="//@tiles.232" left="//@tiles.195" x="6" y="15" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.231" right="//@tiles.268" bottom="//@tiles.233" left="//@tiles.196" x="6" y="16" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.232" right="//@tiles.269" bottom="//@tiles.234" left="//@tiles.197" x="6" y="17" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.233" right="//@tiles.270" bottom="//@tiles.235" left="//@tiles.198" x="6" y="18" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.234" right="//@tiles.271" bottom="//@tiles.236" left="//@tiles.199" x="6" y="19" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.235" right="//@tiles.272" bottom="//@tiles.237" left="//@tiles.200" x="6" y="20" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.236" right="//@tiles.273" bottom="//@tiles.238" left="//@tiles.201" x="6" y="21" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.237" right="//@tiles.274" bottom="//@tiles.239" left="//@tiles.202" x="6" y="22" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.238" right="//@tiles.275" bottom="//@tiles.240" left="//@tiles.203" x="6" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.239" right="//@tiles.276" bottom="//@tiles.241" left="//@tiles.204" x="6" y="24" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.240" right="//@tiles.277" bottom="//@tiles.242" left="//@tiles.205" x="6" y="25" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.241" right="//@tiles.278" bottom="//@tiles.243" left="//@tiles.206" x="6" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.242" right="//@tiles.279" bottom="//@tiles.244" left="//@tiles.207" x="6" y="27" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.243" right="//@tiles.280" bottom="//@tiles.245" left="//@tiles.208" x="6" y="28" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.244" right="//@tiles.281" bottom="//@tiles.246" left="//@tiles.209" x="6" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.245" right="//@tiles.282" bottom="//@tiles.247" left="//@tiles.210" x="6" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.246" right="//@tiles.283" bottom="//@tiles.248" left="//@tiles.211" x="6" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.247" right="//@tiles.284" bottom="//@tiles.249" left="//@tiles.212" x="6" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.248" right="//@tiles.285" bottom="//@tiles.250" left="//@tiles.213" x="6" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.249" right="//@tiles.286" bottom="//@tiles.251" left="//@tiles.214" x="6" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.250" right="//@tiles.287" bottom="//@tiles.216" left="//@tiles.215" x="6" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.287" right="//@tiles.288" bottom="//@tiles.253" left="//@tiles.216" x="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.252" right="//@tiles.289" bottom="//@tiles.254" left="//@tiles.217" x="7" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.253" right="//@tiles.290" bottom="//@tiles.255" left="//@tiles.218" x="7" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.254" right="//@tiles.291" bottom="//@tiles.256" left="//@tiles.219" x="7" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.255" right="//@tiles.292" bottom="//@tiles.257" left="//@tiles.220" x="7" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.256" right="//@tiles.293" bottom="//@tiles.258" left="//@tiles.221" x="7" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.257" right="//@tiles.294" bottom="//@tiles.259" left="//@tiles.222" x="7" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.258" right="//@tiles.295" bottom="//@tiles.260" left="//@tiles.223" x="7" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.259" right="//@tiles.296" bottom="//@tiles.261" left="//@tiles.224" x="7" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.260" right="//@tiles.297" bottom="//@tiles.262" left="//@tiles.225" x="7" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.261" right="//@tiles.298" bottom="//@tiles.263" left="//@tiles.226" x="7" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.262" right="//@tiles.299" bottom="//@tiles.264" left="//@tiles.227" x="7" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.263" right="//@tiles.300" bottom="//@tiles.265" left="//@tiles.228" x="7" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.264" right="//@tiles.301" bottom="//@tiles.266" left="//@tiles.229" x="7" y="13"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.265" right="//@tiles.302" bottom="//@tiles.267" left="//@tiles.230" x="7" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.266" right="//@tiles.303" bottom="//@tiles.268" left="//@tiles.231" x="7" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.267" right="//@tiles.304" bottom="//@tiles.269" left="//@tiles.232" x="7" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.268" right="//@tiles.305" bottom="//@tiles.270" left="//@tiles.233" x="7" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.269" right="//@tiles.306" bottom="//@tiles.271" left="//@tiles.234" x="7" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.270" right="//@tiles.307" bottom="//@tiles.272" left="//@tiles.235" x="7" y="19"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.271" right="//@tiles.308" bottom="//@tiles.273" left="//@tiles.236" x="7" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.272" right="//@tiles.309" bottom="//@tiles.274" left="//@tiles.237" x="7" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.273" right="//@tiles.310" bottom="//@tiles.275" left="//@tiles.238" x="7" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.274" right="//@tiles.311" bottom="//@tiles.276" left="//@tiles.239" x="7" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.275" right="//@tiles.312" bottom="//@tiles.277" left="//@tiles.240" x="7" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.276" right="//@tiles.313" bottom="//@tiles.278" left="//@tiles.241" x="7" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.277" right="//@tiles.314" bottom="//@tiles.279" left="//@tiles.242" x="7" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.278" right="//@tiles.315" bottom="//@tiles.280" left="//@tiles.243" x="7" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.279" right="//@tiles.316" bottom="//@tiles.281" left="//@tiles.244" x="7" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.280" right="//@tiles.317" bottom="//@tiles.282" left="//@tiles.245" x="7" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.281" right="//@tiles.318" bottom="//@tiles.283" left="//@tiles.246" x="7" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.282" right="//@tiles.319" bottom="//@tiles.284" left="//@tiles.247" x="7" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.283" right="//@tiles.320" bottom="//@tiles.285" left="//@tiles.248" x="7" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.284" right="//@tiles.321" bottom="//@tiles.286" left="//@tiles.249" x="7" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.285" right="//@tiles.322" bottom="//@tiles.287" left="//@tiles.250" x="7" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.286" right="//@tiles.323" bottom="//@tiles.252" left="//@tiles.251" x="7" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.323" right="//@tiles.324" bottom="//@tiles.289" left="//@tiles.252" x="8"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.288" right="//@tiles.325" bottom="//@tiles.290" left="//@tiles.253" x="8" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.289" right="//@tiles.326" bottom="//@tiles.291" left="//@tiles.254" x="8" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.290" right="//@tiles.327" bottom="//@tiles.292" left="//@tiles.255" x="8" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.291" right="//@tiles.328" bottom="//@tiles.293" left="//@tiles.256" x="8" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.292" right="//@tiles.329" bottom="//@tiles.294" left="//@tiles.257" x="8" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.293" right="//@tiles.330" bottom="//@tiles.295" left="//@tiles.258" x="8" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.294" right="//@tiles.331" bottom="//@tiles.296" left="//@tiles.259" x="8" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.295" right="//@tiles.332" bottom="//@tiles.297" left="//@tiles.260" x="8" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.296" right="//@tiles.333" bottom="//@tiles.298" left="//@tiles.261" x="8" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.297" right="//@tiles.334" bottom="//@tiles.299" left="//@tiles.262" x="8" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.298" right="//@tiles.335" bottom="//@tiles.300" left="//@tiles.263" x="8" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.299" right="//@tiles.336" bottom="//@tiles.301" left="//@tiles.264" x="8" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.300" right="//@tiles.337" bottom="//@tiles.302" left="//@tiles.265" x="8" y="13"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.301" right="//@tiles.338" bottom="//@tiles.303" left="//@tiles.266" x="8" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.302" right="//@tiles.339" bottom="//@tiles.304" left="//@tiles.267" x="8" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.303" right="//@tiles.340" bottom="//@tiles.305" left="//@tiles.268" x="8" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.304" right="//@tiles.341" bottom="//@tiles.306" left="//@tiles.269" x="8" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.305" right="//@tiles.342" bottom="//@tiles.307" left="//@tiles.270" x="8" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.306" right="//@tiles.343" bottom="//@tiles.308" left="//@tiles.271" x="8" y="19"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.307" right="//@tiles.344" bottom="//@tiles.309" left="//@tiles.272" x="8" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.308" right="//@tiles.345" bottom="//@tiles.310" left="//@tiles.273" x="8" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.309" right="//@tiles.346" bottom="//@tiles.311" left="//@tiles.274" x="8" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.310" right="//@tiles.347" bottom="//@tiles.312" left="//@tiles.275" x="8" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.311" right="//@tiles.348" bottom="//@tiles.313" left="//@tiles.276" x="8" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.312" right="//@tiles.349" bottom="//@tiles.314" left="//@tiles.277" x="8" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.313" right="//@tiles.350" bottom="//@tiles.315" left="//@tiles.278" x="8" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.314" right="//@tiles.351" bottom="//@tiles.316" left="//@tiles.279" x="8" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.315" right="//@tiles.352" bottom="//@tiles.317" left="//@tiles.280" x="8" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.316" right="//@tiles.353" bottom="//@tiles.318" left="//@tiles.281" x="8" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.317" right="//@tiles.354" bottom="//@tiles.319" left="//@tiles.282" x="8" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.318" right="//@tiles.355" bottom="//@tiles.320" left="//@tiles.283" x="8" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.319" right="//@tiles.356" bottom="//@tiles.321" left="//@tiles.284" x="8" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.320" right="//@tiles.357" bottom="//@tiles.322" left="//@tiles.285" x="8" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.321" right="//@tiles.358" bottom="//@tiles.323" left="//@tiles.286" x="8" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.322" right="//@tiles.359" bottom="//@tiles.288" left="//@tiles.287" x="8" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.359" right="//@tiles.360" bottom="//@tiles.325" left="//@tiles.288" x="9"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.324" right="//@tiles.361" bottom="//@tiles.326" left="//@tiles.289" x="9" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.325" right="//@tiles.362" bottom="//@tiles.327" left="//@tiles.290" x="9" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.326" right="//@tiles.363" bottom="//@tiles.328" left="//@tiles.291" x="9" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.327" right="//@tiles.364" bottom="//@tiles.329" left="//@tiles.292" x="9" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.328" right="//@tiles.365" bottom="//@tiles.330" left="//@tiles.293" x="9" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.329" right="//@tiles.366" bottom="//@tiles.331" left="//@tiles.294" x="9" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.330" right="//@tiles.367" bottom="//@tiles.332" left="//@tiles.295" x="9" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.331" right="//@tiles.368" bottom="//@tiles.333" left="//@tiles.296" x="9" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.332" right="//@tiles.369" bottom="//@tiles.334" left="//@tiles.297" x="9" y="9" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.333" right="//@tiles.370" bottom="//@tiles.335" left="//@tiles.298" x="9" y="10" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.334" right="//@tiles.371" bottom="//@tiles.336" left="//@tiles.299" x="9" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.335" right="//@tiles.372" bottom="//@tiles.337" left="//@tiles.300" x="9" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.336" right="//@tiles.373" bottom="//@tiles.338" left="//@tiles.301" x="9" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.337" right="//@tiles.374" bottom="//@tiles.339" left="//@tiles.302" x="9" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.338" right="//@tiles.375" bottom="//@tiles.340" left="//@tiles.303" x="9" y="15"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.339" right="//@tiles.376" bottom="//@tiles.341" left="//@tiles.304" x="9" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.340" right="//@tiles.377" bottom="//@tiles.342" left="//@tiles.305" x="9" y="17"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.341" right="//@tiles.378" bottom="//@tiles.343" left="//@tiles.306" x="9" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.342" right="//@tiles.379" bottom="//@tiles.344" left="//@tiles.307" x="9" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.343" right="//@tiles.380" bottom="//@tiles.345" left="//@tiles.308" x="9" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.344" right="//@tiles.381" bottom="//@tiles.346" left="//@tiles.309" x="9" y="21"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.345" right="//@tiles.382" bottom="//@tiles.347" left="//@tiles.310" x="9" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.346" right="//@tiles.383" bottom="//@tiles.348" left="//@tiles.311" x="9" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.347" right="//@tiles.384" bottom="//@tiles.349" left="//@tiles.312" x="9" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.348" right="//@tiles.385" bottom="//@tiles.350" left="//@tiles.313" x="9" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.349" right="//@tiles.386" bottom="//@tiles.351" left="//@tiles.314" x="9" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.350" right="//@tiles.387" bottom="//@tiles.352" left="//@tiles.315" x="9" y="27" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.351" right="//@tiles.388" bottom="//@tiles.353" left="//@tiles.316" x="9" y="28" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.352" right="//@tiles.389" bottom="//@tiles.354" left="//@tiles.317" x="9" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.353" right="//@tiles.390" bottom="//@tiles.355" left="//@tiles.318" x="9" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.354" right="//@tiles.391" bottom="//@tiles.356" left="//@tiles.319" x="9" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.355" right="//@tiles.392" bottom="//@tiles.357" left="//@tiles.320" x="9" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.356" right="//@tiles.393" bottom="//@tiles.358" left="//@tiles.321" x="9" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.357" right="//@tiles.394" bottom="//@tiles.359" left="//@tiles.322" x="9" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.358" right="//@tiles.395" bottom="//@tiles.324" left="//@tiles.323" x="9" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.395" right="//@tiles.396" bottom="//@tiles.361" left="//@tiles.324" x="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.360" right="//@tiles.397" bottom="//@tiles.362" left="//@tiles.325" x="10" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.361" right="//@tiles.398" bottom="//@tiles.363" left="//@tiles.326" x="10" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.362" right="//@tiles.399" bottom="//@tiles.364" left="//@tiles.327" x="10" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.363" right="//@tiles.400" bottom="//@tiles.365" left="//@tiles.328" x="10" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.364" right="//@tiles.401" bottom="//@tiles.366" left="//@tiles.329" x="10" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.365" right="//@tiles.402" bottom="//@tiles.367" left="//@tiles.330" x="10" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.366" right="//@tiles.403" bottom="//@tiles.368" left="//@tiles.331" x="10" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.367" right="//@tiles.404" bottom="//@tiles.369" left="//@tiles.332" x="10" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.368" right="//@tiles.405" bottom="//@tiles.370" left="//@tiles.333" x="10" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.369" right="//@tiles.406" bottom="//@tiles.371" left="//@tiles.334" x="10" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.370" right="//@tiles.407" bottom="//@tiles.372" left="//@tiles.335" x="10" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.371" right="//@tiles.408" bottom="//@tiles.373" left="//@tiles.336" x="10" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.372" right="//@tiles.409" bottom="//@tiles.374" left="//@tiles.337" x="10" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.373" right="//@tiles.410" bottom="//@tiles.375" left="//@tiles.338" x="10" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.374" right="//@tiles.411" bottom="//@tiles.376" left="//@tiles.339" x="10" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.375" right="//@tiles.988" bottom="//@tiles.377" left="//@tiles.340" x="10" y="16"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.376" right="//@tiles.996" bottom="//@tiles.378" left="//@tiles.341" x="10" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.377" right="//@tiles.997" bottom="//@tiles.379" left="//@tiles.342" x="10" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.378" right="//@tiles.412" bottom="//@tiles.380" left="//@tiles.343" x="10" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.379" right="//@tiles.413" bottom="//@tiles.381" left="//@tiles.344" x="10" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.380" right="//@tiles.414" bottom="//@tiles.382" left="//@tiles.345" x="10" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.381" right="//@tiles.415" bottom="//@tiles.383" left="//@tiles.346" x="10" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.382" right="//@tiles.416" bottom="//@tiles.384" left="//@tiles.347" x="10" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.383" right="//@tiles.417" bottom="//@tiles.385" left="//@tiles.348" x="10" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.384" right="//@tiles.418" bottom="//@tiles.386" left="//@tiles.349" x="10" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.385" right="//@tiles.419" bottom="//@tiles.387" left="//@tiles.350" x="10" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.386" right="//@tiles.420" bottom="//@tiles.388" left="//@tiles.351" x="10" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.387" right="//@tiles.421" bottom="//@tiles.389" left="//@tiles.352" x="10" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.388" right="//@tiles.422" bottom="//@tiles.390" left="//@tiles.353" x="10" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.389" right="//@tiles.423" bottom="//@tiles.391" left="//@tiles.354" x="10" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.390" right="//@tiles.424" bottom="//@tiles.392" left="//@tiles.355" x="10" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.391" right="//@tiles.425" bottom="//@tiles.393" left="//@tiles.356" x="10" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.392" right="//@tiles.426" bottom="//@tiles.394" left="//@tiles.357" x="10" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.393" right="//@tiles.427" bottom="//@tiles.395" left="//@tiles.358" x="10" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.394" right="//@tiles.428" bottom="//@tiles.360" left="//@tiles.359" x="10" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.428" right="//@tiles.429" bottom="//@tiles.397" left="//@tiles.360" x="11"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.396" right="//@tiles.430" bottom="//@tiles.398" left="//@tiles.361" x="11" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.397" right="//@tiles.431" bottom="//@tiles.399" left="//@tiles.362" x="11" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.398" right="//@tiles.432" bottom="//@tiles.400" left="//@tiles.363" x="11" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.399" right="//@tiles.433" bottom="//@tiles.401" left="//@tiles.364" x="11" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.400" right="//@tiles.434" bottom="//@tiles.402" left="//@tiles.365" x="11" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.401" right="//@tiles.435" bottom="//@tiles.403" left="//@tiles.366" x="11" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.402" right="//@tiles.436" bottom="//@tiles.404" left="//@tiles.367" x="11" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.403" right="//@tiles.437" bottom="//@tiles.405" left="//@tiles.368" x="11" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.404" right="//@tiles.438" bottom="//@tiles.406" left="//@tiles.369" x="11" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.405" right="//@tiles.439" bottom="//@tiles.407" left="//@tiles.370" x="11" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.406" right="//@tiles.440" bottom="//@tiles.408" left="//@tiles.371" x="11" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.407" right="//@tiles.441" bottom="//@tiles.409" left="//@tiles.372" x="11" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.408" right="//@tiles.442" bottom="//@tiles.410" left="//@tiles.373" x="11" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.409" right="//@tiles.443" bottom="//@tiles.411" left="//@tiles.374" x="11" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.410" right="//@tiles.444" bottom="//@tiles.988" left="//@tiles.375" x="11" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.997" right="//@tiles.445" bottom="//@tiles.413" left="//@tiles.379" x="11" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.412" right="//@tiles.446" bottom="//@tiles.414" left="//@tiles.380" x="11" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.413" right="//@tiles.447" bottom="//@tiles.415" left="//@tiles.381" x="11" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.414" right="//@tiles.448" bottom="//@tiles.416" left="//@tiles.382" x="11" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.415" right="//@tiles.449" bottom="//@tiles.417" left="//@tiles.383" x="11" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.416" right="//@tiles.450" bottom="//@tiles.418" left="//@tiles.384" x="11" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.417" right="//@tiles.451" bottom="//@tiles.419" left="//@tiles.385" x="11" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.418" right="//@tiles.452" bottom="//@tiles.420" left="//@tiles.386" x="11" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.419" right="//@tiles.453" bottom="//@tiles.421" left="//@tiles.387" x="11" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.420" right="//@tiles.454" bottom="//@tiles.422" left="//@tiles.388" x="11" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.421" right="//@tiles.455" bottom="//@tiles.423" left="//@tiles.389" x="11" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.422" right="//@tiles.456" bottom="//@tiles.424" left="//@tiles.390" x="11" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.423" right="//@tiles.457" bottom="//@tiles.425" left="//@tiles.391" x="11" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.424" right="//@tiles.458" bottom="//@tiles.426" left="//@tiles.392" x="11" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.425" right="//@tiles.459" bottom="//@tiles.427" left="//@tiles.393" x="11" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.426" right="//@tiles.460" bottom="//@tiles.428" left="//@tiles.394" x="11" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.427" right="//@tiles.461" bottom="//@tiles.396" left="//@tiles.395" x="11" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.461" right="//@tiles.462" bottom="//@tiles.430" left="//@tiles.396" x="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.429" right="//@tiles.463" bottom="//@tiles.431" left="//@tiles.397" x="12" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.430" right="//@tiles.464" bottom="//@tiles.432" left="//@tiles.398" x="12" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.431" right="//@tiles.465" bottom="//@tiles.433" left="//@tiles.399" x="12" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.432" right="//@tiles.466" bottom="//@tiles.434" left="//@tiles.400" x="12" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.433" right="//@tiles.467" bottom="//@tiles.435" left="//@tiles.401" x="12" y="5" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.434" right="//@tiles.468" bottom="//@tiles.436" left="//@tiles.402" x="12" y="6" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.435" right="//@tiles.469" bottom="//@tiles.437" left="//@tiles.403" x="12" y="7" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.436" right="//@tiles.470" bottom="//@tiles.438" left="//@tiles.404" x="12" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.437" right="//@tiles.471" bottom="//@tiles.439" left="//@tiles.405" x="12" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.438" right="//@tiles.472" bottom="//@tiles.440" left="//@tiles.406" x="12" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.439" right="//@tiles.473" bottom="//@tiles.441" left="//@tiles.407" x="12" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.440" right="//@tiles.474" bottom="//@tiles.442" left="//@tiles.408" x="12" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.441" right="//@tiles.475" bottom="//@tiles.443" left="//@tiles.409" x="12" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.442" right="//@tiles.476" bottom="//@tiles.444" left="//@tiles.410" x="12" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.443" right="//@tiles.990" bottom="//@tiles.989" left="//@tiles.411" x="12" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.998" right="//@tiles.477" bottom="//@tiles.446" left="//@tiles.412" x="12" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.445" right="//@tiles.478" bottom="//@tiles.447" left="//@tiles.413" x="12" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.446" right="//@tiles.479" bottom="//@tiles.448" left="//@tiles.414" x="12" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.447" right="//@tiles.480" bottom="//@tiles.449" left="//@tiles.415" x="12" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.448" right="//@tiles.481" bottom="//@tiles.450" left="//@tiles.416" x="12" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.449" right="//@tiles.482" bottom="//@tiles.451" left="//@tiles.417" x="12" y="24" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.450" right="//@tiles.483" bottom="//@tiles.452" left="//@tiles.418" x="12" y="25" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.451" right="//@tiles.484" bottom="//@tiles.453" left="//@tiles.419" x="12" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.452" right="//@tiles.485" bottom="//@tiles.454" left="//@tiles.420" x="12" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.453" right="//@tiles.486" bottom="//@tiles.455" left="//@tiles.421" x="12" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.454" right="//@tiles.487" bottom="//@tiles.456" left="//@tiles.422" x="12" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.455" right="//@tiles.488" bottom="//@tiles.457" left="//@tiles.423" x="12" y="30" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.456" right="//@tiles.489" bottom="//@tiles.458" left="//@tiles.424" x="12" y="31" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.457" right="//@tiles.490" bottom="//@tiles.459" left="//@tiles.425" x="12" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.458" right="//@tiles.491" bottom="//@tiles.460" left="//@tiles.426" x="12" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.459" right="//@tiles.492" bottom="//@tiles.461" left="//@tiles.427" x="12" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.460" right="//@tiles.493" bottom="//@tiles.429" left="//@tiles.428" x="12" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.493" right="//@tiles.494" bottom="//@tiles.463" left="//@tiles.429" x="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.462" right="//@tiles.495" bottom="//@tiles.464" left="//@tiles.430" x="13" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.463" right="//@tiles.496" bottom="//@tiles.465" left="//@tiles.431" x="13" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.464" right="//@tiles.497" bottom="//@tiles.466" left="//@tiles.432" x="13" y="3"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.465" right="//@tiles.498" bottom="//@tiles.467" left="//@tiles.433" x="13" y="4"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.466" right="//@tiles.499" bottom="//@tiles.468" left="//@tiles.434" x="13" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.467" right="//@tiles.500" bottom="//@tiles.469" left="//@tiles.435" x="13" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.468" right="//@tiles.501" bottom="//@tiles.470" left="//@tiles.436" x="13" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.469" right="//@tiles.502" bottom="//@tiles.471" left="//@tiles.437" x="13" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.470" right="//@tiles.503" bottom="//@tiles.472" left="//@tiles.438" x="13" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.471" right="//@tiles.504" bottom="//@tiles.473" left="//@tiles.439" x="13" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.472" right="//@tiles.505" bottom="//@tiles.474" left="//@tiles.440" x="13" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.473" right="//@tiles.506" bottom="//@tiles.475" left="//@tiles.441" x="13" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.474" right="//@tiles.507" bottom="//@tiles.476" left="//@tiles.442" x="13" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.475" right="//@tiles.508" bottom="//@tiles.990" left="//@tiles.443" x="13" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.999" right="//@tiles.509" bottom="//@tiles.478" left="//@tiles.445" x="13" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.477" right="//@tiles.510" bottom="//@tiles.479" left="//@tiles.446" x="13" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.478" right="//@tiles.511" bottom="//@tiles.480" left="//@tiles.447" x="13" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.479" right="//@tiles.512" bottom="//@tiles.481" left="//@tiles.448" x="13" y="22"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.480" right="//@tiles.513" bottom="//@tiles.482" left="//@tiles.449" x="13" y="23"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.481" right="//@tiles.514" bottom="//@tiles.483" left="//@tiles.450" x="13" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.482" right="//@tiles.515" bottom="//@tiles.484" left="//@tiles.451" x="13" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.483" right="//@tiles.516" bottom="//@tiles.485" left="//@tiles.452" x="13" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.484" right="//@tiles.517" bottom="//@tiles.486" left="//@tiles.453" x="13" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.485" right="//@tiles.518" bottom="//@tiles.487" left="//@tiles.454" x="13" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.486" right="//@tiles.519" bottom="//@tiles.488" left="//@tiles.455" x="13" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.487" right="//@tiles.520" bottom="//@tiles.489" left="//@tiles.456" x="13" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.488" right="//@tiles.521" bottom="//@tiles.490" left="//@tiles.457" x="13" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.489" right="//@tiles.522" bottom="//@tiles.491" left="//@tiles.458" x="13" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.490" right="//@tiles.523" bottom="//@tiles.492" left="//@tiles.459" x="13" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.491" right="//@tiles.524" bottom="//@tiles.493" left="//@tiles.460" x="13" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.492" right="//@tiles.525" bottom="//@tiles.462" left="//@tiles.461" x="13" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.525" right="//@tiles.526" bottom="//@tiles.495" left="//@tiles.462" x="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.494" right="//@tiles.527" bottom="//@tiles.496" left="//@tiles.463" x="14" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.495" right="//@tiles.528" bottom="//@tiles.497" left="//@tiles.464" x="14" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.496" right="//@tiles.529" bottom="//@tiles.498" left="//@tiles.465" x="14" y="3"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.497" right="//@tiles.530" bottom="//@tiles.499" left="//@tiles.466" x="14" y="4"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.498" right="//@tiles.531" bottom="//@tiles.500" left="//@tiles.467" x="14" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.499" right="//@tiles.532" bottom="//@tiles.501" left="//@tiles.468" x="14" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.500" right="//@tiles.533" bottom="//@tiles.502" left="//@tiles.469" x="14" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.501" right="//@tiles.534" bottom="//@tiles.503" left="//@tiles.470" x="14" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.502" right="//@tiles.535" bottom="//@tiles.504" left="//@tiles.471" x="14" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.503" right="//@tiles.536" bottom="//@tiles.505" left="//@tiles.472" x="14" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.504" right="//@tiles.537" bottom="//@tiles.506" left="//@tiles.473" x="14" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.505" right="//@tiles.538" bottom="//@tiles.507" left="//@tiles.474" x="14" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.506" right="//@tiles.539" bottom="//@tiles.508" left="//@tiles.475" x="14" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.507" right="//@tiles.540" bottom="//@tiles.991" left="//@tiles.476" x="14" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.1000" right="//@tiles.542" bottom="//@tiles.510" left="//@tiles.477" x="14" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.509" right="//@tiles.543" bottom="//@tiles.511" left="//@tiles.478" x="14" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.510" right="//@tiles.544" bottom="//@tiles.512" left="//@tiles.479" x="14" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.511" right="//@tiles.545" bottom="//@tiles.513" left="//@tiles.480" x="14" y="22"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.512" right="//@tiles.546" bottom="//@tiles.514" left="//@tiles.481" x="14" y="23"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.513" right="//@tiles.547" bottom="//@tiles.515" left="//@tiles.482" x="14" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.514" right="//@tiles.548" bottom="//@tiles.516" left="//@tiles.483" x="14" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.515" right="//@tiles.549" bottom="//@tiles.517" left="//@tiles.484" x="14" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.516" right="//@tiles.550" bottom="//@tiles.518" left="//@tiles.485" x="14" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.517" right="//@tiles.551" bottom="//@tiles.519" left="//@tiles.486" x="14" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.518" right="//@tiles.552" bottom="//@tiles.520" left="//@tiles.487" x="14" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.519" right="//@tiles.553" bottom="//@tiles.521" left="//@tiles.488" x="14" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.520" right="//@tiles.554" bottom="//@tiles.522" left="//@tiles.489" x="14" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.521" right="//@tiles.555" bottom="//@tiles.523" left="//@tiles.490" x="14" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.522" right="//@tiles.556" bottom="//@tiles.524" left="//@tiles.491" x="14" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.523" right="//@tiles.557" bottom="//@tiles.525" left="//@tiles.492" x="14" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.524" right="//@tiles.558" bottom="//@tiles.494" left="//@tiles.493" x="14" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.558" right="//@tiles.559" bottom="//@tiles.527" left="//@tiles.494" x="15"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.526" right="//@tiles.560" bottom="//@tiles.528" left="//@tiles.495" x="15" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.527" right="//@tiles.561" bottom="//@tiles.529" left="//@tiles.496" x="15" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.528" right="//@tiles.562" bottom="//@tiles.530" left="//@tiles.497" x="15" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.529" right="//@tiles.563" bottom="//@tiles.531" left="//@tiles.498" x="15" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.530" right="//@tiles.564" bottom="//@tiles.532" left="//@tiles.499" x="15" y="5" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.531" right="//@tiles.565" bottom="//@tiles.533" left="//@tiles.500" x="15" y="6" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.532" right="//@tiles.566" bottom="//@tiles.534" left="//@tiles.501" x="15" y="7" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.533" right="//@tiles.567" bottom="//@tiles.535" left="//@tiles.502" x="15" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.534" right="//@tiles.568" bottom="//@tiles.536" left="//@tiles.503" x="15" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.535" right="//@tiles.569" bottom="//@tiles.537" left="//@tiles.504" x="15" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.536" right="//@tiles.570" bottom="//@tiles.538" left="//@tiles.505" x="15" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.537" right="//@tiles.571" bottom="//@tiles.539" left="//@tiles.506" x="15" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.538" right="//@tiles.572" bottom="//@tiles.540" left="//@tiles.507" x="15" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.539" right="//@tiles.573" bottom="//@tiles.541" left="//@tiles.508" x="15" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.540" right="//@tiles.574" bottom="//@tiles.1005" left="//@tiles.991" x="15" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.1001" right="//@tiles.575" bottom="//@tiles.543" left="//@tiles.509" x="15" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.542" right="//@tiles.576" bottom="//@tiles.544" left="//@tiles.510" x="15" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.543" right="//@tiles.577" bottom="//@tiles.545" left="//@tiles.511" x="15" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.544" right="//@tiles.578" bottom="//@tiles.546" left="//@tiles.512" x="15" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.545" right="//@tiles.579" bottom="//@tiles.547" left="//@tiles.513" x="15" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.546" right="//@tiles.580" bottom="//@tiles.548" left="//@tiles.514" x="15" y="24" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.547" right="//@tiles.581" bottom="//@tiles.549" left="//@tiles.515" x="15" y="25" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.548" right="//@tiles.582" bottom="//@tiles.550" left="//@tiles.516" x="15" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.549" right="//@tiles.583" bottom="//@tiles.551" left="//@tiles.517" x="15" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.550" right="//@tiles.584" bottom="//@tiles.552" left="//@tiles.518" x="15" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.551" right="//@tiles.585" bottom="//@tiles.553" left="//@tiles.519" x="15" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.552" right="//@tiles.586" bottom="//@tiles.554" left="//@tiles.520" x="15" y="30" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.553" right="//@tiles.587" bottom="//@tiles.555" left="//@tiles.521" x="15" y="31" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.554" right="//@tiles.588" bottom="//@tiles.556" left="//@tiles.522" x="15" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.555" right="//@tiles.589" bottom="//@tiles.557" left="//@tiles.523" x="15" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.556" right="//@tiles.590" bottom="//@tiles.558" left="//@tiles.524" x="15" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.557" right="//@tiles.591" bottom="//@tiles.526" left="//@tiles.525" x="15" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.591" right="//@tiles.592" bottom="//@tiles.560" left="//@tiles.526" x="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.559" right="//@tiles.593" bottom="//@tiles.561" left="//@tiles.527" x="16" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.560" right="//@tiles.594" bottom="//@tiles.562" left="//@tiles.528" x="16" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.561" right="//@tiles.595" bottom="//@tiles.563" left="//@tiles.529" x="16" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.562" right="//@tiles.596" bottom="//@tiles.564" left="//@tiles.530" x="16" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.563" right="//@tiles.597" bottom="//@tiles.565" left="//@tiles.531" x="16" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.564" right="//@tiles.598" bottom="//@tiles.566" left="//@tiles.532" x="16" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.565" right="//@tiles.599" bottom="//@tiles.567" left="//@tiles.533" x="16" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.566" right="//@tiles.600" bottom="//@tiles.568" left="//@tiles.534" x="16" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.567" right="//@tiles.601" bottom="//@tiles.569" left="//@tiles.535" x="16" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.568" right="//@tiles.602" bottom="//@tiles.570" left="//@tiles.536" x="16" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.569" right="//@tiles.603" bottom="//@tiles.571" left="//@tiles.537" x="16" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.570" right="//@tiles.604" bottom="//@tiles.572" left="//@tiles.538" x="16" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.571" right="//@tiles.605" bottom="//@tiles.573" left="//@tiles.539" x="16" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.572" right="//@tiles.606" bottom="//@tiles.574" left="//@tiles.540" x="16" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.573" right="//@tiles.607" bottom="//@tiles.1004" left="//@tiles.541" x="16" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.1002" right="//@tiles.611" bottom="//@tiles.576" left="//@tiles.542" x="16" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.575" right="//@tiles.612" bottom="//@tiles.577" left="//@tiles.543" x="16" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.576" right="//@tiles.613" bottom="//@tiles.578" left="//@tiles.544" x="16" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.577" right="//@tiles.614" bottom="//@tiles.579" left="//@tiles.545" x="16" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.578" right="//@tiles.615" bottom="//@tiles.580" left="//@tiles.546" x="16" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.579" right="//@tiles.616" bottom="//@tiles.581" left="//@tiles.547" x="16" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.580" right="//@tiles.617" bottom="//@tiles.582" left="//@tiles.548" x="16" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.581" right="//@tiles.618" bottom="//@tiles.583" left="//@tiles.549" x="16" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.582" right="//@tiles.619" bottom="//@tiles.584" left="//@tiles.550" x="16" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.583" right="//@tiles.620" bottom="//@tiles.585" left="//@tiles.551" x="16" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.584" right="//@tiles.621" bottom="//@tiles.586" left="//@tiles.552" x="16" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.585" right="//@tiles.622" bottom="//@tiles.587" left="//@tiles.553" x="16" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.586" right="//@tiles.623" bottom="//@tiles.588" left="//@tiles.554" x="16" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.587" right="//@tiles.624" bottom="//@tiles.589" left="//@tiles.555" x="16" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.588" right="//@tiles.625" bottom="//@tiles.590" left="//@tiles.556" x="16" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.589" right="//@tiles.626" bottom="//@tiles.591" left="//@tiles.557" x="16" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.590" right="//@tiles.627" bottom="//@tiles.559" left="//@tiles.558" x="16" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.627" right="//@tiles.628" bottom="//@tiles.593" left="//@tiles.559" x="17"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.592" right="//@tiles.629" bottom="//@tiles.594" left="//@tiles.560" x="17" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.593" right="//@tiles.630" bottom="//@tiles.595" left="//@tiles.561" x="17" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.594" right="//@tiles.631" bottom="//@tiles.596" left="//@tiles.562" x="17" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.595" right="//@tiles.632" bottom="//@tiles.597" left="//@tiles.563" x="17" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.596" right="//@tiles.633" bottom="//@tiles.598" left="//@tiles.564" x="17" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.597" right="//@tiles.634" bottom="//@tiles.599" left="//@tiles.565" x="17" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.598" right="//@tiles.635" bottom="//@tiles.600" left="//@tiles.566" x="17" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.599" right="//@tiles.636" bottom="//@tiles.601" left="//@tiles.567" x="17" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.600" right="//@tiles.637" bottom="//@tiles.602" left="//@tiles.568" x="17" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.601" right="//@tiles.638" bottom="//@tiles.603" left="//@tiles.569" x="17" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.602" right="//@tiles.639" bottom="//@tiles.604" left="//@tiles.570" x="17" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.603" right="//@tiles.640" bottom="//@tiles.605" left="//@tiles.571" x="17" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.604" right="//@tiles.641" bottom="//@tiles.606" left="//@tiles.572" x="17" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.605" right="//@tiles.642" bottom="//@tiles.607" left="//@tiles.573" x="17" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.606" right="//@tiles.643" bottom="//@tiles.608" left="//@tiles.574" x="17" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.607" right="//@tiles.644" bottom="//@tiles.609" left="//@tiles.1004" x="17" y="16"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.608" right="//@tiles.645" bottom="//@tiles.610" left="//@tiles.1003" x="17" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.609" right="//@tiles.646" bottom="//@tiles.611" left="//@tiles.1002" x="17" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.610" right="//@tiles.647" bottom="//@tiles.612" left="//@tiles.575" x="17" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.611" right="//@tiles.648" bottom="//@tiles.613" left="//@tiles.576" x="17" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.612" right="//@tiles.649" bottom="//@tiles.614" left="//@tiles.577" x="17" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.613" right="//@tiles.650" bottom="//@tiles.615" left="//@tiles.578" x="17" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.614" right="//@tiles.651" bottom="//@tiles.616" left="//@tiles.579" x="17" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.615" right="//@tiles.652" bottom="//@tiles.617" left="//@tiles.580" x="17" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.616" right="//@tiles.653" bottom="//@tiles.618" left="//@tiles.581" x="17" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.617" right="//@tiles.654" bottom="//@tiles.619" left="//@tiles.582" x="17" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.618" right="//@tiles.655" bottom="//@tiles.620" left="//@tiles.583" x="17" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.619" right="//@tiles.656" bottom="//@tiles.621" left="//@tiles.584" x="17" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.620" right="//@tiles.657" bottom="//@tiles.622" left="//@tiles.585" x="17" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.621" right="//@tiles.658" bottom="//@tiles.623" left="//@tiles.586" x="17" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.622" right="//@tiles.659" bottom="//@tiles.624" left="//@tiles.587" x="17" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.623" right="//@tiles.660" bottom="//@tiles.625" left="//@tiles.588" x="17" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.624" right="//@tiles.661" bottom="//@tiles.626" left="//@tiles.589" x="17" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.625" right="//@tiles.662" bottom="//@tiles.627" left="//@tiles.590" x="17" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.626" right="//@tiles.663" bottom="//@tiles.592" left="//@tiles.591" x="17" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.663" right="//@tiles.664" bottom="//@tiles.629" left="//@tiles.592" x="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.628" right="//@tiles.665" bottom="//@tiles.630" left="//@tiles.593" x="18" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.629" right="//@tiles.666" bottom="//@tiles.631" left="//@tiles.594" x="18" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.630" right="//@tiles.667" bottom="//@tiles.632" left="//@tiles.595" x="18" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.631" right="//@tiles.668" bottom="//@tiles.633" left="//@tiles.596" x="18" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.632" right="//@tiles.669" bottom="//@tiles.634" left="//@tiles.597" x="18" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.633" right="//@tiles.670" bottom="//@tiles.635" left="//@tiles.598" x="18" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.634" right="//@tiles.671" bottom="//@tiles.636" left="//@tiles.599" x="18" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.635" right="//@tiles.672" bottom="//@tiles.637" left="//@tiles.600" x="18" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.636" right="//@tiles.673" bottom="//@tiles.638" left="//@tiles.601" x="18" y="9" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.637" right="//@tiles.674" bottom="//@tiles.639" left="//@tiles.602" x="18" y="10" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.638" right="//@tiles.675" bottom="//@tiles.640" left="//@tiles.603" x="18" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.639" right="//@tiles.676" bottom="//@tiles.641" left="//@tiles.604" x="18" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.640" right="//@tiles.677" bottom="//@tiles.642" left="//@tiles.605" x="18" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.641" right="//@tiles.678" bottom="//@tiles.643" left="//@tiles.606" x="18" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.642" right="//@tiles.679" bottom="//@tiles.644" left="//@tiles.607" x="18" y="15"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.643" right="//@tiles.680" bottom="//@tiles.645" left="//@tiles.608" x="18" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.644" right="//@tiles.681" bottom="//@tiles.646" left="//@tiles.609" x="18" y="17"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.645" right="//@tiles.682" bottom="//@tiles.647" left="//@tiles.610" x="18" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.646" right="//@tiles.683" bottom="//@tiles.648" left="//@tiles.611" x="18" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.647" right="//@tiles.684" bottom="//@tiles.649" left="//@tiles.612" x="18" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.648" right="//@tiles.685" bottom="//@tiles.650" left="//@tiles.613" x="18" y="21"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.649" right="//@tiles.686" bottom="//@tiles.651" left="//@tiles.614" x="18" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.650" right="//@tiles.687" bottom="//@tiles.652" left="//@tiles.615" x="18" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.651" right="//@tiles.688" bottom="//@tiles.653" left="//@tiles.616" x="18" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.652" right="//@tiles.689" bottom="//@tiles.654" left="//@tiles.617" x="18" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.653" right="//@tiles.690" bottom="//@tiles.655" left="//@tiles.618" x="18" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.654" right="//@tiles.691" bottom="//@tiles.656" left="//@tiles.619" x="18" y="27" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.655" right="//@tiles.692" bottom="//@tiles.657" left="//@tiles.620" x="18" y="28" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.656" right="//@tiles.693" bottom="//@tiles.658" left="//@tiles.621" x="18" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.657" right="//@tiles.694" bottom="//@tiles.659" left="//@tiles.622" x="18" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.658" right="//@tiles.695" bottom="//@tiles.660" left="//@tiles.623" x="18" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.659" right="//@tiles.696" bottom="//@tiles.661" left="//@tiles.624" x="18" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.660" right="//@tiles.697" bottom="//@tiles.662" left="//@tiles.625" x="18" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.661" right="//@tiles.698" bottom="//@tiles.663" left="//@tiles.626" x="18" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.662" right="//@tiles.699" bottom="//@tiles.628" left="//@tiles.627" x="18" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.699" right="//@tiles.700" bottom="//@tiles.665" left="//@tiles.628" x="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.664" right="//@tiles.701" bottom="//@tiles.666" left="//@tiles.629" x="19" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.665" right="//@tiles.702" bottom="//@tiles.667" left="//@tiles.630" x="19" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.666" right="//@tiles.703" bottom="//@tiles.668" left="//@tiles.631" x="19" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.667" right="//@tiles.704" bottom="//@tiles.669" left="//@tiles.632" x="19" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.668" right="//@tiles.705" bottom="//@tiles.670" left="//@tiles.633" x="19" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.669" right="//@tiles.706" bottom="//@tiles.671" left="//@tiles.634" x="19" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.670" right="//@tiles.707" bottom="//@tiles.672" left="//@tiles.635" x="19" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.671" right="//@tiles.708" bottom="//@tiles.673" left="//@tiles.636" x="19" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.672" right="//@tiles.709" bottom="//@tiles.674" left="//@tiles.637" x="19" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.673" right="//@tiles.710" bottom="//@tiles.675" left="//@tiles.638" x="19" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.674" right="//@tiles.711" bottom="//@tiles.676" left="//@tiles.639" x="19" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.675" right="//@tiles.712" bottom="//@tiles.677" left="//@tiles.640" x="19" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.676" right="//@tiles.713" bottom="//@tiles.678" left="//@tiles.641" x="19" y="13"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.677" right="//@tiles.714" bottom="//@tiles.679" left="//@tiles.642" x="19" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.678" right="//@tiles.715" bottom="//@tiles.680" left="//@tiles.643" x="19" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.679" right="//@tiles.716" bottom="//@tiles.681" left="//@tiles.644" x="19" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.680" right="//@tiles.717" bottom="//@tiles.682" left="//@tiles.645" x="19" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.681" right="//@tiles.718" bottom="//@tiles.683" left="//@tiles.646" x="19" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.682" right="//@tiles.719" bottom="//@tiles.684" left="//@tiles.647" x="19" y="19"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.683" right="//@tiles.720" bottom="//@tiles.685" left="//@tiles.648" x="19" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.684" right="//@tiles.721" bottom="//@tiles.686" left="//@tiles.649" x="19" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.685" right="//@tiles.722" bottom="//@tiles.687" left="//@tiles.650" x="19" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.686" right="//@tiles.723" bottom="//@tiles.688" left="//@tiles.651" x="19" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.687" right="//@tiles.724" bottom="//@tiles.689" left="//@tiles.652" x="19" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.688" right="//@tiles.725" bottom="//@tiles.690" left="//@tiles.653" x="19" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.689" right="//@tiles.726" bottom="//@tiles.691" left="//@tiles.654" x="19" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.690" right="//@tiles.727" bottom="//@tiles.692" left="//@tiles.655" x="19" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.691" right="//@tiles.728" bottom="//@tiles.693" left="//@tiles.656" x="19" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.692" right="//@tiles.729" bottom="//@tiles.694" left="//@tiles.657" x="19" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.693" right="//@tiles.730" bottom="//@tiles.695" left="//@tiles.658" x="19" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.694" right="//@tiles.731" bottom="//@tiles.696" left="//@tiles.659" x="19" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.695" right="//@tiles.732" bottom="//@tiles.697" left="//@tiles.660" x="19" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.696" right="//@tiles.733" bottom="//@tiles.698" left="//@tiles.661" x="19" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.697" right="//@tiles.734" bottom="//@tiles.699" left="//@tiles.662" x="19" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.698" right="//@tiles.735" bottom="//@tiles.664" left="//@tiles.663" x="19" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.735" right="//@tiles.736" bottom="//@tiles.701" left="//@tiles.664" x="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.700" right="//@tiles.737" bottom="//@tiles.702" left="//@tiles.665" x="20" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.701" right="//@tiles.738" bottom="//@tiles.703" left="//@tiles.666" x="20" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.702" right="//@tiles.739" bottom="//@tiles.704" left="//@tiles.667" x="20" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.703" right="//@tiles.740" bottom="//@tiles.705" left="//@tiles.668" x="20" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.704" right="//@tiles.741" bottom="//@tiles.706" left="//@tiles.669" x="20" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.705" right="//@tiles.742" bottom="//@tiles.707" left="//@tiles.670" x="20" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.706" right="//@tiles.743" bottom="//@tiles.708" left="//@tiles.671" x="20" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.707" right="//@tiles.744" bottom="//@tiles.709" left="//@tiles.672" x="20" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.708" right="//@tiles.745" bottom="//@tiles.710" left="//@tiles.673" x="20" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.709" right="//@tiles.746" bottom="//@tiles.711" left="//@tiles.674" x="20" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.710" right="//@tiles.747" bottom="//@tiles.712" left="//@tiles.675" x="20" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.711" right="//@tiles.748" bottom="//@tiles.713" left="//@tiles.676" x="20" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.712" right="//@tiles.749" bottom="//@tiles.714" left="//@tiles.677" x="20" y="13"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.713" right="//@tiles.750" bottom="//@tiles.715" left="//@tiles.678" x="20" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.714" right="//@tiles.751" bottom="//@tiles.716" left="//@tiles.679" x="20" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.715" right="//@tiles.752" bottom="//@tiles.717" left="//@tiles.680" x="20" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.716" right="//@tiles.753" bottom="//@tiles.718" left="//@tiles.681" x="20" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.717" right="//@tiles.754" bottom="//@tiles.719" left="//@tiles.682" x="20" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.718" right="//@tiles.755" bottom="//@tiles.720" left="//@tiles.683" x="20" y="19"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.719" right="//@tiles.756" bottom="//@tiles.721" left="//@tiles.684" x="20" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.720" right="//@tiles.757" bottom="//@tiles.722" left="//@tiles.685" x="20" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.721" right="//@tiles.758" bottom="//@tiles.723" left="//@tiles.686" x="20" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.722" right="//@tiles.759" bottom="//@tiles.724" left="//@tiles.687" x="20" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.723" right="//@tiles.760" bottom="//@tiles.725" left="//@tiles.688" x="20" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.724" right="//@tiles.761" bottom="//@tiles.726" left="//@tiles.689" x="20" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.725" right="//@tiles.762" bottom="//@tiles.727" left="//@tiles.690" x="20" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.726" right="//@tiles.763" bottom="//@tiles.728" left="//@tiles.691" x="20" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.727" right="//@tiles.764" bottom="//@tiles.729" left="//@tiles.692" x="20" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.728" right="//@tiles.765" bottom="//@tiles.730" left="//@tiles.693" x="20" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.729" right="//@tiles.766" bottom="//@tiles.731" left="//@tiles.694" x="20" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.730" right="//@tiles.767" bottom="//@tiles.732" left="//@tiles.695" x="20" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.731" right="//@tiles.768" bottom="//@tiles.733" left="//@tiles.696" x="20" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.732" right="//@tiles.769" bottom="//@tiles.734" left="//@tiles.697" x="20" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.733" right="//@tiles.770" bottom="//@tiles.735" left="//@tiles.698" x="20" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.734" right="//@tiles.771" bottom="//@tiles.700" left="//@tiles.699" x="20" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.771" right="//@tiles.772" bottom="//@tiles.737" left="//@tiles.700" x="21"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.736" right="//@tiles.773" bottom="//@tiles.738" left="//@tiles.701" x="21" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.737" right="//@tiles.774" bottom="//@tiles.739" left="//@tiles.702" x="21" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.738" right="//@tiles.775" bottom="//@tiles.740" left="//@tiles.703" x="21" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.739" right="//@tiles.776" bottom="//@tiles.741" left="//@tiles.704" x="21" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.740" right="//@tiles.777" bottom="//@tiles.742" left="//@tiles.705" x="21" y="5" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.741" right="//@tiles.778" bottom="//@tiles.743" left="//@tiles.706" x="21" y="6" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.742" right="//@tiles.779" bottom="//@tiles.744" left="//@tiles.707" x="21" y="7" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.743" right="//@tiles.780" bottom="//@tiles.745" left="//@tiles.708" x="21" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.744" right="//@tiles.781" bottom="//@tiles.746" left="//@tiles.709" x="21" y="9" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.745" right="//@tiles.782" bottom="//@tiles.747" left="//@tiles.710" x="21" y="10" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.746" right="//@tiles.783" bottom="//@tiles.748" left="//@tiles.711" x="21" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.747" right="//@tiles.784" bottom="//@tiles.749" left="//@tiles.712" x="21" y="12" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.748" right="//@tiles.785" bottom="//@tiles.750" left="//@tiles.713" x="21" y="13" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.749" right="//@tiles.786" bottom="//@tiles.751" left="//@tiles.714" x="21" y="14" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.750" right="//@tiles.787" bottom="//@tiles.752" left="//@tiles.715" x="21" y="15" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.751" right="//@tiles.788" bottom="//@tiles.753" left="//@tiles.716" x="21" y="16" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.752" right="//@tiles.789" bottom="//@tiles.754" left="//@tiles.717" x="21" y="17" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.753" right="//@tiles.790" bottom="//@tiles.755" left="//@tiles.718" x="21" y="18" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.754" right="//@tiles.791" bottom="//@tiles.756" left="//@tiles.719" x="21" y="19" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.755" right="//@tiles.792" bottom="//@tiles.757" left="//@tiles.720" x="21" y="20" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.756" right="//@tiles.793" bottom="//@tiles.758" left="//@tiles.721" x="21" y="21" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.757" right="//@tiles.794" bottom="//@tiles.759" left="//@tiles.722" x="21" y="22" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.758" right="//@tiles.795" bottom="//@tiles.760" left="//@tiles.723" x="21" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.759" right="//@tiles.796" bottom="//@tiles.761" left="//@tiles.724" x="21" y="24" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.760" right="//@tiles.797" bottom="//@tiles.762" left="//@tiles.725" x="21" y="25" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.761" right="//@tiles.798" bottom="//@tiles.763" left="//@tiles.726" x="21" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.762" right="//@tiles.799" bottom="//@tiles.764" left="//@tiles.727" x="21" y="27" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.763" right="//@tiles.800" bottom="//@tiles.765" left="//@tiles.728" x="21" y="28" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.764" right="//@tiles.801" bottom="//@tiles.766" left="//@tiles.729" x="21" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.765" right="//@tiles.802" bottom="//@tiles.767" left="//@tiles.730" x="21" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.766" right="//@tiles.803" bottom="//@tiles.768" left="//@tiles.731" x="21" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.767" right="//@tiles.804" bottom="//@tiles.769" left="//@tiles.732" x="21" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.768" right="//@tiles.805" bottom="//@tiles.770" left="//@tiles.733" x="21" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.769" right="//@tiles.806" bottom="//@tiles.771" left="//@tiles.734" x="21" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.770" right="//@tiles.807" bottom="//@tiles.736" left="//@tiles.735" x="21" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.807" right="//@tiles.808" bottom="//@tiles.773" left="//@tiles.736" x="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.772" right="//@tiles.809" bottom="//@tiles.774" left="//@tiles.737" x="22" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.773" right="//@tiles.810" bottom="//@tiles.775" left="//@tiles.738" x="22" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.774" right="//@tiles.811" bottom="//@tiles.776" left="//@tiles.739" x="22" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.775" right="//@tiles.812" bottom="//@tiles.777" left="//@tiles.740" x="22" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.776" right="//@tiles.813" bottom="//@tiles.778" left="//@tiles.741" x="22" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.777" right="//@tiles.814" bottom="//@tiles.779" left="//@tiles.742" x="22" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.778" right="//@tiles.815" bottom="//@tiles.780" left="//@tiles.743" x="22" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.779" right="//@tiles.816" bottom="//@tiles.781" left="//@tiles.744" x="22" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.780" right="//@tiles.817" bottom="//@tiles.782" left="//@tiles.745" x="22" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.781" right="//@tiles.818" bottom="//@tiles.783" left="//@tiles.746" x="22" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.782" right="//@tiles.819" bottom="//@tiles.784" left="//@tiles.747" x="22" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.783" right="//@tiles.820" bottom="//@tiles.785" left="//@tiles.748" x="22" y="12"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.784" right="//@tiles.821" bottom="//@tiles.786" left="//@tiles.749" x="22" y="13"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.785" right="//@tiles.822" bottom="//@tiles.787" left="//@tiles.750" x="22" y="14"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.786" right="//@tiles.823" bottom="//@tiles.788" left="//@tiles.751" x="22" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.787" right="//@tiles.824" bottom="//@tiles.789" left="//@tiles.752" x="22" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.788" right="//@tiles.825" bottom="//@tiles.790" left="//@tiles.753" x="22" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.789" right="//@tiles.826" bottom="//@tiles.791" left="//@tiles.754" x="22" y="18"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.790" right="//@tiles.827" bottom="//@tiles.792" left="//@tiles.755" x="22" y="19"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.791" right="//@tiles.828" bottom="//@tiles.793" left="//@tiles.756" x="22" y="20"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.792" right="//@tiles.829" bottom="//@tiles.794" left="//@tiles.757" x="22" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.793" right="//@tiles.830" bottom="//@tiles.795" left="//@tiles.758" x="22" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.794" right="//@tiles.831" bottom="//@tiles.796" left="//@tiles.759" x="22" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.795" right="//@tiles.832" bottom="//@tiles.797" left="//@tiles.760" x="22" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.796" right="//@tiles.833" bottom="//@tiles.798" left="//@tiles.761" x="22" y="25"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.797" right="//@tiles.834" bottom="//@tiles.799" left="//@tiles.762" x="22" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.798" right="//@tiles.835" bottom="//@tiles.800" left="//@tiles.763" x="22" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.799" right="//@tiles.836" bottom="//@tiles.801" left="//@tiles.764" x="22" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.800" right="//@tiles.837" bottom="//@tiles.802" left="//@tiles.765" x="22" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.801" right="//@tiles.838" bottom="//@tiles.803" left="//@tiles.766" x="22" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.802" right="//@tiles.839" bottom="//@tiles.804" left="//@tiles.767" x="22" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.803" right="//@tiles.840" bottom="//@tiles.805" left="//@tiles.768" x="22" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.804" right="//@tiles.841" bottom="//@tiles.806" left="//@tiles.769" x="22" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.805" right="//@tiles.842" bottom="//@tiles.807" left="//@tiles.770" x="22" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.806" right="//@tiles.843" bottom="//@tiles.772" left="//@tiles.771" x="22" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.843" right="//@tiles.844" bottom="//@tiles.809" left="//@tiles.772" x="23"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.808" right="//@tiles.845" bottom="//@tiles.810" left="//@tiles.773" x="23" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.809" right="//@tiles.846" bottom="//@tiles.811" left="//@tiles.774" x="23" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.810" right="//@tiles.847" bottom="//@tiles.812" left="//@tiles.775" x="23" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.811" right="//@tiles.848" bottom="//@tiles.813" left="//@tiles.776" x="23" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.812" right="//@tiles.849" bottom="//@tiles.814" left="//@tiles.777" x="23" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.813" right="//@tiles.850" bottom="//@tiles.815" left="//@tiles.778" x="23" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.814" right="//@tiles.851" bottom="//@tiles.816" left="//@tiles.779" x="23" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.815" right="//@tiles.852" bottom="//@tiles.817" left="//@tiles.780" x="23" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.816" right="//@tiles.853" bottom="//@tiles.818" left="//@tiles.781" x="23" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.817" right="//@tiles.854" bottom="//@tiles.819" left="//@tiles.782" x="23" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.818" right="//@tiles.855" bottom="//@tiles.820" left="//@tiles.783" x="23" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.819" right="//@tiles.856" bottom="//@tiles.821" left="//@tiles.784" x="23" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.820" right="//@tiles.857" bottom="//@tiles.822" left="//@tiles.785" x="23" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.821" right="//@tiles.858" bottom="//@tiles.823" left="//@tiles.786" x="23" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.822" right="//@tiles.859" bottom="//@tiles.824" left="//@tiles.787" x="23" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.823" right="//@tiles.860" bottom="//@tiles.825" left="//@tiles.788" x="23" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.824" right="//@tiles.861" bottom="//@tiles.826" left="//@tiles.789" x="23" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.825" right="//@tiles.862" bottom="//@tiles.827" left="//@tiles.790" x="23" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.826" right="//@tiles.863" bottom="//@tiles.828" left="//@tiles.791" x="23" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.827" right="//@tiles.864" bottom="//@tiles.829" left="//@tiles.792" x="23" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.828" right="//@tiles.865" bottom="//@tiles.830" left="//@tiles.793" x="23" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.829" right="//@tiles.866" bottom="//@tiles.831" left="//@tiles.794" x="23" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.830" right="//@tiles.867" bottom="//@tiles.832" left="//@tiles.795" x="23" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.831" right="//@tiles.868" bottom="//@tiles.833" left="//@tiles.796" x="23" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.832" right="//@tiles.869" bottom="//@tiles.834" left="//@tiles.797" x="23" y="25"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.833" right="//@tiles.870" bottom="//@tiles.835" left="//@tiles.798" x="23" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.834" right="//@tiles.871" bottom="//@tiles.836" left="//@tiles.799" x="23" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.835" right="//@tiles.872" bottom="//@tiles.837" left="//@tiles.800" x="23" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.836" right="//@tiles.873" bottom="//@tiles.838" left="//@tiles.801" x="23" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.837" right="//@tiles.874" bottom="//@tiles.839" left="//@tiles.802" x="23" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.838" right="//@tiles.875" bottom="//@tiles.840" left="//@tiles.803" x="23" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.839" right="//@tiles.876" bottom="//@tiles.841" left="//@tiles.804" x="23" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.840" right="//@tiles.877" bottom="//@tiles.842" left="//@tiles.805" x="23" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.841" right="//@tiles.878" bottom="//@tiles.843" left="//@tiles.806" x="23" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.842" right="//@tiles.879" bottom="//@tiles.808" left="//@tiles.807" x="23" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.879" right="//@tiles.880" bottom="//@tiles.845" left="//@tiles.808" x="24"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.844" right="//@tiles.881" bottom="//@tiles.846" left="//@tiles.809" x="24" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.845" right="//@tiles.882" bottom="//@tiles.847" left="//@tiles.810" x="24" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.846" right="//@tiles.883" bottom="//@tiles.848" left="//@tiles.811" x="24" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.847" right="//@tiles.884" bottom="//@tiles.849" left="//@tiles.812" x="24" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.848" right="//@tiles.885" bottom="//@tiles.850" left="//@tiles.813" x="24" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.849" right="//@tiles.886" bottom="//@tiles.851" left="//@tiles.814" x="24" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.850" right="//@tiles.887" bottom="//@tiles.852" left="//@tiles.815" x="24" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.851" right="//@tiles.888" bottom="//@tiles.853" left="//@tiles.816" x="24" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.852" right="//@tiles.889" bottom="//@tiles.854" left="//@tiles.817" x="24" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.853" right="//@tiles.890" bottom="//@tiles.855" left="//@tiles.818" x="24" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.854" right="//@tiles.891" bottom="//@tiles.856" left="//@tiles.819" x="24" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.855" right="//@tiles.892" bottom="//@tiles.857" left="//@tiles.820" x="24" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.856" right="//@tiles.893" bottom="//@tiles.858" left="//@tiles.821" x="24" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.857" right="//@tiles.894" bottom="//@tiles.859" left="//@tiles.822" x="24" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.858" right="//@tiles.895" bottom="//@tiles.860" left="//@tiles.823" x="24" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.859" right="//@tiles.896" bottom="//@tiles.861" left="//@tiles.824" x="24" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.860" right="//@tiles.897" bottom="//@tiles.862" left="//@tiles.825" x="24" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.861" right="//@tiles.898" bottom="//@tiles.863" left="//@tiles.826" x="24" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.862" right="//@tiles.899" bottom="//@tiles.864" left="//@tiles.827" x="24" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.863" right="//@tiles.900" bottom="//@tiles.865" left="//@tiles.828" x="24" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.864" right="//@tiles.901" bottom="//@tiles.866" left="//@tiles.829" x="24" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.865" right="//@tiles.902" bottom="//@tiles.867" left="//@tiles.830" x="24" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.866" right="//@tiles.903" bottom="//@tiles.868" left="//@tiles.831" x="24" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.867" right="//@tiles.904" bottom="//@tiles.869" left="//@tiles.832" x="24" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.868" right="//@tiles.905" bottom="//@tiles.870" left="//@tiles.833" x="24" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.869" right="//@tiles.906" bottom="//@tiles.871" left="//@tiles.834" x="24" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.870" right="//@tiles.907" bottom="//@tiles.872" left="//@tiles.835" x="24" y="27" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.871" right="//@tiles.908" bottom="//@tiles.873" left="//@tiles.836" x="24" y="28" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.872" right="//@tiles.909" bottom="//@tiles.874" left="//@tiles.837" x="24" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.873" right="//@tiles.910" bottom="//@tiles.875" left="//@tiles.838" x="24" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.874" right="//@tiles.911" bottom="//@tiles.876" left="//@tiles.839" x="24" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.875" right="//@tiles.912" bottom="//@tiles.877" left="//@tiles.840" x="24" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.876" right="//@tiles.913" bottom="//@tiles.878" left="//@tiles.841" x="24" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.877" right="//@tiles.914" bottom="//@tiles.879" left="//@tiles.842" x="24" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.878" right="//@tiles.915" bottom="//@tiles.844" left="//@tiles.843" x="24" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.915" right="//@tiles.916" bottom="//@tiles.881" left="//@tiles.844" x="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.880" right="//@tiles.917" bottom="//@tiles.882" left="//@tiles.845" x="25" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.881" right="//@tiles.918" bottom="//@tiles.883" left="//@tiles.846" x="25" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.882" right="//@tiles.919" bottom="//@tiles.884" left="//@tiles.847" x="25" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.883" right="//@tiles.920" bottom="//@tiles.885" left="//@tiles.848" x="25" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.884" right="//@tiles.921" bottom="//@tiles.886" left="//@tiles.849" x="25" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.885" right="//@tiles.922" bottom="//@tiles.887" left="//@tiles.850" x="25" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.886" right="//@tiles.923" bottom="//@tiles.888" left="//@tiles.851" x="25" y="7"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.887" right="//@tiles.924" bottom="//@tiles.889" left="//@tiles.852" x="25" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.888" right="//@tiles.925" bottom="//@tiles.890" left="//@tiles.853" x="25" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.889" right="//@tiles.926" bottom="//@tiles.891" left="//@tiles.854" x="25" y="10"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.890" right="//@tiles.927" bottom="//@tiles.892" left="//@tiles.855" x="25" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.891" right="//@tiles.928" bottom="//@tiles.893" left="//@tiles.856" x="25" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.892" right="//@tiles.929" bottom="//@tiles.894" left="//@tiles.857" x="25" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.893" right="//@tiles.930" bottom="//@tiles.895" left="//@tiles.858" x="25" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.894" right="//@tiles.931" bottom="//@tiles.896" left="//@tiles.859" x="25" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.895" right="//@tiles.932" bottom="//@tiles.897" left="//@tiles.860" x="25" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.896" right="//@tiles.933" bottom="//@tiles.898" left="//@tiles.861" x="25" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.897" right="//@tiles.934" bottom="//@tiles.899" left="//@tiles.862" x="25" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.898" right="//@tiles.935" bottom="//@tiles.900" left="//@tiles.863" x="25" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.899" right="//@tiles.936" bottom="//@tiles.901" left="//@tiles.864" x="25" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.900" right="//@tiles.937" bottom="//@tiles.902" left="//@tiles.865" x="25" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.901" right="//@tiles.938" bottom="//@tiles.903" left="//@tiles.866" x="25" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.902" right="//@tiles.939" bottom="//@tiles.904" left="//@tiles.867" x="25" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.903" right="//@tiles.940" bottom="//@tiles.905" left="//@tiles.868" x="25" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.904" right="//@tiles.941" bottom="//@tiles.906" left="//@tiles.869" x="25" y="25"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.905" right="//@tiles.942" bottom="//@tiles.907" left="//@tiles.870" x="25" y="26" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.906" right="//@tiles.943" bottom="//@tiles.908" left="//@tiles.871" x="25" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.907" right="//@tiles.944" bottom="//@tiles.909" left="//@tiles.872" x="25" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.908" right="//@tiles.945" bottom="//@tiles.910" left="//@tiles.873" x="25" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.909" right="//@tiles.946" bottom="//@tiles.911" left="//@tiles.874" x="25" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.910" right="//@tiles.947" bottom="//@tiles.912" left="//@tiles.875" x="25" y="31"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.911" right="//@tiles.948" bottom="//@tiles.913" left="//@tiles.876" x="25" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.912" right="//@tiles.949" bottom="//@tiles.914" left="//@tiles.877" x="25" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.913" right="//@tiles.950" bottom="//@tiles.915" left="//@tiles.878" x="25" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.914" right="//@tiles.951" bottom="//@tiles.880" left="//@tiles.879" x="25" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.951" right="//@tiles.952" bottom="//@tiles.917" left="//@tiles.880" x="26"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.916" right="//@tiles.953" bottom="//@tiles.918" left="//@tiles.881" x="26" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.917" right="//@tiles.954" bottom="//@tiles.919" left="//@tiles.882" x="26" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.918" right="//@tiles.955" bottom="//@tiles.920" left="//@tiles.883" x="26" y="3"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.919" right="//@tiles.956" bottom="//@tiles.921" left="//@tiles.884" x="26" y="4" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.920" right="//@tiles.957" bottom="//@tiles.922" left="//@tiles.885" x="26" y="5" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.921" right="//@tiles.958" bottom="//@tiles.923" left="//@tiles.886" x="26" y="6" initialPellet="SUPER_PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.922" right="//@tiles.959" bottom="//@tiles.924" left="//@tiles.887" x="26" y="7" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.923" right="//@tiles.960" bottom="//@tiles.925" left="//@tiles.888" x="26" y="8" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.924" right="//@tiles.961" bottom="//@tiles.926" left="//@tiles.889" x="26" y="9" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.925" right="//@tiles.962" bottom="//@tiles.927" left="//@tiles.890" x="26" y="10" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.926" right="//@tiles.963" bottom="//@tiles.928" left="//@tiles.891" x="26" y="11" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.927" right="//@tiles.964" bottom="//@tiles.929" left="//@tiles.892" x="26" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.928" right="//@tiles.965" bottom="//@tiles.930" left="//@tiles.893" x="26" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.929" right="//@tiles.966" bottom="//@tiles.931" left="//@tiles.894" x="26" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.930" right="//@tiles.967" bottom="//@tiles.932" left="//@tiles.895" x="26" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.931" right="//@tiles.968" bottom="//@tiles.933" left="//@tiles.896" x="26" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.932" right="//@tiles.969" bottom="//@tiles.934" left="//@tiles.897" x="26" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.933" right="//@tiles.970" bottom="//@tiles.935" left="//@tiles.898" x="26" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.934" right="//@tiles.971" bottom="//@tiles.936" left="//@tiles.899" x="26" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.935" right="//@tiles.972" bottom="//@tiles.937" left="//@tiles.900" x="26" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.936" right="//@tiles.973" bottom="//@tiles.938" left="//@tiles.901" x="26" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.937" right="//@tiles.974" bottom="//@tiles.939" left="//@tiles.902" x="26" y="22"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.938" right="//@tiles.975" bottom="//@tiles.940" left="//@tiles.903" x="26" y="23" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.939" right="//@tiles.976" bottom="//@tiles.941" left="//@tiles.904" x="26" y="24" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.940" right="//@tiles.977" bottom="//@tiles.942" left="//@tiles.905" x="26" y="25" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.941" right="//@tiles.978" bottom="//@tiles.943" left="//@tiles.906" x="26" y="26" initialPellet="SUPER_PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.942" right="//@tiles.979" bottom="//@tiles.944" left="//@tiles.907" x="26" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.943" right="//@tiles.980" bottom="//@tiles.945" left="//@tiles.908" x="26" y="28"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.944" right="//@tiles.981" bottom="//@tiles.946" left="//@tiles.909" x="26" y="29" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.945" right="//@tiles.982" bottom="//@tiles.947" left="//@tiles.910" x="26" y="30" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.946" right="//@tiles.983" bottom="//@tiles.948" left="//@tiles.911" x="26" y="31" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.947" right="//@tiles.984" bottom="//@tiles.949" left="//@tiles.912" x="26" y="32" initialPellet="PELLET"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.948" right="//@tiles.985" bottom="//@tiles.950" left="//@tiles.913" x="26" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.949" right="//@tiles.986" bottom="//@tiles.951" left="//@tiles.914" x="26" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.950" right="//@tiles.987" bottom="//@tiles.916" left="//@tiles.915" x="26" y="35"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.987" right="//@tiles.0" bottom="//@tiles.953" left="//@tiles.916" x="27"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.952" right="//@tiles.1" bottom="//@tiles.954" left="//@tiles.917" x="27" y="1"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.953" right="//@tiles.2" bottom="//@tiles.955" left="//@tiles.918" x="27" y="2"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.954" right="//@tiles.3" bottom="//@tiles.956" left="//@tiles.919" x="27" y="3"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.955" right="//@tiles.4" bottom="//@tiles.957" left="//@tiles.920" x="27" y="4"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.956" right="//@tiles.5" bottom="//@tiles.958" left="//@tiles.921" x="27" y="5"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.957" right="//@tiles.6" bottom="//@tiles.959" left="//@tiles.922" x="27" y="6"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.958" right="//@tiles.7" bottom="//@tiles.960" left="//@tiles.923" x="27" y="7"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.959" right="//@tiles.8" bottom="//@tiles.961" left="//@tiles.924" x="27" y="8"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.960" right="//@tiles.9" bottom="//@tiles.962" left="//@tiles.925" x="27" y="9"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.961" right="//@tiles.10" bottom="//@tiles.963" left="//@tiles.926" x="27" y="10"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.962" right="//@tiles.11" bottom="//@tiles.964" left="//@tiles.927" x="27" y="11"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.963" right="//@tiles.12" bottom="//@tiles.965" left="//@tiles.928" x="27" y="12"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.964" right="//@tiles.13" bottom="//@tiles.966" left="//@tiles.929" x="27" y="13"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.965" right="//@tiles.14" bottom="//@tiles.967" left="//@tiles.930" x="27" y="14"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.966" right="//@tiles.15" bottom="//@tiles.968" left="//@tiles.931" x="27" y="15"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.967" right="//@tiles.16" bottom="//@tiles.969" left="//@tiles.932" x="27" y="16"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.968" right="//@tiles.17" bottom="//@tiles.970" left="//@tiles.933" x="27" y="17"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.969" right="//@tiles.18" bottom="//@tiles.971" left="//@tiles.934" x="27" y="18"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.970" right="//@tiles.19" bottom="//@tiles.972" left="//@tiles.935" x="27" y="19"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.971" right="//@tiles.20" bottom="//@tiles.973" left="//@tiles.936" x="27" y="20"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.972" right="//@tiles.21" bottom="//@tiles.974" left="//@tiles.937" x="27" y="21"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.973" right="//@tiles.22" bottom="//@tiles.975" left="//@tiles.938" x="27" y="22"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.974" right="//@tiles.23" bottom="//@tiles.976" left="//@tiles.939" x="27" y="23"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.975" right="//@tiles.24" bottom="//@tiles.977" left="//@tiles.940" x="27" y="24"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.976" right="//@tiles.25" bottom="//@tiles.978" left="//@tiles.941" x="27" y="25"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.977" right="//@tiles.26" bottom="//@tiles.979" left="//@tiles.942" x="27" y="26"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.978" right="//@tiles.27" bottom="//@tiles.980" left="//@tiles.943" x="27" y="27"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.979" right="//@tiles.28" bottom="//@tiles.981" left="//@tiles.944" x="27" y="28"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.980" right="//@tiles.29" bottom="//@tiles.982" left="//@tiles.945" x="27" y="29"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.981" right="//@tiles.30" bottom="//@tiles.983" left="//@tiles.946" x="27" y="30"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.982" right="//@tiles.31" bottom="//@tiles.984" left="//@tiles.947" x="27" y="31"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.983" right="//@tiles.32" bottom="//@tiles.985" left="//@tiles.948" x="27" y="32"/>
+  <tiles xsi:type="pacman:WallTile" top="//@tiles.984" right="//@tiles.33" bottom="//@tiles.986" left="//@tiles.949" x="27" y="33"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.985" right="//@tiles.34" bottom="//@tiles.987" left="//@tiles.950" x="27" y="34"/>
+  <tiles xsi:type="pacman:Tile"="//@tiles.986" right="//@tiles.35" bottom="//@tiles.952" left="//@tiles.951" x="27" y="35"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.411" right="//@tiles.989" bottom="//@tiles.996" left="//@tiles.376" x="11" y="16"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.444" right="//@tiles.993" bottom="//@tiles.995" left="//@tiles.988" x="12" y="16"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.476" right="//@tiles.991" bottom="//@tiles.993" left="//@tiles.444" x="13" y="15"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.508" right="//@tiles.541" bottom="//@tiles.992" left="//@tiles.990" x="14" y="15"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.991" right="//@tiles.1005" bottom="//@tiles.1007" left="//@tiles.993" x="14" y="16"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.990" right="//@tiles.992" bottom="//@tiles.994" left="//@tiles.989" x="13" y="16"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.993" right="//@tiles.1007" bottom="//@tiles.999" left="//@tiles.995" x="13" y="17"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.989" right="//@tiles.994" bottom="//@tiles.998" left="//@tiles.996" x="12" y="17"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.988" right="//@tiles.995" bottom="//@tiles.997" left="//@tiles.377" x="11" y="17"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.996" right="//@tiles.998" bottom="//@tiles.412" left="//@tiles.378" x="11" y="18"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.995" right="//@tiles.999" bottom="//@tiles.445" left="//@tiles.997" x="12" y="18"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.994" right="//@tiles.1000" bottom="//@tiles.477" left="//@tiles.998" x="13" y="18"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.1007" right="//@tiles.1001" bottom="//@tiles.509" left="//@tiles.999" x="14" y="18"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.1006" right="//@tiles.1002" bottom="//@tiles.542" left="//@tiles.1000" x="15" y="18"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.1003" right="//@tiles.610" bottom="//@tiles.575" left="//@tiles.1001" x="16" y="18"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.1004" right="//@tiles.609" bottom="//@tiles.1002" left="//@tiles.1006" x="16" y="17"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.574" right="//@tiles.608" bottom="//@tiles.1003" left="//@tiles.1005" x="16" y="16"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.541" right="//@tiles.1004" bottom="//@tiles.1006" left="//@tiles.992" x="15" y="16"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.1005" right="//@tiles.1003" bottom="//@tiles.1001" left="//@tiles.1007" x="15" y="17"/>
+  <tiles xsi:type="pacman:GhostHouseTile" top="//@tiles.992" right="//@tiles.1006" bottom="//@tiles.1000" left="//@tiles.994" x="14" y="17"/>
+  <entities xsi:type="pacman:Pacman" initialTile="//@tiles.516" initialLives="3"/>
+  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.508"/>
+  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.1007" personnality="SPEEDY"/>
+  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.995" personnality="BASHFUL"/>
+  <entities xsi:type="pacman:Ghost" initialTile="//@tiles.1003" personnality="POKEY"/>
 </pacman:Board>

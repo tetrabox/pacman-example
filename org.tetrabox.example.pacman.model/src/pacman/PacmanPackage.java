@@ -58,14 +58,14 @@ public interface PacmanPackage extends EPackage {
 	PacmanPackage eINSTANCE = pacman.impl.PacmanPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link pacman.impl.TileImpl <em>Tile</em>}' class.
+	 * The meta object id for the '{@link pacman.impl.AbstractTileImpl <em>Abstract Tile</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see pacman.impl.TileImpl
-	 * @see pacman.impl.PacmanPackageImpl#getTile()
+	 * @see pacman.impl.AbstractTileImpl
+	 * @see pacman.impl.PacmanPackageImpl#getAbstractTile()
 	 * @generated
 	 */
-	int TILE = 0;
+	int ABSTRACT_TILE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Top</b></em>' reference.
@@ -74,7 +74,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__TOP = 0;
+	int ABSTRACT_TILE__TOP = 0;
 
 	/**
 	 * The feature id for the '<em><b>Right</b></em>' reference.
@@ -83,7 +83,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__RIGHT = 1;
+	int ABSTRACT_TILE__RIGHT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Bottom</b></em>' reference.
@@ -92,7 +92,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__BOTTOM = 2;
+	int ABSTRACT_TILE__BOTTOM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Left</b></em>' reference.
@@ -101,7 +101,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__LEFT = 3;
+	int ABSTRACT_TILE__LEFT = 3;
 
 	/**
 	 * The feature id for the '<em><b>X</b></em>' attribute.
@@ -110,7 +110,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__X = 4;
+	int ABSTRACT_TILE__X = 4;
 
 	/**
 	 * The feature id for the '<em><b>Y</b></em>' attribute.
@@ -119,43 +119,35 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__Y = 5;
+	int ABSTRACT_TILE__Y = 5;
 
 	/**
-	 * The feature id for the '<em><b>Passable</b></em>' attribute.
+	 * The number of structural features of the '<em>Abstract Tile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__PASSABLE = 6;
+	int ABSTRACT_TILE_FEATURE_COUNT = 6;
 
 	/**
-	 * The feature id for the '<em><b>Initial Pellet</b></em>' attribute.
+	 * The number of operations of the '<em>Abstract Tile</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TILE__INITIAL_PELLET = 7;
+	int ABSTRACT_TILE_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Tile</em>' class.
+	 * The meta object id for the '{@link pacman.impl.TileImpl <em>Tile</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see pacman.impl.TileImpl
+	 * @see pacman.impl.PacmanPackageImpl#getTile()
 	 * @generated
-	 * @ordered
 	 */
-	int TILE_FEATURE_COUNT = 8;
-
-	/**
-	 * The number of operations of the '<em>Tile</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TILE_OPERATION_COUNT = 0;
+	int TILE = 6;
 
 	/**
 	 * The meta object id for the '{@link pacman.impl.BoardImpl <em>Board</em>}' class.
@@ -342,6 +334,389 @@ public interface PacmanPackage extends EPackage {
 	int GHOST_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link pacman.impl.PassableTileImpl <em>Passable Tile</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pacman.impl.PassableTileImpl
+	 * @see pacman.impl.PacmanPackageImpl#getPassableTile()
+	 * @generated
+	 */
+	int PASSABLE_TILE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE__TOP = ABSTRACT_TILE__TOP;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE__RIGHT = ABSTRACT_TILE__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE__BOTTOM = ABSTRACT_TILE__BOTTOM;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE__LEFT = ABSTRACT_TILE__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE__X = ABSTRACT_TILE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE__Y = ABSTRACT_TILE__Y;
+
+	/**
+	 * The number of structural features of the '<em>Passable Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE_FEATURE_COUNT = ABSTRACT_TILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Passable Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PASSABLE_TILE_OPERATION_COUNT = ABSTRACT_TILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__TOP = PASSABLE_TILE__TOP;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__RIGHT = PASSABLE_TILE__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__BOTTOM = PASSABLE_TILE__BOTTOM;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__LEFT = PASSABLE_TILE__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__X = PASSABLE_TILE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__Y = PASSABLE_TILE__Y;
+
+	/**
+	 * The feature id for the '<em><b>Initial Pellet</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE__INITIAL_PELLET = PASSABLE_TILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE_FEATURE_COUNT = PASSABLE_TILE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TILE_OPERATION_COUNT = PASSABLE_TILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pacman.impl.GhostHouseTileImpl <em>Ghost House Tile</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pacman.impl.GhostHouseTileImpl
+	 * @see pacman.impl.PacmanPackageImpl#getGhostHouseTile()
+	 * @generated
+	 */
+	int GHOST_HOUSE_TILE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE__TOP = PASSABLE_TILE__TOP;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE__RIGHT = PASSABLE_TILE__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE__BOTTOM = PASSABLE_TILE__BOTTOM;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE__LEFT = PASSABLE_TILE__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE__X = PASSABLE_TILE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE__Y = PASSABLE_TILE__Y;
+
+	/**
+	 * The number of structural features of the '<em>Ghost House Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE_FEATURE_COUNT = PASSABLE_TILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Ghost House Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST_HOUSE_TILE_OPERATION_COUNT = PASSABLE_TILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pacman.impl.WallTileImpl <em>Wall Tile</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pacman.impl.WallTileImpl
+	 * @see pacman.impl.PacmanPackageImpl#getWallTile()
+	 * @generated
+	 */
+	int WALL_TILE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Top</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE__TOP = ABSTRACT_TILE__TOP;
+
+	/**
+	 * The feature id for the '<em><b>Right</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE__RIGHT = ABSTRACT_TILE__RIGHT;
+
+	/**
+	 * The feature id for the '<em><b>Bottom</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE__BOTTOM = ABSTRACT_TILE__BOTTOM;
+
+	/**
+	 * The feature id for the '<em><b>Left</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE__LEFT = ABSTRACT_TILE__LEFT;
+
+	/**
+	 * The feature id for the '<em><b>X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE__X = ABSTRACT_TILE__X;
+
+	/**
+	 * The feature id for the '<em><b>Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE__Y = ABSTRACT_TILE__Y;
+
+	/**
+	 * The number of structural features of the '<em>Wall Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE_FEATURE_COUNT = ABSTRACT_TILE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Wall Tile</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WALL_TILE_OPERATION_COUNT = ABSTRACT_TILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link pacman.impl.PelletImpl <em>Pellet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pacman.impl.PelletImpl
+	 * @see pacman.impl.PacmanPackageImpl#getPellet()
+	 * @generated
+	 */
+	int PELLET = 9;
+
+	/**
+	 * The number of structural features of the '<em>Pellet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PELLET_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Pellet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PELLET_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link pacman.impl.SuperPelletImpl <em>Super Pellet</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see pacman.impl.SuperPelletImpl
+	 * @see pacman.impl.PacmanPackageImpl#getSuperPellet()
+	 * @generated
+	 */
+	int SUPER_PELLET = 10;
+
+	/**
+	 * The number of structural features of the '<em>Super Pellet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPER_PELLET_FEATURE_COUNT = PELLET_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Super Pellet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPER_PELLET_OPERATION_COUNT = PELLET_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link pacman.PelletType <em>Pellet Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -349,7 +724,7 @@ public interface PacmanPackage extends EPackage {
 	 * @see pacman.impl.PacmanPackageImpl#getPelletType()
 	 * @generated
 	 */
-	int PELLET_TYPE = 5;
+	int PELLET_TYPE = 11;
 
 
 	/**
@@ -360,8 +735,84 @@ public interface PacmanPackage extends EPackage {
 	 * @see pacman.impl.PacmanPackageImpl#getGhostPersonality()
 	 * @generated
 	 */
-	int GHOST_PERSONALITY = 6;
+	int GHOST_PERSONALITY = 12;
 
+
+	/**
+	 * Returns the meta object for class '{@link pacman.AbstractTile <em>Abstract Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Tile</em>'.
+	 * @see pacman.AbstractTile
+	 * @generated
+	 */
+	EClass getAbstractTile();
+
+	/**
+	 * Returns the meta object for the reference '{@link pacman.AbstractTile#getTop <em>Top</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Top</em>'.
+	 * @see pacman.AbstractTile#getTop()
+	 * @see #getAbstractTile()
+	 * @generated
+	 */
+	EReference getAbstractTile_Top();
+
+	/**
+	 * Returns the meta object for the reference '{@link pacman.AbstractTile#getRight <em>Right</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Right</em>'.
+	 * @see pacman.AbstractTile#getRight()
+	 * @see #getAbstractTile()
+	 * @generated
+	 */
+	EReference getAbstractTile_Right();
+
+	/**
+	 * Returns the meta object for the reference '{@link pacman.AbstractTile#getBottom <em>Bottom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Bottom</em>'.
+	 * @see pacman.AbstractTile#getBottom()
+	 * @see #getAbstractTile()
+	 * @generated
+	 */
+	EReference getAbstractTile_Bottom();
+
+	/**
+	 * Returns the meta object for the reference '{@link pacman.AbstractTile#getLeft <em>Left</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Left</em>'.
+	 * @see pacman.AbstractTile#getLeft()
+	 * @see #getAbstractTile()
+	 * @generated
+	 */
+	EReference getAbstractTile_Left();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pacman.AbstractTile#getX <em>X</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>X</em>'.
+	 * @see pacman.AbstractTile#getX()
+	 * @see #getAbstractTile()
+	 * @generated
+	 */
+	EAttribute getAbstractTile_X();
+
+	/**
+	 * Returns the meta object for the attribute '{@link pacman.AbstractTile#getY <em>Y</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Y</em>'.
+	 * @see pacman.AbstractTile#getY()
+	 * @see #getAbstractTile()
+	 * @generated
+	 */
+	EAttribute getAbstractTile_Y();
 
 	/**
 	 * Returns the meta object for class '{@link pacman.Tile <em>Tile</em>}'.
@@ -372,83 +823,6 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTile();
-
-	/**
-	 * Returns the meta object for the reference '{@link pacman.Tile#getTop <em>Top</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Top</em>'.
-	 * @see pacman.Tile#getTop()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EReference getTile_Top();
-
-	/**
-	 * Returns the meta object for the reference '{@link pacman.Tile#getRight <em>Right</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Right</em>'.
-	 * @see pacman.Tile#getRight()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EReference getTile_Right();
-
-	/**
-	 * Returns the meta object for the reference '{@link pacman.Tile#getBottom <em>Bottom</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Bottom</em>'.
-	 * @see pacman.Tile#getBottom()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EReference getTile_Bottom();
-
-	/**
-	 * Returns the meta object for the reference '{@link pacman.Tile#getLeft <em>Left</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Left</em>'.
-	 * @see pacman.Tile#getLeft()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EReference getTile_Left();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pacman.Tile#getX <em>X</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>X</em>'.
-	 * @see pacman.Tile#getX()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EAttribute getTile_X();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pacman.Tile#getY <em>Y</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Y</em>'.
-	 * @see pacman.Tile#getY()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EAttribute getTile_Y();
-
-	/**
-	 * Returns the meta object for the attribute '{@link pacman.Tile#isPassable <em>Passable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Passable</em>'.
-	 * @see pacman.Tile#isPassable()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EAttribute getTile_Passable();
 
 	/**
 	 * Returns the meta object for the attribute '{@link pacman.Tile#getInitialPellet <em>Initial Pellet</em>}'.
@@ -568,6 +942,56 @@ public interface PacmanPackage extends EPackage {
 	EAttribute getGhost_Personnality();
 
 	/**
+	 * Returns the meta object for class '{@link pacman.PassableTile <em>Passable Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Passable Tile</em>'.
+	 * @see pacman.PassableTile
+	 * @generated
+	 */
+	EClass getPassableTile();
+
+	/**
+	 * Returns the meta object for class '{@link pacman.GhostHouseTile <em>Ghost House Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ghost House Tile</em>'.
+	 * @see pacman.GhostHouseTile
+	 * @generated
+	 */
+	EClass getGhostHouseTile();
+
+	/**
+	 * Returns the meta object for class '{@link pacman.WallTile <em>Wall Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Wall Tile</em>'.
+	 * @see pacman.WallTile
+	 * @generated
+	 */
+	EClass getWallTile();
+
+	/**
+	 * Returns the meta object for class '{@link pacman.Pellet <em>Pellet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pellet</em>'.
+	 * @see pacman.Pellet
+	 * @generated
+	 */
+	EClass getPellet();
+
+	/**
+	 * Returns the meta object for class '{@link pacman.SuperPellet <em>Super Pellet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Super Pellet</em>'.
+	 * @see pacman.SuperPellet
+	 * @generated
+	 */
+	EClass getSuperPellet();
+
+	/**
 	 * Returns the meta object for enum '{@link pacman.PelletType <em>Pellet Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -611,6 +1035,64 @@ public interface PacmanPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link pacman.impl.AbstractTileImpl <em>Abstract Tile</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pacman.impl.AbstractTileImpl
+		 * @see pacman.impl.PacmanPackageImpl#getAbstractTile()
+		 * @generated
+		 */
+		EClass ABSTRACT_TILE = eINSTANCE.getAbstractTile();
+
+		/**
+		 * The meta object literal for the '<em><b>Top</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_TILE__TOP = eINSTANCE.getAbstractTile_Top();
+
+		/**
+		 * The meta object literal for the '<em><b>Right</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_TILE__RIGHT = eINSTANCE.getAbstractTile_Right();
+
+		/**
+		 * The meta object literal for the '<em><b>Bottom</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_TILE__BOTTOM = eINSTANCE.getAbstractTile_Bottom();
+
+		/**
+		 * The meta object literal for the '<em><b>Left</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_TILE__LEFT = eINSTANCE.getAbstractTile_Left();
+
+		/**
+		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TILE__X = eINSTANCE.getAbstractTile_X();
+
+		/**
+		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TILE__Y = eINSTANCE.getAbstractTile_Y();
+
+		/**
 		 * The meta object literal for the '{@link pacman.impl.TileImpl <em>Tile</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -619,62 +1101,6 @@ public interface PacmanPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TILE = eINSTANCE.getTile();
-
-		/**
-		 * The meta object literal for the '<em><b>Top</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TILE__TOP = eINSTANCE.getTile_Top();
-
-		/**
-		 * The meta object literal for the '<em><b>Right</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TILE__RIGHT = eINSTANCE.getTile_Right();
-
-		/**
-		 * The meta object literal for the '<em><b>Bottom</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TILE__BOTTOM = eINSTANCE.getTile_Bottom();
-
-		/**
-		 * The meta object literal for the '<em><b>Left</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TILE__LEFT = eINSTANCE.getTile_Left();
-
-		/**
-		 * The meta object literal for the '<em><b>X</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TILE__X = eINSTANCE.getTile_X();
-
-		/**
-		 * The meta object literal for the '<em><b>Y</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TILE__Y = eINSTANCE.getTile_Y();
-
-		/**
-		 * The meta object literal for the '<em><b>Passable</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TILE__PASSABLE = eINSTANCE.getTile_Passable();
 
 		/**
 		 * The meta object literal for the '<em><b>Initial Pellet</b></em>' attribute feature.
@@ -771,6 +1197,56 @@ public interface PacmanPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GHOST__PERSONNALITY = eINSTANCE.getGhost_Personnality();
+
+		/**
+		 * The meta object literal for the '{@link pacman.impl.PassableTileImpl <em>Passable Tile</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pacman.impl.PassableTileImpl
+		 * @see pacman.impl.PacmanPackageImpl#getPassableTile()
+		 * @generated
+		 */
+		EClass PASSABLE_TILE = eINSTANCE.getPassableTile();
+
+		/**
+		 * The meta object literal for the '{@link pacman.impl.GhostHouseTileImpl <em>Ghost House Tile</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pacman.impl.GhostHouseTileImpl
+		 * @see pacman.impl.PacmanPackageImpl#getGhostHouseTile()
+		 * @generated
+		 */
+		EClass GHOST_HOUSE_TILE = eINSTANCE.getGhostHouseTile();
+
+		/**
+		 * The meta object literal for the '{@link pacman.impl.WallTileImpl <em>Wall Tile</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pacman.impl.WallTileImpl
+		 * @see pacman.impl.PacmanPackageImpl#getWallTile()
+		 * @generated
+		 */
+		EClass WALL_TILE = eINSTANCE.getWallTile();
+
+		/**
+		 * The meta object literal for the '{@link pacman.impl.PelletImpl <em>Pellet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pacman.impl.PelletImpl
+		 * @see pacman.impl.PacmanPackageImpl#getPellet()
+		 * @generated
+		 */
+		EClass PELLET = eINSTANCE.getPellet();
+
+		/**
+		 * The meta object literal for the '{@link pacman.impl.SuperPelletImpl <em>Super Pellet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see pacman.impl.SuperPelletImpl
+		 * @see pacman.impl.PacmanPackageImpl#getSuperPellet()
+		 * @generated
+		 */
+		EClass SUPER_PELLET = eINSTANCE.getSuperPellet();
 
 		/**
 		 * The meta object literal for the '{@link pacman.PelletType <em>Pellet Type</em>}' enum.

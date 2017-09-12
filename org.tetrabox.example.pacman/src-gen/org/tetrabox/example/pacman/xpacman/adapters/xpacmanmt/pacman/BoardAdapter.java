@@ -6,8 +6,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.XPacmanMTAdaptersFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.Board;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile;
 import org.tetrabox.example.pacman.xpacmanmt.pacman.Entity;
-import org.tetrabox.example.pacman.xpacmanmt.pacman.Tile;
 
 @SuppressWarnings("all")
 public class BoardAdapter extends EObjectAdapter<Board> implements org.tetrabox.example.pacman.xpacmanmt.pacman.Board {
@@ -18,10 +18,10 @@ public class BoardAdapter extends EObjectAdapter<Board> implements org.tetrabox.
     adaptersFactory = org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.XPacmanMTAdaptersFactory.getInstance();
   }
   
-  private EList<Tile> tiles_;
+  private EList<AbstractTile> tiles_;
   
   @Override
-  public EList<Tile> getTiles() {
+  public EList<AbstractTile> getTiles() {
     if (tiles_ == null)
     	tiles_ = fr.inria.diverse.melange.adapters.EListAdapter.newInstance(adaptee.getTiles(), adaptersFactory, eResource);
     return tiles_;

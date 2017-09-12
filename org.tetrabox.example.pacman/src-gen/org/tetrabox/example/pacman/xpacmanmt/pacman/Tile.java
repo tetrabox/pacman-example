@@ -13,212 +13,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getTop <em>Top</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getRight <em>Right</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getBottom <em>Bottom</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getLeft <em>Left</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getX <em>X</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getY <em>Y</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#isPassable <em>Passable</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getInitialPellet <em>Initial Pellet</em>}</li>
- *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#isHasPellet <em>Has Pellet</em>}</li>
+ *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getPellet <em>Pellet</em>}</li>
  * </ul>
  *
  * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile()
  * @model
  * @generated
  */
-public interface Tile extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Top</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getBottom <em>Bottom</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Top</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Top</em>' reference.
-	 * @see #setTop(Tile)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Top()
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getBottom
-	 * @model opposite="bottom"
-	 * @generated
-	 */
-	Tile getTop();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getTop <em>Top</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Top</em>' reference.
-	 * @see #getTop()
-	 * @generated
-	 */
-	void setTop(Tile value);
-
-	/**
-	 * Returns the value of the '<em><b>Right</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getLeft <em>Left</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Right</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Right</em>' reference.
-	 * @see #setRight(Tile)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Right()
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getLeft
-	 * @model opposite="left"
-	 * @generated
-	 */
-	Tile getRight();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getRight <em>Right</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Right</em>' reference.
-	 * @see #getRight()
-	 * @generated
-	 */
-	void setRight(Tile value);
-
-	/**
-	 * Returns the value of the '<em><b>Bottom</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getTop <em>Top</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bottom</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bottom</em>' reference.
-	 * @see #setBottom(Tile)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Bottom()
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getTop
-	 * @model opposite="top"
-	 * @generated
-	 */
-	Tile getBottom();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getBottom <em>Bottom</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bottom</em>' reference.
-	 * @see #getBottom()
-	 * @generated
-	 */
-	void setBottom(Tile value);
-
-	/**
-	 * Returns the value of the '<em><b>Left</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getRight <em>Right</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Left</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Left</em>' reference.
-	 * @see #setLeft(Tile)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Left()
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getRight
-	 * @model opposite="right"
-	 * @generated
-	 */
-	Tile getLeft();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getLeft <em>Left</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Left</em>' reference.
-	 * @see #getLeft()
-	 * @generated
-	 */
-	void setLeft(Tile value);
-
-	/**
-	 * Returns the value of the '<em><b>X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>X</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>X</em>' attribute.
-	 * @see #setX(int)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_X()
-	 * @model
-	 * @generated
-	 */
-	int getX();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getX <em>X</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>X</em>' attribute.
-	 * @see #getX()
-	 * @generated
-	 */
-	void setX(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Y</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Y</em>' attribute.
-	 * @see #setY(int)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Y()
-	 * @model
-	 * @generated
-	 */
-	int getY();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getY <em>Y</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Y</em>' attribute.
-	 * @see #getY()
-	 * @generated
-	 */
-	void setY(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Passable</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Passable</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Passable</em>' attribute.
-	 * @see #setPassable(boolean)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Passable()
-	 * @model
-	 * @generated
-	 */
-	boolean isPassable();
-
-	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#isPassable <em>Passable</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Passable</em>' attribute.
-	 * @see #isPassable()
-	 * @generated
-	 */
-	void setPassable(boolean value);
-
+public interface Tile extends PassableTile {
 	/**
 	 * Returns the value of the '<em><b>Initial Pellet</b></em>' attribute.
 	 * The default value is <code>"NO_PELLET"</code>.
@@ -250,30 +53,30 @@ public interface Tile extends EObject {
 	void setInitialPellet(PelletType value);
 
 	/**
-	 * Returns the value of the '<em><b>Has Pellet</b></em>' attribute.
+	 * Returns the value of the '<em><b>Pellet</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Pellet</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Pellet</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Pellet</em>' attribute.
-	 * @see #setHasPellet(boolean)
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_HasPellet()
-	 * @model unique="false"
+	 * @return the value of the '<em>Pellet</em>' containment reference.
+	 * @see #setPellet(Pellet)
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getTile_Pellet()
+	 * @model containment="true"
 	 * @generated
 	 */
-	boolean isHasPellet();
+	Pellet getPellet();
 
 	/**
-	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#isHasPellet <em>Has Pellet</em>}' attribute.
+	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getPellet <em>Pellet</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Has Pellet</em>' attribute.
-	 * @see #isHasPellet()
+	 * @param value the new value of the '<em>Pellet</em>' containment reference.
+	 * @see #getPellet()
 	 * @generated
 	 */
-	void setHasPellet(boolean value);
+	void setPellet(Pellet value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -282,5 +85,13 @@ public interface Tile extends EObject {
 	 * @generated
 	 */
 	void initialize();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void eatPellet(Pacman pacman);
 
 } // Tile

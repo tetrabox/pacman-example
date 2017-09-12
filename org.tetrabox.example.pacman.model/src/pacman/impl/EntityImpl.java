@@ -8,10 +8,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import pacman.Entity;
 import pacman.PacmanPackage;
-import pacman.Tile;
+import pacman.PassableTile;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +34,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected Tile initialTile;
+	protected PassableTile initialTile;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,10 +60,11 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tile getInitialTile() {
+	@SuppressWarnings("unchecked")
+	public PassableTile getInitialTile() {
 		if (initialTile != null && initialTile.eIsProxy()) {
 			InternalEObject oldInitialTile = (InternalEObject)initialTile;
-			initialTile = (Tile)eResolveProxy(oldInitialTile);
+			initialTile = (PassableTile)eResolveProxy(oldInitialTile);
 			if (initialTile != oldInitialTile) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PacmanPackage.ENTITY__INITIAL_TILE, oldInitialTile, initialTile));
@@ -78,7 +78,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tile basicGetInitialTile() {
+	public PassableTile basicGetInitialTile() {
 		return initialTile;
 	}
 
@@ -87,8 +87,8 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInitialTile(Tile newInitialTile) {
-		Tile oldInitialTile = initialTile;
+	public void setInitialTile(PassableTile newInitialTile) {
+		PassableTile oldInitialTile = initialTile;
 		initialTile = newInitialTile;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PacmanPackage.ENTITY__INITIAL_TILE, oldInitialTile, initialTile));
@@ -114,11 +114,12 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PacmanPackage.ENTITY__INITIAL_TILE:
-				setInitialTile((Tile)newValue);
+				setInitialTile((PassableTile)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -133,7 +134,7 @@ public abstract class EntityImpl extends MinimalEObjectImpl.Container implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PacmanPackage.ENTITY__INITIAL_TILE:
-				setInitialTile((Tile)null);
+				setInitialTile((PassableTile)null);
 				return;
 		}
 		super.eUnset(featureID);

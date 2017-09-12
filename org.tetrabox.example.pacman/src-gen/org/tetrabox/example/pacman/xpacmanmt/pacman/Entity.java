@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getDirection <em>Direction</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getCurrentTile <em>Current Tile</em>}</li>
  *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getNextTile <em>Next Tile</em>}</li>
+ *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getXMoveProgress <em>XMove Progress</em>}</li>
+ *   <li>{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getYMoveProgress <em>YMove Progress</em>}</li>
  * </ul>
  *
  * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity()
@@ -34,12 +36,12 @@ public interface Entity extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Initial Tile</em>' reference.
-	 * @see #setInitialTile(Tile)
+	 * @see #setInitialTile(PassableTile)
 	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity_InitialTile()
 	 * @model required="true"
 	 * @generated
 	 */
-	Tile getInitialTile();
+	PassableTile getInitialTile();
 
 	/**
 	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getInitialTile <em>Initial Tile</em>}' reference.
@@ -49,7 +51,7 @@ public interface Entity extends EObject {
 	 * @see #getInitialTile()
 	 * @generated
 	 */
-	void setInitialTile(Tile value);
+	void setInitialTile(PassableTile value);
 
 	/**
 	 * Returns the value of the '<em><b>Speed</b></em>' attribute.
@@ -112,12 +114,12 @@ public interface Entity extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Current Tile</em>' reference.
-	 * @see #setCurrentTile(Tile)
+	 * @see #setCurrentTile(PassableTile)
 	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity_CurrentTile()
 	 * @model
 	 * @generated
 	 */
-	Tile getCurrentTile();
+	PassableTile getCurrentTile();
 
 	/**
 	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getCurrentTile <em>Current Tile</em>}' reference.
@@ -127,7 +129,7 @@ public interface Entity extends EObject {
 	 * @see #getCurrentTile()
 	 * @generated
 	 */
-	void setCurrentTile(Tile value);
+	void setCurrentTile(PassableTile value);
 
 	/**
 	 * Returns the value of the '<em><b>Next Tile</b></em>' reference.
@@ -138,12 +140,12 @@ public interface Entity extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Next Tile</em>' reference.
-	 * @see #setNextTile(Tile)
+	 * @see #setNextTile(PassableTile)
 	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity_NextTile()
 	 * @model
 	 * @generated
 	 */
-	Tile getNextTile();
+	PassableTile getNextTile();
 
 	/**
 	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getNextTile <em>Next Tile</em>}' reference.
@@ -153,7 +155,59 @@ public interface Entity extends EObject {
 	 * @see #getNextTile()
 	 * @generated
 	 */
-	void setNextTile(Tile value);
+	void setNextTile(PassableTile value);
+
+	/**
+	 * Returns the value of the '<em><b>XMove Progress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>XMove Progress</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>XMove Progress</em>' attribute.
+	 * @see #setXMoveProgress(int)
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity_XMoveProgress()
+	 * @model unique="false"
+	 * @generated
+	 */
+	int getXMoveProgress();
+
+	/**
+	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getXMoveProgress <em>XMove Progress</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>XMove Progress</em>' attribute.
+	 * @see #getXMoveProgress()
+	 * @generated
+	 */
+	void setXMoveProgress(int value);
+
+	/**
+	 * Returns the value of the '<em><b>YMove Progress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>YMove Progress</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>YMove Progress</em>' attribute.
+	 * @see #setYMoveProgress(int)
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage#getEntity_YMoveProgress()
+	 * @model unique="false"
+	 * @generated
+	 */
+	int getYMoveProgress();
+
+	/**
+	 * Sets the value of the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Entity#getYMoveProgress <em>YMove Progress</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>YMove Progress</em>' attribute.
+	 * @see #getYMoveProgress()
+	 * @generated
+	 */
+	void setYMoveProgress(int value);
 
 	/**
 	 * <!-- begin-user-doc -->

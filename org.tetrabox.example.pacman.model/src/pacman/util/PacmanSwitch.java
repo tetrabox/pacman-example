@@ -66,9 +66,9 @@ public class PacmanSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case PacmanPackage.TILE: {
-				Tile tile = (Tile)theEObject;
-				T result = caseTile(tile);
+			case PacmanPackage.ABSTRACT_TILE: {
+				AbstractTile abstractTile = (AbstractTile)theEObject;
+				T result = caseAbstractTile(abstractTile);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -98,8 +98,66 @@ public class PacmanSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PacmanPackage.PASSABLE_TILE: {
+				PassableTile passableTile = (PassableTile)theEObject;
+				T result = casePassableTile(passableTile);
+				if (result == null) result = caseAbstractTile(passableTile);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PacmanPackage.TILE: {
+				Tile tile = (Tile)theEObject;
+				T result = caseTile(tile);
+				if (result == null) result = casePassableTile(tile);
+				if (result == null) result = caseAbstractTile(tile);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PacmanPackage.GHOST_HOUSE_TILE: {
+				GhostHouseTile ghostHouseTile = (GhostHouseTile)theEObject;
+				T result = caseGhostHouseTile(ghostHouseTile);
+				if (result == null) result = casePassableTile(ghostHouseTile);
+				if (result == null) result = caseAbstractTile(ghostHouseTile);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PacmanPackage.WALL_TILE: {
+				WallTile wallTile = (WallTile)theEObject;
+				T result = caseWallTile(wallTile);
+				if (result == null) result = caseAbstractTile(wallTile);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PacmanPackage.PELLET: {
+				Pellet pellet = (Pellet)theEObject;
+				T result = casePellet(pellet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case PacmanPackage.SUPER_PELLET: {
+				SuperPellet superPellet = (SuperPellet)theEObject;
+				T result = caseSuperPellet(superPellet);
+				if (result == null) result = casePellet(superPellet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Tile</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractTile(AbstractTile object) {
+		return null;
 	}
 
 	/**
@@ -174,6 +232,81 @@ public class PacmanSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGhost(Ghost object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Passable Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Passable Tile</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePassableTile(PassableTile object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ghost House Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ghost House Tile</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGhostHouseTile(GhostHouseTile object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wall Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wall Tile</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWallTile(WallTile object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pellet</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pellet</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePellet(Pellet object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Super Pellet</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Super Pellet</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSuperPellet(SuperPellet object) {
 		return null;
 	}
 

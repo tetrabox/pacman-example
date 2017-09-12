@@ -1,0 +1,14 @@
+import 'platform:/resource/org.tetrabox.example.pacman.xpacman/model/XPacman.ecore'
+
+package pacman
+
+context Board
+inv a : self.entities <> null
+
+endpackage
+
+context pacman::Board
+inv b : self.entities <> null
+
+context pacman::Entity
+inv b : self.initialTile <> null

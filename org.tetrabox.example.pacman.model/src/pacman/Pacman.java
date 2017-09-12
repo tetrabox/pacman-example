@@ -2,7 +2,6 @@
  */
 package pacman;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Pacman</b></em>'.

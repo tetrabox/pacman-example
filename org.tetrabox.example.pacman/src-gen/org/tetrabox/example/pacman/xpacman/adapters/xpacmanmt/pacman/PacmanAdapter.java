@@ -4,7 +4,7 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import org.eclipse.emf.ecore.EClass;
 import org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.XPacmanMTAdaptersFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.Pacman;
-import org.tetrabox.example.pacman.xpacmanmt.pacman.Tile;
+import org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile;
 
 @SuppressWarnings("all")
 public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman {
@@ -26,15 +26,21 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public Tile getInitialTile() {
-    return (Tile) adaptersFactory.createAdapter(adaptee.getInitialTile(), eResource);
+  public PassableTile getInitialTile() {
+    return (PassableTile) adaptersFactory.createAdapter(adaptee.getInitialTile(), eResource);
   }
   
   @Override
-  public void setInitialTile(final Tile o) {
+  public void setInitialTile(final PassableTile o) {
     if (o != null)
-    	adaptee.setInitialTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.TileAdapter) o).getAdaptee());
+    	adaptee.setInitialTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.PassableTileAdapter) o).getAdaptee());
     else adaptee.setInitialTile(null);
+  }
+  
+  @Override
+  public boolean canTakeDirection(final Integer direction) {
+    return org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.canTakeDirection(adaptee, direction
+    );
   }
   
   @Override
@@ -49,8 +55,19 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public void eatPellet() {
-    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.eatPellet(adaptee);
+  public void energize() {
+    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.energize(adaptee);
+  }
+  
+  @Override
+  public boolean isEnergized() {
+    return org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.energized(adaptee);
+  }
+  
+  @Override
+  public void setEnergized(final boolean energized) {
+    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.energized(adaptee, energized
+    );
   }
   
   @Override
@@ -106,13 +123,19 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public Tile getCurrentTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee), eResource);
+  public void update(final long deltaTime) {
+    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.update(adaptee, deltaTime
+    );
   }
   
   @Override
-  public void setCurrentTile(final Tile currentTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)currentTile).getAdaptee()
+  public PassableTile getCurrentTile() {
+    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee), eResource);
+  }
+  
+  @Override
+  public void setCurrentTile(final PassableTile currentTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.currentTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)currentTile).getAdaptee()
     );
   }
   
@@ -134,13 +157,13 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public Tile getNextTile() {
-    return (Tile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
+  public PassableTile getNextTile() {
+    return (PassableTile) adaptersFactory.createAdapter(org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee), eResource);
   }
   
   @Override
-  public void setNextTile(final Tile nextTile) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.Tile)((EObjectAdapter)nextTile).getAdaptee()
+  public void setNextTile(final PassableTile nextTile) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.nextTile(adaptee, (org.tetrabox.example.pacman.xpacman.pacman.PassableTile)((EObjectAdapter)nextTile).getAdaptee()
     );
   }
   
@@ -156,8 +179,24 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public void update(final long deltaTime) {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.update(adaptee, deltaTime
+  public int getXMoveProgress() {
+    return org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.xMoveProgress(adaptee);
+  }
+  
+  @Override
+  public void setXMoveProgress(final int xMoveProgress) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.xMoveProgress(adaptee, xMoveProgress
+    );
+  }
+  
+  @Override
+  public int getYMoveProgress() {
+    return org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.yMoveProgress(adaptee);
+  }
+  
+  @Override
+  public void setYMoveProgress(final int yMoveProgress) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.yMoveProgress(adaptee, yMoveProgress
     );
   }
   
@@ -165,11 +204,17 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   
   protected final static int DIRECTION_EDEFAULT = 0;
   
+  protected final static int XMOVE_PROGRESS_EDEFAULT = 0;
+  
+  protected final static int YMOVE_PROGRESS_EDEFAULT = 0;
+  
   protected final static int INITIAL_LIVES_EDEFAULT = 0;
   
   protected final static int PELLETS_EATEN_EDEFAULT = 0;
   
   protected final static int LIVES_EDEFAULT = 0;
+  
+  protected final static boolean ENERGIZED_EDEFAULT = false;
   
   @Override
   public EClass eClass() {
@@ -189,12 +234,18 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return getCurrentTile();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__NEXT_TILE:
     		return getNextTile();
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__XMOVE_PROGRESS:
+    		return new java.lang.Integer(getXMoveProgress());
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__YMOVE_PROGRESS:
+    		return new java.lang.Integer(getYMoveProgress());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__INITIAL_LIVES:
     		return new java.lang.Integer(getInitialLives());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__PELLETS_EATEN:
     		return new java.lang.Integer(getPelletsEaten());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__LIVES:
     		return new java.lang.Integer(getLives());
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__ENERGIZED:
+    		return isEnergized() ? Boolean.TRUE : Boolean.FALSE;
     }
     
     return super.eGet(featureID, resolve, coreType);
@@ -213,12 +264,18 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return getCurrentTile() != null;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__NEXT_TILE:
     		return getNextTile() != null;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__XMOVE_PROGRESS:
+    		return getXMoveProgress() != XMOVE_PROGRESS_EDEFAULT;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__YMOVE_PROGRESS:
+    		return getYMoveProgress() != YMOVE_PROGRESS_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__INITIAL_LIVES:
     		return getInitialLives() != INITIAL_LIVES_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__PELLETS_EATEN:
     		return getPelletsEaten() != PELLETS_EATEN_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__LIVES:
     		return getLives() != LIVES_EDEFAULT;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__ENERGIZED:
+    		return isEnergized() != ENERGIZED_EDEFAULT;
     }
     
     return super.eIsSet(featureID);
@@ -229,7 +286,7 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     switch (featureID) {
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__INITIAL_TILE:
     		setInitialTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__SPEED:
@@ -240,13 +297,19 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__CURRENT_TILE:
     		setCurrentTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__NEXT_TILE:
     		setNextTile(
-    		(org.tetrabox.example.pacman.xpacmanmt.pacman.Tile)
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile)
     		 newValue);
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__XMOVE_PROGRESS:
+    		setXMoveProgress(((java.lang.Integer) newValue).intValue());
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__YMOVE_PROGRESS:
+    		setYMoveProgress(((java.lang.Integer) newValue).intValue());
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__INITIAL_LIVES:
     		setInitialLives(((java.lang.Integer) newValue).intValue());
@@ -256,6 +319,9 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__LIVES:
     		setLives(((java.lang.Integer) newValue).intValue());
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__ENERGIZED:
+    		setEnergized(((java.lang.Boolean) newValue).booleanValue());
     		return;
     }
     
