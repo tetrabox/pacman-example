@@ -38,12 +38,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public boolean canTakeDirection(final Integer direction) {
-    return org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.canTakeDirection(adaptee, direction
-    );
-  }
-  
-  @Override
   public void changeDirection(final Integer newDirection) {
     org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.changeDirection(adaptee, newDirection
     );
@@ -55,19 +49,13 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
+  public void eat() {
+    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.eat(adaptee);
+  }
+  
+  @Override
   public void energize() {
     org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.energize(adaptee);
-  }
-  
-  @Override
-  public boolean isEnergized() {
-    return org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.energized(adaptee);
-  }
-  
-  @Override
-  public void setEnergized(final boolean energized) {
-    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.energized(adaptee, energized
-    );
   }
   
   @Override
@@ -78,11 +66,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   @Override
   public void initialize() {
     org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.initialize(adaptee);
-  }
-  
-  @Override
-  public void kill() {
-    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.kill(adaptee);
   }
   
   @Override
@@ -208,8 +191,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   
   protected final static int LIVES_EDEFAULT = 0;
   
-  protected final static boolean ENERGIZED_EDEFAULT = false;
-  
   @Override
   public EClass eClass() {
     return org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.eINSTANCE.getPacman();
@@ -236,8 +217,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return new java.lang.Integer(getPelletsEaten());
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__LIVES:
     		return new java.lang.Integer(getLives());
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__ENERGIZED:
-    		return isEnergized() ? Boolean.TRUE : Boolean.FALSE;
     }
     
     return super.eGet(featureID, resolve, coreType);
@@ -264,8 +243,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return getPelletsEaten() != PELLETS_EATEN_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__LIVES:
     		return getLives() != LIVES_EDEFAULT;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__ENERGIZED:
-    		return isEnergized() != ENERGIZED_EDEFAULT;
     }
     
     return super.eIsSet(featureID);
@@ -304,9 +281,6 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
     		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__LIVES:
     		setLives(((java.lang.Integer) newValue).intValue());
-    		return;
-    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.PACMAN__ENERGIZED:
-    		setEnergized(((java.lang.Boolean) newValue).booleanValue());
     		return;
     }
     

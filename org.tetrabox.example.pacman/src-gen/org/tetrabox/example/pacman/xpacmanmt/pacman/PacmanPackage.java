@@ -341,22 +341,13 @@ public interface PacmanPackage extends EPackage {
 	int PACMAN__LIVES = ENTITY_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Energized</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PACMAN__ENERGIZED = ENTITY_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Pacman</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PACMAN_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 4;
+	int PACMAN_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.GhostImpl <em>Ghost</em>}' class.
@@ -441,13 +432,31 @@ public interface PacmanPackage extends EPackage {
 	int GHOST__PERSONNALITY = ENTITY_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Scatter Tile</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST__SCATTER_TILE = ENTITY_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Target Tile</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GHOST__TARGET_TILE = ENTITY_FEATURE_COUNT + 2;
+	int GHOST__TARGET_TILE = ENTITY_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Frightened Mode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GHOST__FRIGHTENED_MODE = ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Ghost</em>' class.
@@ -456,7 +465,7 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GHOST_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 3;
+	int GHOST_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PassableTileImpl <em>Passable Tile</em>}' class.
@@ -1077,17 +1086,6 @@ public interface PacmanPackage extends EPackage {
 	EAttribute getPacman_Lives();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#isEnergized <em>Energized</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Energized</em>'.
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Pacman#isEnergized()
-	 * @see #getPacman()
-	 * @generated
-	 */
-	EAttribute getPacman_Energized();
-
-	/**
 	 * Returns the meta object for class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost <em>Ghost</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1120,6 +1118,17 @@ public interface PacmanPackage extends EPackage {
 	EAttribute getGhost_Personnality();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost#getScatterTile <em>Scatter Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scatter Tile</em>'.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost#getScatterTile()
+	 * @see #getGhost()
+	 * @generated
+	 */
+	EReference getGhost_ScatterTile();
+
+	/**
 	 * Returns the meta object for the reference '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost#getTargetTile <em>Target Tile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1129,6 +1138,17 @@ public interface PacmanPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGhost_TargetTile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost#isFrightenedMode <em>Frightened Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Frightened Mode</em>'.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Ghost#isFrightenedMode()
+	 * @see #getGhost()
+	 * @generated
+	 */
+	EAttribute getGhost_FrightenedMode();
 
 	/**
 	 * Returns the meta object for class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.PassableTile <em>Passable Tile</em>}'.
@@ -1425,14 +1445,6 @@ public interface PacmanPackage extends EPackage {
 		EAttribute PACMAN__LIVES = eINSTANCE.getPacman_Lives();
 
 		/**
-		 * The meta object literal for the '<em><b>Energized</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PACMAN__ENERGIZED = eINSTANCE.getPacman_Energized();
-
-		/**
 		 * The meta object literal for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.GhostImpl <em>Ghost</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1459,12 +1471,28 @@ public interface PacmanPackage extends EPackage {
 		EAttribute GHOST__PERSONNALITY = eINSTANCE.getGhost_Personnality();
 
 		/**
+		 * The meta object literal for the '<em><b>Scatter Tile</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GHOST__SCATTER_TILE = eINSTANCE.getGhost_ScatterTile();
+
+		/**
 		 * The meta object literal for the '<em><b>Target Tile</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference GHOST__TARGET_TILE = eINSTANCE.getGhost_TargetTile();
+
+		/**
+		 * The meta object literal for the '<em><b>Frightened Mode</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GHOST__FRIGHTENED_MODE = eINSTANCE.getGhost_FrightenedMode();
 
 		/**
 		 * The meta object literal for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PassableTileImpl <em>Passable Tile</em>}' class.

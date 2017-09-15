@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<plugin>
+
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated XPacmanEvent -->
+      <package
+            uri="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanEvent/"
+            class="org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.XPacmanEventPackage"
+            genModel="model/XPacmanEvent.genmodel"/>
+   </extension>
+
+</plugin>

@@ -3,7 +3,11 @@ package org.tetrabox.example.pacman.view;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -18,6 +22,7 @@ import org.tetrabox.example.pacman.xpacman.pacman.Board;
 import org.tetrabox.example.pacman.xpacman.pacman.Entity;
 import org.tetrabox.example.pacman.xpacman.pacman.Ghost;
 import org.tetrabox.example.pacman.xpacman.pacman.GhostHouseTile;
+import org.tetrabox.example.pacman.xpacman.pacman.GhostPersonality;
 import org.tetrabox.example.pacman.xpacman.pacman.Pacman;
 import org.tetrabox.example.pacman.xpacman.pacman.PacmanFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage;
@@ -27,10 +32,16 @@ import org.tetrabox.example.pacman.xpacman.pacman.Tile;
 import org.tetrabox.example.pacman.xpacman.pacman.WallTile;
 
 import javafx.application.Application;
+import javafx.beans.InvalidationListener;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+import javafx.embed.swt.FXCanvas;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
@@ -57,6 +68,7 @@ public class PacManEditor extends Application {
 	private Map<Tile, Circle> tileToPellet = new HashMap<>();
 	private Map<PassableTile, Entity> tileToEntity = new HashMap<>();
 	private Map<Entity, ImageView> entityToView = new HashMap<>();
+	private ObservableList<Ghost> ghosts = FXCollections.observableArrayList();
 
 	private Image blue = new Image("blue.png");
 	private Image orange = new Image("orange.png");
@@ -103,11 +115,10 @@ public class PacManEditor extends Application {
 		VBox ySizeBox = new VBox(ySizeLabel, ySizeField);
 		HBox sizeBox = new HBox(xSizeBox, ySizeBox);
 
-		TextField ghostField = new TextField();
 		ComboBox<Personality> ghostComboBox = new ComboBox<Personality>();
 		ghostComboBox.getItems().addAll(Arrays.asList(Personality.values()));
 		ghostComboBox.setValue(Personality.SHADOW);
-		HBox ghostBox = new HBox(ghostField, ghostComboBox);
+		HBox ghostBox = new HBox(ghostComboBox);
 		ghostBox.setVisible(false);
 
 		ToggleGroup pelletGroup = new ToggleGroup();
@@ -153,6 +164,12 @@ public class PacManEditor extends Application {
 			pelletBox.setVisible(true);
 		});
 		HBox brushBox = new HBox(wallBrush, ghostHouseBrush, pacmanBrush, ghostBrush, pelletBrush);
+		
+		
+		Label entitiesLabel = new Label("Ghosts");
+		ListView ghostListView = new ListView<>(ghosts);
+		VBox entitiesBox = new VBox(entitiesLabel, ghostListView);
+				
 
 		Button newButton = new Button("new");
 		newButton.setOnAction(evt -> {
@@ -210,7 +227,7 @@ public class PacManEditor extends Application {
 					tileToPellet = new HashMap<>();
 					tileToEntity = new HashMap<>();
 					entityToView = new HashMap<>();
-					tiles = new Tile[width][height];
+					tiles = new AbstractTile[width][height];
 					boardPane.getChildren().clear();
 					board.getTiles().forEach(tile -> {
 						int x = tile.getX();
@@ -220,7 +237,7 @@ public class PacManEditor extends Application {
 						if (tile instanceof WallTile) {
 							rectangle.setFill(Color.BLUE);
 						} else if (tile instanceof GhostHouseTile) {
-							rectangle.setFill(Color.PINK);
+							rectangle.setFill(Color.CYAN);
 						} else if (tile instanceof Tile) {
 							final Tile t = (Tile) tile;
 							rectangle.setFill(Color.BLACK);
@@ -332,7 +349,7 @@ public class PacManEditor extends Application {
 							tileViews[x][y].setFill(Color.BLACK);
 						} else {
 							newTile = PacmanFactory.eINSTANCE.createGhostHouseTile();
-							tileViews[x][y].setFill(Color.PINK);
+							tileViews[x][y].setFill(Color.CYAN);
 						}
 					} else if (tile instanceof GhostHouseTile){
 						if (wallBrush.isSelected()) {
@@ -348,7 +365,7 @@ public class PacManEditor extends Application {
 							tileViews[x][y].setFill(Color.BLUE);
 						} else {
 							newTile = PacmanFactory.eINSTANCE.createGhostHouseTile();
-							tileViews[x][y].setFill(Color.PINK);
+							tileViews[x][y].setFill(Color.CYAN);
 						}
 					}
 					newTile.setX(x);
@@ -404,7 +421,7 @@ public class PacManEditor extends Application {
 						tileViews[x][y].setFill(Color.BLACK);
 					} else {
 						newTile = PacmanFactory.eINSTANCE.createGhostHouseTile();
-						tileViews[x][y].setFill(Color.PINK);
+						tileViews[x][y].setFill(Color.CYAN);
 					}
 				} else if (tile instanceof GhostHouseTile){
 					if (wallBrush.isSelected()) {
@@ -420,7 +437,7 @@ public class PacManEditor extends Application {
 						tileViews[x][y].setFill(Color.BLUE);
 					} else {
 						newTile = PacmanFactory.eINSTANCE.createGhostHouseTile();
-						tileViews[x][y].setFill(Color.PINK);
+						tileViews[x][y].setFill(Color.CYAN);
 					}
 				}
 				newTile.setX(x);
@@ -451,6 +468,68 @@ public class PacManEditor extends Application {
 						tileToPellet.put(t, pellet);
 						boardPane.getChildren().add(pellet);
 					}
+				}
+			} else if (ghostBrush.isSelected() && tile instanceof GhostHouseTile) {
+				final List<Entity> entities = board.getEntities().stream()
+						.filter(e -> e.getInitialTile() == tile)
+						.collect(Collectors.toList());
+				entities.forEach(e -> {
+					board.getEntities().remove(e);
+					boardPane.getChildren().remove(entityToView.get(e));
+				});
+				if (entities.isEmpty() || entities.stream().allMatch(e -> e instanceof Pacman)) {
+					final Ghost ghost = PacmanFactory.eINSTANCE.createGhost();
+					final GhostHouseTile ghostHouseTile = (GhostHouseTile) tile;
+					board.getEntities().add(ghost);
+					ghost.setInitialTile(ghostHouseTile);
+					ImageView ghostView = null;
+					switch (ghostComboBox.getValue()) {
+					case SHADOW:
+						ghost.setPersonnality(GhostPersonality.SHADOW);
+						ghostView = new ImageView(red);
+						break;
+					case SPEEDY:
+						ghost.setPersonnality(GhostPersonality.SPEEDY);
+						ghostView = new ImageView(pink);
+						break;
+					case BASHFUL:
+						ghost.setPersonnality(GhostPersonality.BASHFUL);
+						ghostView = new ImageView(blue);
+						break;
+					case POKEY:
+						ghost.setPersonnality(GhostPersonality.POKEY);
+						ghostView = new ImageView(orange);
+						break;
+					}
+					board.getEntities().add(ghost);
+					ghostView.setFitWidth(tileSize * 1.5);
+					ghostView.setFitHeight(tileSize * 1.5);
+					ghostView.setX(tileSize * x - tileSize / 3);
+					ghostView.setY(tileSize * y - tileSize / 3);
+					boardPane.getChildren().add(ghostView);
+					tileToEntity.put(ghostHouseTile, ghost);
+					entityToView.put(ghost, ghostView);
+				}
+			} else if (pacmanBrush.isSelected() && tile instanceof Tile) {
+				final List<Entity> entities = board.getEntities().stream()
+						.filter(e -> e.getInitialTile() == tile)
+						.collect(Collectors.toList());
+				board.getEntities().removeAll(entities);
+				if (entities.isEmpty() || entities.stream().allMatch(e -> e instanceof Ghost)) {
+					final Pacman p = PacmanFactory.eINSTANCE.createPacman();
+					final Tile t = (Tile) tile;
+					board.getEntities().add(p);
+					p.setInitialTile(t);
+					p.setInitialLives(3);
+					board.getEntities().add(p);
+					ImageView pacmanView = new ImageView(pacman);
+					pacmanView.setFitWidth(tileSize * 1.5);
+					pacmanView.setFitHeight(tileSize * 1.5);
+					pacmanView.setX(tileSize * x - tileSize / 3);
+					pacmanView.setY(tileSize * y - tileSize / 3);
+					boardPane.getChildren().add(pacmanView);
+					tileToEntity.put(t, p);
+					entityToView.put(p, pacmanView);
 				}
 			}
 		});

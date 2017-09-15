@@ -34,6 +34,9 @@
         <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
       </eParameters>
     </eOperations>
+    <eOperations name="enterFrightenedMode">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tiles" upperBound="-1" eType="//AbstractTile" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1" eType="//Entity" containment="true"/>
   </eClassifiers>
@@ -117,17 +120,10 @@
     <eOperations name="right">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="canTakeDirection">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-      <eParameters name="direction">
-        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-      </eParameters>
-    </eOperations>
     <eOperations name="enterNextTile">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="kill">
+    <eOperations name="eat">
       <eAnnotations source="aspect"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialLives">
@@ -140,10 +136,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lives" unique="false">
       <eAnnotations source="aspect"/>
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="energized" unique="false">
-      <eAnnotations source="aspect"/>
-      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ghost" eSuperTypes="//Entity">
@@ -165,12 +157,15 @@
     <eOperations name="enterScatterMode">
       <eAnnotations source="aspect"/>
     </eOperations>
-    <eOperations name="enterFrightenedMode">
+    <eOperations name="switchFrightenedMode">
       <eAnnotations source="aspect"/>
     </eOperations>
     <eOperations name="changeTargetTile">
       <eAnnotations source="aspect"/>
       <eParameters name="targetTile" eType="//AbstractTile"/>
+    </eOperations>
+    <eOperations name="eat">
+      <eAnnotations source="aspect"/>
     </eOperations>
     <eOperations name="enterNextTile">
       <eAnnotations source="aspect"/>
@@ -179,8 +174,13 @@
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personnality" lowerBound="1" eType="//GhostPersonality"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scatterTile" lowerBound="1" eType="//AbstractTile"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetTile" unique="false" eType="//AbstractTile">
       <eAnnotations source="aspect"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="frightenedMode" unique="false">
+      <eAnnotations source="aspect"/>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PassableTile" eSuperTypes="//AbstractTile"/>

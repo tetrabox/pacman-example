@@ -3,6 +3,9 @@ package org.tetrabox.example.pacman.k3dsa
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import fr.inria.diverse.k3.al.annotationprocessor.Step
+import java.util.List
+import java.util.Random
+import java.util.Set
 import pacman.AbstractTile
 import pacman.Board
 import pacman.Entity
@@ -15,8 +18,8 @@ import pacman.Tile
 import pacman.WallTile
 
 import static extension org.tetrabox.example.pacman.k3dsa.BoardAspect.*
-import static extension org.tetrabox.example.pacman.k3dsa.PacmanAspect.*
 import static extension org.tetrabox.example.pacman.k3dsa.TileAspect.*
+import static extension org.tetrabox.example.pacman.k3dsa.PacmanAspect.*
 
 @Aspect(className=Entity)
 abstract class EntityAspect {
@@ -73,9 +76,7 @@ abstract class EntityAspect {
 						if (-yMoveProgress > _self.baseMoveTime) {
 							yMoveProgress = 2 * _self.baseMoveTime + yMoveProgress
 							_self.yMoveProgress = yMoveProgress
-							if (_self.nextTile != null) {
-								_self.enterNextTile
-							}
+							_self.enterNextTile
 							_self.nextTile = _self.computeNextTile
 						} else {
 							_self.yMoveProgress = yMoveProgress
@@ -96,9 +97,7 @@ abstract class EntityAspect {
 						if (-xMoveProgress > _self.baseMoveTime) {
 							xMoveProgress = 2 * _self.baseMoveTime + xMoveProgress
 							_self.xMoveProgress = xMoveProgress
-							if (_self.nextTile != null) {
-								_self.enterNextTile
-							}
+							_self.enterNextTile
 							_self.nextTile = _self.computeNextTile
 						} else {
 							_self.xMoveProgress = xMoveProgress
@@ -119,9 +118,7 @@ abstract class EntityAspect {
 						if (yMoveProgress > _self.baseMoveTime) {
 							yMoveProgress = -(2 * _self.baseMoveTime - yMoveProgress)
 							_self.yMoveProgress = yMoveProgress
-							if (_self.nextTile != null) {
-								_self.enterNextTile
-							}
+							_self.enterNextTile
 							_self.nextTile = _self.computeNextTile
 						} else {
 							_self.yMoveProgress = yMoveProgress
@@ -142,9 +139,7 @@ abstract class EntityAspect {
 						if (xMoveProgress > _self.baseMoveTime) {
 							xMoveProgress = -(2 * _self.baseMoveTime - xMoveProgress)
 							_self.xMoveProgress = xMoveProgress
-							if (_self.nextTile != null) {
-								_self.enterNextTile
-							}
+							_self.enterNextTile
 							_self.nextTile = _self.computeNextTile
 						} else {
 							_self.xMoveProgress = xMoveProgress
@@ -199,11 +194,19 @@ class GhostAspect extends EntityAspect {
 	
 	public var AbstractTile targetTile
 	
+	public var boolean frightenedMode
+	
 	private var Board board
 	
 	private var PassableTile previousTile
 	
 	private var boolean activated
+	
+	private var Tile ghostHouseExit
+	
+	private var boolean chaseMode
+	
+	private val Random rand = new Random
 	
 	@OverrideAspectMethod
 	def void initialize() {
@@ -211,6 +214,9 @@ class GhostAspect extends EntityAspect {
 		_self.board = _self.eContainer as Board
 		_self.currentTile = _self.initialTile
 		_self.previousTile = null
+		_self.findGhostHouseExit
+		_self.chaseMode = false
+		_self.frightenedMode = false
 		if (_self.personnality == GhostPersonality.SHADOW || _self.personnality == GhostPersonality.SPEEDY) {
 			_self.activate
 		} else {
@@ -223,8 +229,14 @@ class GhostAspect extends EntityAspect {
 	def void update(long deltaTime) {
 		if (_self.activated) {
 			_self.super_update(deltaTime)
-			val pacmen = _self.board.entities.filter[it instanceof Pacman]
-			pacmen.filter[it.currentTile == _self.currentTile].forEach[(it as Pacman).kill]
+			val pacmen = _self.board.entities.filter[it instanceof Pacman && it.currentTile == _self.currentTile]
+			if (!pacmen.empty) {
+				if (_self.frightenedMode) {
+					_self.eat
+				} else {
+					pacmen.forEach[(it as Pacman).eat]
+				}
+			}
 		}
 	}
 	
@@ -237,17 +249,23 @@ class GhostAspect extends EntityAspect {
 	
 	@Step
 	def void enterChaseMode() {
-		
+		_self.chaseMode = true
 	}
 	
 	@Step
 	def void enterScatterMode() {
-		
+		_self.chaseMode = false
 	}
 	
 	@Step
-	def void enterFrightenedMode() {
-		
+	def void switchFrightenedMode() {
+		if (_self.frightenedMode) {
+			_self.frightenedMode = false
+			_self.modifySpeed(50)
+		} else {
+			_self.frightenedMode = true
+			_self.modifySpeed(-50)
+		}
 	}
 	
 	@Step
@@ -256,73 +274,109 @@ class GhostAspect extends EntityAspect {
 		_self.nextTile = _self.computeNextTile
 	}
 	
-//	private def Tile findGhostHouseExit() {
-//		val currentTile = _self.currentTile
-//		val paths = new ArrayList<List<PassableTile>>
-//		if (currentTile.top instanceof GhostHouseTile)
-//		paths.add(newArrayList(currentTile.top))
-//		paths.add(newArrayList(currentTile.top))
-//		paths.add(newArrayList(currentTile.top))
-//		paths.add(newArrayList(currentTile.top))
-//		null
-//	}
+	@Step
+	def void eat() {
+		_self.reset
+	}
+	
+	private def void findGhostHouseExit() {
+		val closedSet = newHashSet
+		val openList = newArrayList(_self.initialTile)
+		var found = false
+		while (!openList.empty && !found) {
+			val t = openList.remove(0)
+			if (t instanceof Tile) {
+				_self.ghostHouseExit = t
+				found = true
+			}
+			closedSet += t
+			_self.addToOpenList(t.top, openList, closedSet)
+			_self.addToOpenList(t.bottom, openList, closedSet)
+			_self.addToOpenList(t.left, openList, closedSet)
+			_self.addToOpenList(t.right, openList, closedSet)
+		}
+	}
+	
+	private def void addToOpenList(AbstractTile tile, List<PassableTile> openList, Set<PassableTile> closedSet) {
+		if (!openList.contains(tile) && !closedSet.contains(tile) && tile instanceof PassableTile) {
+			openList += tile as PassableTile
+		}
+	}
 	
 	private def AbstractTile findTargetTile() {
 		if (_self.activated) {
-			val pacman = _self.board.entities.filter[it instanceof Pacman].head
-			return switch (_self.personnality) {
-				case SHADOW: {
-					pacman.currentTile
-				}
-				case SPEEDY: {
-					switch (pacman.direction) {
-						case 0: {
-							pacman.currentTile?.top?.top?.top?.top
+			val selfTile =_self.currentTile
+			if (selfTile instanceof GhostHouseTile) {
+				_self.ghostHouseExit
+			} else if (_self.frightenedMode) {
+				val previousTile = _self.previousTile
+				val filter = [AbstractTile t|
+					t != null &&
+					t != previousTile &&
+					t instanceof PassableTile &&
+					!(t instanceof GhostHouseTile)
+				]
+				val candidateTiles = newArrayList(selfTile.top, selfTile.left,
+					selfTile.bottom, selfTile.right).filter(filter).map[it as PassableTile]
+				return candidateTiles.get(_self.rand.nextInt(candidateTiles.size))
+			} else if (_self.chaseMode) {
+				val pacman = _self.board.entities.filter[it instanceof Pacman].head
+				val pacmanTile = pacman.currentTile
+				return switch (_self.personnality) {
+					case SHADOW: {
+						pacman.currentTile
+					}
+					case SPEEDY: {
+						switch (pacman.direction) {
+							case 0: {
+								pacmanTile?.top?.top?.top?.top
+							}
+							case 1: {
+								pacmanTile?.left?.left?.left?.left
+							}
+							case 2: {
+								pacmanTile?.bottom?.bottom?.bottom?.bottom
+							}
+							case 3: {
+								pacmanTile?.right.right.right.right
+							}
+							default: null
 						}
-						case 1: {
-							pacman.currentTile?.left?.left?.left?.left
+					}
+					case BASHFUL: {
+						val tile2 = switch (pacman.direction) {
+							case 0: {
+								pacmanTile?.top?.top
+							}
+							case 1: {
+								pacmanTile?.left?.left
+							}
+							case 2: {
+								pacmanTile?.bottom?.bottom
+							}
+							case 3: {
+								pacmanTile?.right?.right
+							}
+							default: null
 						}
-						case 2: {
-							pacman.currentTile?.bottom?.bottom?.bottom?.bottom
+						val tile1 = _self.board.entities.filter[it instanceof Ghost]
+								.findFirst[(it as Ghost).personnality == GhostPersonality.SHADOW]
+								?.currentTile
+						val x = (2 * tile2.x + tile1.x) % 28
+						val y = (2 * tile2.y + tile1.y) % 36
+						_self.board.tiles.findFirst[it.x == x && it.y == y]
+					}
+					case POKEY: {
+						val d = _self.computeDistanceBetweenTiles(selfTile, pacmanTile)
+						if (d > 8) {
+							return pacmanTile
+						} else {
+							_self.scatterTile
 						}
-						case 3: {
-							pacman.currentTile?.right.right.right.right
-						}
-						default: null
 					}
 				}
-				case BASHFUL: {
-					val tile2 = switch (pacman.direction) {
-						case 0: {
-							pacman.currentTile?.top?.top
-						}
-						case 1: {
-							pacman.currentTile?.left?.left
-						}
-						case 2: {
-							pacman.currentTile?.bottom?.bottom
-						}
-						case 3: {
-							pacman.currentTile?.right?.right
-						}
-						default: null
-					}
-					val tile1 = _self.board.entities.filter[it instanceof Ghost]
-							.findFirst[(it as Ghost).personnality == GhostPersonality.SHADOW]
-							?.currentTile
-					val x = (2 * tile2.x + tile1.x) % 28
-					val y = (2 * tile2.y + tile1.y) % 36
-					_self.board.tiles.findFirst[it.x == x && it.y == y]
-				}
-				case POKEY: {
-					val d = _self.computeDistanceBetweenTiles(_self.currentTile, pacman.currentTile)
-					if (d > 8) {
-						return pacman.currentTile
-					} else {
-						_self.board.tiles.findFirst[it.x == 0 && it.y == 35]
-					}
-					null
-				}
+			} else {
+				return _self.scatterTile
 			}
 		} else {
 			return null
@@ -401,13 +455,10 @@ class PacmanAspect extends EntityAspect {
 	
 	public var int lives
 	
-	public var boolean energized
-	
 	@OverrideAspectMethod
 	def void initialize() {
 		_self.lives = _self.initialLives
 		_self.direction = 1
-		_self.energized = false
 		_self.super_initialize
 	}
 	
@@ -417,7 +468,6 @@ class PacmanAspect extends EntityAspect {
 		_self.super_update(deltaTime)
 		if (deltaTime >= _self.energizedRemainingDuration) {
 			_self.energizedRemainingDuration = 0
-			_self.energized = false
 		} else {
 			_self.energizedRemainingDuration = _self.energizedRemainingDuration - deltaTime
 		}
@@ -432,8 +482,7 @@ class PacmanAspect extends EntityAspect {
 	
 	@Step
 	def void energize() {
-		_self.energized = true
-		_self.energizedRemainingDuration = 10000000000l
+		(_self.eContainer as Board).enterFrightenedMode
 	}
 	
 	@Step(eventHandler = true)
@@ -472,7 +521,7 @@ class PacmanAspect extends EntityAspect {
 		}
 	}
 	
-	def boolean canTakeDirection(Integer direction) {
+	private def boolean canTakeDirection(Integer direction) {
 		val nextTile = switch(direction) {
 			case 0: {
 				_self.currentTile.top
@@ -506,7 +555,7 @@ class PacmanAspect extends EntityAspect {
 	}
 	
 	@Step
-	def void kill() {
+	def void eat() {
 		_self.lives = _self.lives - 1
 		(_self.eContainer as Board).reset
 	}

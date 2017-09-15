@@ -413,15 +413,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPacman_Energized() {
-		return (EAttribute)pacmanEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getGhost() {
 		return ghostEClass;
 	}
@@ -449,8 +440,26 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGhost_TargetTile() {
+	public EReference getGhost_ScatterTile() {
 		return (EReference)ghostEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGhost_TargetTile() {
+		return (EReference)ghostEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGhost_FrightenedMode() {
+		return (EAttribute)ghostEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -568,12 +577,13 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		createEAttribute(pacmanEClass, PACMAN__INITIAL_LIVES);
 		createEAttribute(pacmanEClass, PACMAN__PELLETS_EATEN);
 		createEAttribute(pacmanEClass, PACMAN__LIVES);
-		createEAttribute(pacmanEClass, PACMAN__ENERGIZED);
 
 		ghostEClass = createEClass(GHOST);
 		createEAttribute(ghostEClass, GHOST__NAME);
 		createEAttribute(ghostEClass, GHOST__PERSONNALITY);
+		createEReference(ghostEClass, GHOST__SCATTER_TILE);
 		createEReference(ghostEClass, GHOST__TARGET_TILE);
+		createEAttribute(ghostEClass, GHOST__FRIGHTENED_MODE);
 
 		passableTileEClass = createEClass(PASSABLE_TILE);
 
@@ -655,6 +665,8 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		op = addEOperation(boardEClass, null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getELong(), "deltaTime", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		addEOperation(boardEClass, null, "enterFrightenedMode", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(entityEClass, Entity.class, "Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEntity_InitialTile(), this.getPassableTile(), null, "initialTile", null, 1, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEntity_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -682,7 +694,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		initEAttribute(getPacman_InitialLives(), ecorePackage.getEInt(), "initialLives", null, 0, 1, Pacman.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPacman_PelletsEaten(), ecorePackage.getEInt(), "pelletsEaten", null, 0, 1, Pacman.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPacman_Lives(), ecorePackage.getEInt(), "lives", null, 0, 1, Pacman.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPacman_Energized(), ecorePackage.getEBoolean(), "energized", null, 0, 1, Pacman.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(pacmanEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -702,17 +713,16 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 
 		addEOperation(pacmanEClass, null, "right", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(pacmanEClass, ecorePackage.getEBoolean(), "canTakeDirection", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEIntegerObject(), "direction", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		addEOperation(pacmanEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(pacmanEClass, null, "kill", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(pacmanEClass, null, "eat", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(ghostEClass, Ghost.class, "Ghost", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGhost_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGhost_Personnality(), this.getGhostPersonality(), "personnality", null, 1, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGhost_ScatterTile(), this.getAbstractTile(), null, "scatterTile", null, 1, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGhost_TargetTile(), this.getAbstractTile(), null, "targetTile", null, 0, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGhost_FrightenedMode(), ecorePackage.getEBoolean(), "frightenedMode", null, 0, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(ghostEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -725,10 +735,12 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 
 		addEOperation(ghostEClass, null, "enterScatterMode", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(ghostEClass, null, "enterFrightenedMode", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(ghostEClass, null, "switchFrightenedMode", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		op = addEOperation(ghostEClass, null, "changeTargetTile", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getAbstractTile(), "targetTile", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(ghostEClass, null, "eat", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(ghostEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -807,6 +819,11 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		   });	
 		addAnnotation
 		  (boardEClass.getEOperations().get(3), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (boardEClass.getEOperations().get(4), 
 		   source, 
 		   new String[] {
 		   });	
@@ -916,22 +933,12 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		   new String[] {
 		   });	
 		addAnnotation
-		  (pacmanEClass.getEOperations().get(10), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
 		  (getPacman_PelletsEaten(), 
 		   source, 
 		   new String[] {
 		   });	
 		addAnnotation
 		  (getPacman_Lives(), 
-		   source, 
-		   new String[] {
-		   });	
-		addAnnotation
-		  (getPacman_Energized(), 
 		   source, 
 		   new String[] {
 		   });	
@@ -976,7 +983,17 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		   new String[] {
 		   });	
 		addAnnotation
+		  (ghostEClass.getEOperations().get(8), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getGhost_TargetTile(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getGhost_FrightenedMode(), 
 		   source, 
 		   new String[] {
 		   });	

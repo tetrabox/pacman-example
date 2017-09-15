@@ -360,6 +360,15 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGhost_ScatterTile() {
+		return (EReference)ghostEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPassableTile() {
 		return passableTileEClass;
 	}
@@ -467,6 +476,7 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		ghostEClass = createEClass(GHOST);
 		createEAttribute(ghostEClass, GHOST__NAME);
 		createEAttribute(ghostEClass, GHOST__PERSONNALITY);
+		createEReference(ghostEClass, GHOST__SCATTER_TILE);
 
 		passableTileEClass = createEClass(PASSABLE_TILE);
 
@@ -544,6 +554,7 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		initEClass(ghostEClass, Ghost.class, "Ghost", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGhost_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGhost_Personnality(), this.getGhostPersonality(), "personnality", null, 1, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGhost_ScatterTile(), this.getAbstractTile(), null, "scatterTile", null, 1, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(passableTileEClass, PassableTile.class, "PassableTile", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

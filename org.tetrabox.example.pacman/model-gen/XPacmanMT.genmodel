@@ -80,6 +80,9 @@
           <ecoreParameter href="XPacmanMT.ecore#//Board/update/deltaTime"/>
         </genParameters>
       </genOperations>
+      <genOperations>
+        <ecoreOperation href="XPacmanMT.ecore#//Board/enterFrightenedMode"/>
+      </genOperations>
     </genClasses>
     <genClasses image="false">
       <ecoreClass href="XPacmanMT.ecore#//Entity"/>
@@ -140,9 +143,6 @@
       <genFeatures createChild="false">
         <ecoreFeature xsi:type="ecore:EAttribute" href="XPacmanMT.ecore#//Pacman/lives"/>
       </genFeatures>
-      <genFeatures createChild="false">
-        <ecoreFeature xsi:type="ecore:EAttribute" href="XPacmanMT.ecore#//Pacman/energized"/>
-      </genFeatures>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Pacman/initialize"/>
       </genOperations>
@@ -174,16 +174,10 @@
         <ecoreOperation href="XPacmanMT.ecore#//Pacman/right"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XPacmanMT.ecore#//Pacman/canTakeDirection"/>
-        <genParameters>
-          <ecoreParameter href="XPacmanMT.ecore#//Pacman/canTakeDirection/direction"/>
-        </genParameters>
-      </genOperations>
-      <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Pacman/enterNextTile"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XPacmanMT.ecore#//Pacman/kill"/>
+        <ecoreOperation href="XPacmanMT.ecore#//Pacman/eat"/>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -195,7 +189,13 @@
         <ecoreFeature xsi:type="ecore:EAttribute" href="XPacmanMT.ecore#//Ghost/personnality"/>
       </genFeatures>
       <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XPacmanMT.ecore#//Ghost/scatterTile"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
         <ecoreFeature xsi:type="ecore:EReference" href="XPacmanMT.ecore#//Ghost/targetTile"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="XPacmanMT.ecore#//Ghost/frightenedMode"/>
       </genFeatures>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Ghost/initialize"/>
@@ -216,13 +216,16 @@
         <ecoreOperation href="XPacmanMT.ecore#//Ghost/enterScatterMode"/>
       </genOperations>
       <genOperations>
-        <ecoreOperation href="XPacmanMT.ecore#//Ghost/enterFrightenedMode"/>
+        <ecoreOperation href="XPacmanMT.ecore#//Ghost/switchFrightenedMode"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Ghost/changeTargetTile"/>
         <genParameters>
           <ecoreParameter href="XPacmanMT.ecore#//Ghost/changeTargetTile/targetTile"/>
         </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XPacmanMT.ecore#//Ghost/eat"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Ghost/enterNextTile"/>

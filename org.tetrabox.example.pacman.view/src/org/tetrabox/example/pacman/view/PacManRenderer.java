@@ -48,6 +48,7 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 	private Map<Tile, Circle> tileToPellet = new HashMap<>();
 	private Map<Entity, ImageView> entityToView = new HashMap<>();
 
+	private Image frightened = new Image("frightened.png");
 	private Image blue = new Image("blue.png");
 	private Image orange = new Image("orange.png");
 	private Image pink = new Image("pink.png");
@@ -152,6 +153,30 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 			}
 			if (e instanceof Pacman) {
 				n.setRotate(-90 - ((Pacman) e).getDirection() * 90);
+			} else {
+				final Ghost ghost = (Ghost) e;
+				if (ghost.isFrightenedMode()) {
+					if (n.getImage() != frightened) {
+						n.setImage(frightened);
+					}
+				} else {
+					if (n.getImage() == frightened) {
+						switch (ghost.getPersonnality()) {
+						case SHADOW:
+							n.setImage(red);
+							break;
+						case SPEEDY:
+							n.setImage(pink);
+							break;
+						case BASHFUL:
+							n.setImage(blue);
+							break;
+						case POKEY:
+							n.setImage(orange);
+							break;
+						}
+					}
+				}
 			}
 		});
 	}

@@ -1,3 +1,0 @@
-import platform:/resource/org.tetrabox.example.pacman.model/model/NewOCLFile.ocl
-
-{ocl a : ocl b}

@@ -5,7 +5,9 @@ package pacman.impl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import pacman.AbstractTile;
 import pacman.Ghost;
 import pacman.GhostPersonality;
 import pacman.PacmanPackage;
@@ -20,6 +22,7 @@ import pacman.PacmanPackage;
  * <ul>
  *   <li>{@link pacman.impl.GhostImpl#getName <em>Name</em>}</li>
  *   <li>{@link pacman.impl.GhostImpl#getPersonnality <em>Personnality</em>}</li>
+ *   <li>{@link pacman.impl.GhostImpl#getScatterTile <em>Scatter Tile</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,6 +64,16 @@ public class GhostImpl extends EntityImpl implements Ghost {
 	 * @ordered
 	 */
 	protected GhostPersonality personnality = PERSONNALITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getScatterTile() <em>Scatter Tile</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScatterTile()
+	 * @generated
+	 * @ordered
+	 */
+	protected AbstractTile scatterTile;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,6 +141,44 @@ public class GhostImpl extends EntityImpl implements Ghost {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AbstractTile getScatterTile() {
+		if (scatterTile != null && scatterTile.eIsProxy()) {
+			InternalEObject oldScatterTile = (InternalEObject)scatterTile;
+			scatterTile = (AbstractTile)eResolveProxy(oldScatterTile);
+			if (scatterTile != oldScatterTile) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PacmanPackage.GHOST__SCATTER_TILE, oldScatterTile, scatterTile));
+			}
+		}
+		return scatterTile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AbstractTile basicGetScatterTile() {
+		return scatterTile;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScatterTile(AbstractTile newScatterTile) {
+		AbstractTile oldScatterTile = scatterTile;
+		scatterTile = newScatterTile;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PacmanPackage.GHOST__SCATTER_TILE, oldScatterTile, scatterTile));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -135,6 +186,9 @@ public class GhostImpl extends EntityImpl implements Ghost {
 				return getName();
 			case PacmanPackage.GHOST__PERSONNALITY:
 				return getPersonnality();
+			case PacmanPackage.GHOST__SCATTER_TILE:
+				if (resolve) return getScatterTile();
+				return basicGetScatterTile();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,6 +206,9 @@ public class GhostImpl extends EntityImpl implements Ghost {
 				return;
 			case PacmanPackage.GHOST__PERSONNALITY:
 				setPersonnality((GhostPersonality)newValue);
+				return;
+			case PacmanPackage.GHOST__SCATTER_TILE:
+				setScatterTile((AbstractTile)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -171,6 +228,9 @@ public class GhostImpl extends EntityImpl implements Ghost {
 			case PacmanPackage.GHOST__PERSONNALITY:
 				setPersonnality(PERSONNALITY_EDEFAULT);
 				return;
+			case PacmanPackage.GHOST__SCATTER_TILE:
+				setScatterTile((AbstractTile)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -187,6 +247,8 @@ public class GhostImpl extends EntityImpl implements Ghost {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PacmanPackage.GHOST__PERSONNALITY:
 				return personnality != PERSONNALITY_EDEFAULT;
+			case PacmanPackage.GHOST__SCATTER_TILE:
+				return scatterTile != null;
 		}
 		return super.eIsSet(featureID);
 	}

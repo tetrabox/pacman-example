@@ -88,4 +88,12 @@ public interface Board extends EObject {
 	 */
 	void update(long deltaTime);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void enterFrightenedMode();
+
 } // Board

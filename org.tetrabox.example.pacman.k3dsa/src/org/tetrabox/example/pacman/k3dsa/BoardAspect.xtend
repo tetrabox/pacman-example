@@ -28,6 +28,12 @@ class BoardAspect {
 	
 	private val long targetFrameRate = 1000000000l / targetFps
 	
+	private var long modeChangeTimer = 5000000000l
+	
+	private var boolean scatterMode = true
+	
+	private var long frightenedTimer = 0l
+	
 	private var int totalPellets
 	
 	@InitializeModel
@@ -73,6 +79,39 @@ class BoardAspect {
 		val remainingPellets = _self.tiles.filter[it instanceof Tile && (it as Tile).pellet != null].length
 		val blueMilestoneReached = remainingPellets == totalPellets - totalPellets / 8
 		val orangeMilestoneReached = remainingPellets == totalPellets - totalPellets / 3
+		val frightenedTimer = _self.frightenedTimer
+		var modeChangeTimer = _self.modeChangeTimer
+		var modeChangeNeeded = false
+		if (frightenedTimer > 0) {
+			if (frightenedTimer > deltaTime) {
+				_self.frightenedTimer = frightenedTimer - deltaTime
+			} else {
+				val remainingDeltaTime = deltaTime - frightenedTimer
+				_self.frightenedTimer = 0
+				_self.entities.filter[it instanceof Ghost].map[it as Ghost].forEach[switchFrightenedMode]
+				modeChangeTimer = modeChangeTimer - remainingDeltaTime
+				if (modeChangeTimer <= remainingDeltaTime) {
+					modeChangeNeeded = true
+				}
+			}
+		} else {
+			modeChangeTimer = modeChangeTimer - deltaTime
+			if (modeChangeTimer <= deltaTime) {
+				modeChangeNeeded = true
+			}
+		}
+		if (modeChangeNeeded) {
+			if (_self.scatterMode) {
+				_self.entities.filter[it instanceof Ghost].map[it as Ghost].forEach[enterChaseMode]
+				_self.scatterMode = false
+				modeChangeTimer += 20000000000l
+			} else {
+				_self.entities.filter[it instanceof Ghost].map[it as Ghost].forEach[enterScatterMode]
+				_self.scatterMode = true
+				modeChangeTimer += 5000000000l
+			}
+		}
+		_self.modeChangeTimer = modeChangeTimer
 		_self.entities.filter[it instanceof Ghost].forEach[
 			val ghost = it as Ghost
 			if (ghost.personnality == GhostPersonality.SHADOW) {
@@ -90,5 +129,13 @@ class BoardAspect {
 			ghost.update(deltaTime)
 		]
 		_self.entities.filter[it instanceof Pacman].forEach[update(deltaTime)]
+	}
+	
+	@Step
+	def void enterFrightenedMode() {
+		if (_self.frightenedTimer == 0) {
+			_self.entities.filter[it instanceof Ghost].map[it as Ghost].forEach[switchFrightenedMode]
+		}
+		_self.frightenedTimer = 10000000000l
 	}
 }

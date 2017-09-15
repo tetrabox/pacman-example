@@ -8,19 +8,16 @@ import org.eclipse.gemoc.event.commons.interpreter.IBehavioralAPI;
 import org.eclipse.gemoc.event.commons.interpreter.EventInstance;
 import org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect;
 import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.XPacmanEventPackage;
-import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.PacmanDownEvent;
 import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.PacmanUpEvent;
 import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.PacmanLeftEvent;
 import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.PacmanRightEvent;
+import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.PacmanDownEvent;
 import org.tetrabox.example.pacman.xpacman.pacman.Pacman;
 
 public class XPacmanBehavioralAPI implements IBehavioralAPI {
 
 	@Override
 	public boolean canSendEvent(EventInstance event) {
-		if (event.getOriginalEvent() instanceof PacmanDownEvent) {
-			return true;
-		} else
 		if (event.getOriginalEvent() instanceof PacmanUpEvent) {
 			return true;
 		} else
@@ -28,6 +25,9 @@ public class XPacmanBehavioralAPI implements IBehavioralAPI {
 			return true;
 		} else
 		if (event.getOriginalEvent() instanceof PacmanRightEvent) {
+			return true;
+		} else
+		if (event.getOriginalEvent() instanceof PacmanDownEvent) {
 			return true;
 		}
 		return false;
@@ -36,18 +36,15 @@ public class XPacmanBehavioralAPI implements IBehavioralAPI {
 	@Override
 	public Set<EClass> getEventClasses() {
 		final Set<EClass> eventClasses = new HashSet<>();
-		eventClasses.add(XPacmanEventPackage.eINSTANCE.getPacmanDownEvent());
 		eventClasses.add(XPacmanEventPackage.eINSTANCE.getPacmanUpEvent());
 		eventClasses.add(XPacmanEventPackage.eINSTANCE.getPacmanLeftEvent());
 		eventClasses.add(XPacmanEventPackage.eINSTANCE.getPacmanRightEvent());
+		eventClasses.add(XPacmanEventPackage.eINSTANCE.getPacmanDownEvent());
 		return eventClasses;
 	}
 	
 	@Override
 	public void dispatchEvent(EventInstance event) {
-		if (event.getOriginalEvent() instanceof PacmanDownEvent) {
-			handlePacmanDownEvent(event);
-		} else
 		if (event.getOriginalEvent() instanceof PacmanUpEvent) {
 			handlePacmanUpEvent(event);
 		} else
@@ -56,12 +53,10 @@ public class XPacmanBehavioralAPI implements IBehavioralAPI {
 		} else
 		if (event.getOriginalEvent() instanceof PacmanRightEvent) {
 			handlePacmanRightEvent(event);
+		} else
+		if (event.getOriginalEvent() instanceof PacmanDownEvent) {
+			handlePacmanDownEvent(event);
 		}
-	}
-	
-	private void handlePacmanDownEvent(EventInstance _event) {
-		final Pacman pacman = (Pacman) _event.getParameters().get(_event.getOriginalEvent().eClass().getEAllStructuralFeatures().get(0));
-		PacmanAspect.down(pacman);
 	}
 	
 	private void handlePacmanUpEvent(EventInstance _event) {
@@ -77,6 +72,11 @@ public class XPacmanBehavioralAPI implements IBehavioralAPI {
 	private void handlePacmanRightEvent(EventInstance _event) {
 		final Pacman pacman = (Pacman) _event.getParameters().get(_event.getOriginalEvent().eClass().getEAllStructuralFeatures().get(0));
 		PacmanAspect.right(pacman);
+	}
+	
+	private void handlePacmanDownEvent(EventInstance _event) {
+		final Pacman pacman = (Pacman) _event.getParameters().get(_event.getOriginalEvent().eClass().getEAllStructuralFeatures().get(0));
+		PacmanAspect.down(pacman);
 	}
 	
 }

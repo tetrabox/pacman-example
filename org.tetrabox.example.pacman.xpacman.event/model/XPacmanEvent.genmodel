@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.tetrabox.example.pacman.xpacman.event/src/" modelPluginID="org.tetrabox.example.pacman.xpacman.event" modelName="XPacmanevent" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/org.tetrabox.example.pacman.xpacman/model/XPacman.ecore</foreignModel>
+  <genPackages prefix="XPacmanEvent" basePackage="org.tetrabox.example.pacman.xpacman.event" disposableProviderFactory="true" fileExtensions="xpacmans">
+    <ecorePackage href="XPacmanEvent.ecore#/"/>
+    <genClasses image="false">
+      <ecoreClass href="XPacmanEvent.ecore#//XPacmanDSLEvent"/>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="XPacmanEvent.ecore#//PacmanEvent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="XPacmanEvent.ecore#//PacmanEvent/pacman"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XPacmanEvent.ecore#//PacmanDownEvent"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XPacmanEvent.ecore#//PacmanLeftEvent"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XPacmanEvent.ecore#//PacmanRightEvent"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="XPacmanEvent.ecore#//PacmanUpEvent"/>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../../plugin/org.eclipse.gemoc.event.commons.model/model/scenario.genmodel#//scenario"/>
+  <usedGenPackages href="../../org.tetrabox.example.pacman.xpacman/model/XPacman.genmodel#//pacman"/>
+</genmodel:GenModel>

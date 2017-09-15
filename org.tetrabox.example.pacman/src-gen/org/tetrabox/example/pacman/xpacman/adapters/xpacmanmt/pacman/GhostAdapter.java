@@ -50,6 +50,18 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
+  public AbstractTile getScatterTile() {
+    return (AbstractTile) adaptersFactory.createAdapter(adaptee.getScatterTile(), eResource);
+  }
+  
+  @Override
+  public void setScatterTile(final AbstractTile o) {
+    if (o != null)
+    	adaptee.setScatterTile(((org.tetrabox.example.pacman.xpacman.adapters.xpacmanmt.pacman.AbstractTileAdapter) o).getAdaptee());
+    else adaptee.setScatterTile(null);
+  }
+  
+  @Override
   public void activate() {
     org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.activate(adaptee);
   }
@@ -61,13 +73,13 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public void enterChaseMode() {
-    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterChaseMode(adaptee);
+  public void eat() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.eat(adaptee);
   }
   
   @Override
-  public void enterFrightenedMode() {
-    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterFrightenedMode(adaptee);
+  public void enterChaseMode() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterChaseMode(adaptee);
   }
   
   @Override
@@ -81,8 +93,24 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
+  public boolean isFrightenedMode() {
+    return org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.frightenedMode(adaptee);
+  }
+  
+  @Override
+  public void setFrightenedMode(final boolean frightenedMode) {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.frightenedMode(adaptee, frightenedMode
+    );
+  }
+  
+  @Override
   public void initialize() {
     org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.initialize(adaptee);
+  }
+  
+  @Override
+  public void switchFrightenedMode() {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.switchFrightenedMode(adaptee);
   }
   
   @Override
@@ -186,6 +214,8 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   
   protected final static GhostPersonality PERSONNALITY_EDEFAULT = org.tetrabox.example.pacman.xpacmanmt.pacman.GhostPersonality.SHADOW;
   
+  protected final static boolean FRIGHTENED_MODE_EDEFAULT = false;
+  
   @Override
   public EClass eClass() {
     return org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.eINSTANCE.getGhost();
@@ -210,8 +240,12 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		return getName();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__PERSONNALITY:
     		return getPersonnality();
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__SCATTER_TILE:
+    		return getScatterTile();
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__TARGET_TILE:
     		return getTargetTile();
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__FRIGHTENED_MODE:
+    		return isFrightenedMode() ? Boolean.TRUE : Boolean.FALSE;
     }
     
     return super.eGet(featureID, resolve, coreType);
@@ -236,8 +270,12 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		return getName() != NAME_EDEFAULT;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__PERSONNALITY:
     		return getPersonnality() != PERSONNALITY_EDEFAULT;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__SCATTER_TILE:
+    		return getScatterTile() != null;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__TARGET_TILE:
     		return getTargetTile() != null;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__FRIGHTENED_MODE:
+    		return isFrightenedMode() != FRIGHTENED_MODE_EDEFAULT;
     }
     
     return super.eIsSet(featureID);
@@ -278,10 +316,18 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
     		(org.tetrabox.example.pacman.xpacmanmt.pacman.GhostPersonality)
     		 newValue);
     		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__SCATTER_TILE:
+    		setScatterTile(
+    		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
+    		 newValue);
+    		return;
     	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__TARGET_TILE:
     		setTargetTile(
     		(org.tetrabox.example.pacman.xpacmanmt.pacman.AbstractTile)
     		 newValue);
+    		return;
+    	case org.tetrabox.example.pacman.xpacmanmt.pacman.PacmanPackage.GHOST__FRIGHTENED_MODE:
+    		setFrightenedMode(((java.lang.Boolean) newValue).booleanValue());
     		return;
     }
     

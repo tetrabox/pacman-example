@@ -37,6 +37,11 @@ public class BoardAdapter extends EObjectAdapter<Board> implements org.tetrabox.
   }
   
   @Override
+  public void enterFrightenedMode() {
+    org.tetrabox.example.pacman.xpacman.aspects.BoardAspect.enterFrightenedMode(adaptee);
+  }
+  
+  @Override
   public void initializeModel(final org.eclipse.emf.common.util.EList<java.lang.String> args) {
     org.tetrabox.example.pacman.xpacman.aspects.BoardAspect.initializeModel(adaptee, args
     );

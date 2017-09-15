@@ -29,6 +29,7 @@
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personnality" lowerBound="1" eType="//GhostPersonality"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scatterTile" lowerBound="1" eType="//AbstractTile"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PassableTile" abstract="true" eSuperTypes="//AbstractTile"/>
   <eClassifiers xsi:type="ecore:EClass" name="Tile" eSuperTypes="//PassableTile">
