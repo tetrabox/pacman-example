@@ -11,7 +11,6 @@ Require-Bundle: org.eclipse.core.runtime,
  fr.inria.diverse.k3.al.annotationprocessor.plugin,
  fr.inria.diverse.melange,
  org.eclipse.xtext.xbase.lib,
- org.eclipse.gemoc.event.commons.interpreter,
  org.eclipse.xtend.lib.macro,
  com.google.guava,
  org.eclipse.xtend.lib
@@ -20,5 +19,5 @@ Export-Package: org.tetrabox.example.pacman.xpacman.aspects,
  org.tetrabox.example.pacman.xpacman.pacman,
  org.tetrabox.example.pacman.xpacman.pacman.impl,
  org.tetrabox.example.pacman.xpacman.pacman.util
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 

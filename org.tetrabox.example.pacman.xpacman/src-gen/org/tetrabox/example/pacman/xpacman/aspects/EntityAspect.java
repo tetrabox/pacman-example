@@ -1,6 +1,5 @@
 package org.tetrabox.example.pacman.xpacman.aspects;
 
-import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Abstract;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
@@ -155,10 +154,10 @@ public abstract class EntityAspect {
   protected static PassableTile computeNextTile(final Entity _self) {
     final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext.getSelf(_self);
     Object result = null;
-     if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman){
-    					result = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.computeNextTile((org.tetrabox.example.pacman.xpacman.pacman.Pacman)_self);
-    } else  if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost){
+     if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost){
     					result = org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.computeNextTile((org.tetrabox.example.pacman.xpacman.pacman.Ghost)_self);
+    } else  if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman){
+    					result = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.computeNextTile((org.tetrabox.example.pacman.xpacman.pacman.Pacman)_self);
     } else  if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Entity){
     					result = org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_computeNextTile(_self_, (org.tetrabox.example.pacman.xpacman.pacman.Entity)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
@@ -298,18 +297,14 @@ public abstract class EntityAspect {
   }
   
   protected static void _privk3_initialize(final EntityAspectEntityAspectProperties _self_, final Entity _self) {
-    PassableTile _initialTile = _self.getInitialTile();
-    EntityAspect.currentTile(_self, _initialTile);
-    PassableTile _computeNextTile = EntityAspect.computeNextTile(_self);
-    EntityAspect.nextTile(_self, _computeNextTile);
+    EntityAspect.currentTile(_self, _self.getInitialTile());
+    EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
     EntityAspect.speed(_self, 100);
   }
   
   protected static void _privk3_reset(final EntityAspectEntityAspectProperties _self_, final Entity _self) {
-    PassableTile _initialTile = _self.getInitialTile();
-    EntityAspect.currentTile(_self, _initialTile);
-    PassableTile _computeNextTile = EntityAspect.computeNextTile(_self);
-    EntityAspect.nextTile(_self, _computeNextTile);
+    EntityAspect.currentTile(_self, _self.getInitialTile());
+    EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
     EntityAspect.xMoveProgress(_self, 0);
     EntityAspect.yMoveProgress(_self, 0);
   }
@@ -333,11 +328,10 @@ public abstract class EntityAspect {
     int _direction = EntityAspect.direction(_self);
     switch (_direction) {
       case 0:
-        int _xTowardCenter = EntityAspect.xTowardCenter(_self, progress);
-        progress = _xTowardCenter;
+        progress = EntityAspect.xTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile = EntityAspect.nextTile(_self);
-          if (((!Objects.equal(nextTile, null)) && (nextTile instanceof PassableTile))) {
+          if (((nextTile != null) && (nextTile instanceof PassableTile))) {
             int _yMoveProgress = EntityAspect.yMoveProgress(_self);
             int yMoveProgress = (_yMoveProgress - progress);
             int _baseMoveTime = EntityAspect.baseMoveTime(_self);
@@ -349,8 +343,7 @@ public abstract class EntityAspect {
               yMoveProgress = _plus;
               EntityAspect.yMoveProgress(_self, yMoveProgress);
               EntityAspect.enterNextTile(_self);
-              PassableTile _computeNextTile = EntityAspect.computeNextTile(_self);
-              EntityAspect.nextTile(_self, _computeNextTile);
+              EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.yMoveProgress(_self, yMoveProgress);
             }
@@ -360,11 +353,10 @@ public abstract class EntityAspect {
         }
         break;
       case 1:
-        int _yTowardCenter = EntityAspect.yTowardCenter(_self, progress);
-        progress = _yTowardCenter;
+        progress = EntityAspect.yTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile_1 = EntityAspect.nextTile(_self);
-          if (((!Objects.equal(nextTile_1, null)) && (nextTile_1 instanceof PassableTile))) {
+          if (((nextTile_1 != null) && (nextTile_1 instanceof PassableTile))) {
             int _xMoveProgress = EntityAspect.xMoveProgress(_self);
             int xMoveProgress = (_xMoveProgress - progress);
             int _baseMoveTime_2 = EntityAspect.baseMoveTime(_self);
@@ -376,8 +368,7 @@ public abstract class EntityAspect {
               xMoveProgress = _plus_1;
               EntityAspect.xMoveProgress(_self, xMoveProgress);
               EntityAspect.enterNextTile(_self);
-              PassableTile _computeNextTile_1 = EntityAspect.computeNextTile(_self);
-              EntityAspect.nextTile(_self, _computeNextTile_1);
+              EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.xMoveProgress(_self, xMoveProgress);
             }
@@ -387,11 +378,10 @@ public abstract class EntityAspect {
         }
         break;
       case 2:
-        int _xTowardCenter_1 = EntityAspect.xTowardCenter(_self, progress);
-        progress = _xTowardCenter_1;
+        progress = EntityAspect.xTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile_2 = EntityAspect.nextTile(_self);
-          if (((!Objects.equal(nextTile_2, null)) && (nextTile_2 instanceof PassableTile))) {
+          if (((nextTile_2 != null) && (nextTile_2 instanceof PassableTile))) {
             int _yMoveProgress_1 = EntityAspect.yMoveProgress(_self);
             int yMoveProgress_1 = (_yMoveProgress_1 + progress);
             int _baseMoveTime_4 = EntityAspect.baseMoveTime(_self);
@@ -404,8 +394,7 @@ public abstract class EntityAspect {
               yMoveProgress_1 = _minus_1;
               EntityAspect.yMoveProgress(_self, yMoveProgress_1);
               EntityAspect.enterNextTile(_self);
-              PassableTile _computeNextTile_2 = EntityAspect.computeNextTile(_self);
-              EntityAspect.nextTile(_self, _computeNextTile_2);
+              EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.yMoveProgress(_self, yMoveProgress_1);
             }
@@ -415,11 +404,10 @@ public abstract class EntityAspect {
         }
         break;
       case 3:
-        int _yTowardCenter_1 = EntityAspect.yTowardCenter(_self, progress);
-        progress = _yTowardCenter_1;
+        progress = EntityAspect.yTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile_3 = EntityAspect.nextTile(_self);
-          if (((!Objects.equal(nextTile_3, null)) && (nextTile_3 instanceof PassableTile))) {
+          if (((nextTile_3 != null) && (nextTile_3 instanceof PassableTile))) {
             int _xMoveProgress_1 = EntityAspect.xMoveProgress(_self);
             int xMoveProgress_1 = (_xMoveProgress_1 + progress);
             int _baseMoveTime_6 = EntityAspect.baseMoveTime(_self);
@@ -432,8 +420,7 @@ public abstract class EntityAspect {
               xMoveProgress_1 = _minus_3;
               EntityAspect.xMoveProgress(_self, xMoveProgress_1);
               EntityAspect.enterNextTile(_self);
-              PassableTile _computeNextTile_3 = EntityAspect.computeNextTile(_self);
-              EntityAspect.nextTile(_self, _computeNextTile_3);
+              EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.xMoveProgress(_self, xMoveProgress_1);
             }
@@ -449,20 +436,17 @@ public abstract class EntityAspect {
     int _xMoveProgress = EntityAspect.xMoveProgress(_self);
     boolean _notEquals = (_xMoveProgress != 0);
     if (_notEquals) {
-      int _xMoveProgress_1 = EntityAspect.xMoveProgress(_self);
-      int _abs = Math.abs(_xMoveProgress_1);
+      int _abs = Math.abs(EntityAspect.xMoveProgress(_self));
       boolean _greaterThan = (progress > _abs);
       if (_greaterThan) {
         EntityAspect.xMoveProgress(_self, 0);
-        int _xMoveProgress_2 = EntityAspect.xMoveProgress(_self);
-        int _abs_1 = Math.abs(_xMoveProgress_2);
+        int _abs_1 = Math.abs(EntityAspect.xMoveProgress(_self));
         return (progress - _abs_1);
       } else {
-        int _xMoveProgress_3 = EntityAspect.xMoveProgress(_self);
-        int _xMoveProgress_4 = EntityAspect.xMoveProgress(_self);
-        float _signum = Math.signum(_xMoveProgress_4);
+        int _xMoveProgress_1 = EntityAspect.xMoveProgress(_self);
+        float _signum = Math.signum(EntityAspect.xMoveProgress(_self));
         int _multiply = (((int) _signum) * progress);
-        int _minus = (_xMoveProgress_3 - _multiply);
+        int _minus = (_xMoveProgress_1 - _multiply);
         EntityAspect.xMoveProgress(_self, _minus);
         return 0;
       }
@@ -474,20 +458,17 @@ public abstract class EntityAspect {
     int _yMoveProgress = EntityAspect.yMoveProgress(_self);
     boolean _notEquals = (_yMoveProgress != 0);
     if (_notEquals) {
-      int _yMoveProgress_1 = EntityAspect.yMoveProgress(_self);
-      int _abs = Math.abs(_yMoveProgress_1);
+      int _abs = Math.abs(EntityAspect.yMoveProgress(_self));
       boolean _greaterThan = (progress > _abs);
       if (_greaterThan) {
         EntityAspect.yMoveProgress(_self, 0);
-        int _yMoveProgress_2 = EntityAspect.yMoveProgress(_self);
-        int _abs_1 = Math.abs(_yMoveProgress_2);
+        int _abs_1 = Math.abs(EntityAspect.yMoveProgress(_self));
         return (progress - _abs_1);
       } else {
-        int _yMoveProgress_3 = EntityAspect.yMoveProgress(_self);
-        int _yMoveProgress_4 = EntityAspect.yMoveProgress(_self);
-        float _signum = Math.signum(_yMoveProgress_4);
+        int _yMoveProgress_1 = EntityAspect.yMoveProgress(_self);
+        float _signum = Math.signum(EntityAspect.yMoveProgress(_self));
         int _multiply = (((int) _signum) * progress);
-        int _minus = (_yMoveProgress_3 - _multiply);
+        int _minus = (_yMoveProgress_1 - _multiply);
         EntityAspect.yMoveProgress(_self, _minus);
         return 0;
       }
@@ -500,8 +481,7 @@ public abstract class EntityAspect {
   }
   
   protected static void _privk3_enterNextTile(final EntityAspectEntityAspectProperties _self_, final Entity _self) {
-    PassableTile _nextTile = EntityAspect.nextTile(_self);
-    EntityAspect.currentTile(_self, _nextTile);
+    EntityAspect.currentTile(_self, EntityAspect.nextTile(_self));
   }
   
   protected static int _privk3_speed(final EntityAspectEntityAspectProperties _self_, final Entity _self) {

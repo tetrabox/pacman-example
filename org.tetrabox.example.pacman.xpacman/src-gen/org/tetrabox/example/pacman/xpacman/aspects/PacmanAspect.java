@@ -1,6 +1,5 @@
 package org.tetrabox.example.pacman.xpacman.aspects;
 
-import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
@@ -301,8 +300,7 @@ public class PacmanAspect extends EntityAspect {
   }
   
   protected static void _privk3_initialize(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
-    int _initialLives = _self.getInitialLives();
-    PacmanAspect.lives(_self, _initialLives);
+    PacmanAspect.lives(_self, _self.getInitialLives());
     EntityAspect.direction(_self, 1);
     PacmanAspect.super_initialize(_self);
   }
@@ -332,8 +330,7 @@ public class PacmanAspect extends EntityAspect {
   
   protected static void _privk3_changeDirection(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self, final Integer newDirection) {
     EntityAspect.direction(_self, (newDirection).intValue());
-    Tile _computeNextTile = PacmanAspect.computeNextTile(_self);
-    EntityAspect.nextTile(_self, _computeNextTile);
+    EntityAspect.nextTile(_self, PacmanAspect.computeNextTile(_self));
   }
   
   protected static void _privk3_energize(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
@@ -384,20 +381,16 @@ public class PacmanAspect extends EntityAspect {
       if (direction != null) {
         switch (direction) {
           case 0:
-            PassableTile _currentTile = EntityAspect.currentTile(_self);
-            _switchResult = _currentTile.getTop();
+            _switchResult = EntityAspect.currentTile(_self).getTop();
             break;
           case 1:
-            PassableTile _currentTile_1 = EntityAspect.currentTile(_self);
-            _switchResult = _currentTile_1.getLeft();
+            _switchResult = EntityAspect.currentTile(_self).getLeft();
             break;
           case 2:
-            PassableTile _currentTile_2 = EntityAspect.currentTile(_self);
-            _switchResult = _currentTile_2.getBottom();
+            _switchResult = EntityAspect.currentTile(_self).getBottom();
             break;
           case 3:
-            PassableTile _currentTile_3 = EntityAspect.currentTile(_self);
-            _switchResult = _currentTile_3.getRight();
+            _switchResult = EntityAspect.currentTile(_self).getRight();
             break;
           default:
             _switchResult = null;
@@ -407,7 +400,7 @@ public class PacmanAspect extends EntityAspect {
         _switchResult = null;
       }
       final AbstractTile nextTile = _switchResult;
-      _xblockexpression = (((!Objects.equal(nextTile, null)) && (!(nextTile instanceof WallTile))) && (!(nextTile instanceof GhostHouseTile)));
+      _xblockexpression = (((nextTile != null) && (!(nextTile instanceof WallTile))) && (!(nextTile instanceof GhostHouseTile)));
     }
     return _xblockexpression;
   }
@@ -419,15 +412,13 @@ public class PacmanAspect extends EntityAspect {
   
   protected static void _privk3_enterNextTile(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
     final PassableTile tile = EntityAspect.nextTile(_self);
-    if (((!Objects.equal(tile, null)) && (tile instanceof Tile))) {
+    if (((tile != null) && (tile instanceof Tile))) {
       PacmanAspect.super_enterNextTile(_self);
       TileAspect.eatPellet(((Tile) tile), _self);
     }
-    int _nextDirection = PacmanAspect.nextDirection(_self);
-    boolean _canTakeDirection = PacmanAspect.canTakeDirection(_self, Integer.valueOf(_nextDirection));
+    boolean _canTakeDirection = PacmanAspect.canTakeDirection(_self, Integer.valueOf(PacmanAspect.nextDirection(_self)));
     if (_canTakeDirection) {
-      int _nextDirection_1 = PacmanAspect.nextDirection(_self);
-      PacmanAspect.changeDirection(_self, Integer.valueOf(_nextDirection_1));
+      PacmanAspect.changeDirection(_self, Integer.valueOf(PacmanAspect.nextDirection(_self)));
     }
     PacmanAspect.nextDirection(_self, (-1));
   }
@@ -446,20 +437,16 @@ public class PacmanAspect extends EntityAspect {
     int _direction = EntityAspect.direction(_self);
     switch (_direction) {
       case 0:
-        AbstractTile _top = currentTile.getTop();
-        result = _top;
+        result = currentTile.getTop();
         break;
       case 1:
-        AbstractTile _left = currentTile.getLeft();
-        result = _left;
+        result = currentTile.getLeft();
         break;
       case 2:
-        AbstractTile _bottom = currentTile.getBottom();
-        result = _bottom;
+        result = currentTile.getBottom();
         break;
       case 3:
-        AbstractTile _right = currentTile.getRight();
-        result = _right;
+        result = currentTile.getRight();
         break;
     }
     Tile _xifexpression = null;

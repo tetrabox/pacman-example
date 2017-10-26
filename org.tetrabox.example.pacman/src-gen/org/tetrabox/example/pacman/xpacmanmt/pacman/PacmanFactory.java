@@ -31,15 +31,6 @@ public interface PacmanFactory extends EFactory {
 	AbstractTile createAbstractTile();
 
 	/**
-	 * Returns a new object of class '<em>Tile</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tile</em>'.
-	 * @generated
-	 */
-	Tile createTile();
-
-	/**
 	 * Returns a new object of class '<em>Board</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,6 +65,15 @@ public interface PacmanFactory extends EFactory {
 	 * @generated
 	 */
 	PassableTile createPassableTile();
+
+	/**
+	 * Returns a new object of class '<em>Tile</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tile</em>'.
+	 * @generated
+	 */
+	Tile createTile();
 
 	/**
 	 * Returns a new object of class '<em>Ghost House Tile</em>'.

@@ -6,17 +6,16 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.gemoc.event.commons.interpreter.EventInstance;
-import org.eclipse.gemoc.event.commons.interpreter.EventInterpreter;
+import org.eclipse.gemoc.executionframework.event.manager.EventManager;
 import org.eclipse.gemoc.trace.commons.model.trace.Step;
 import org.eclipse.gemoc.xdsmlframework.api.core.IExecutionEngine;
 import org.eclipse.gemoc.xdsmlframework.api.engine_addon.IEngineAddon;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyEvent;
 import org.eclipse.swt.events.KeyListener;
-import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.XPacmanDSLEvent;
-import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.XPacmanEventFactory;
-import org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.XPacmanEventPackage;
+import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanEvent;
+import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventFactory;
+import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventPackage;
 import org.tetrabox.example.pacman.xpacman.pacman.Board;
 import org.tetrabox.example.pacman.xpacman.pacman.Entity;
 import org.tetrabox.example.pacman.xpacman.pacman.Ghost;
@@ -40,9 +39,9 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 
 	private Board board;
 
-	private XPacmanEventFactory eventFactory = XPacmanEventFactory.eINSTANCE;
+	private PacmaneventFactory eventFactory = PacmaneventFactory.eINSTANCE;
 
-	private EventInterpreter eventInterpreter;
+	private EventManager eventInterpreter;
 
 	private List<Rectangle> tiles = new ArrayList<>();
 	private Map<Tile, Circle> tileToPellet = new HashMap<>();
@@ -62,7 +61,7 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 	@Override
 	public void stepExecuted(IExecutionEngine engine, Step<?> stepExecuted) {
 		if (eventInterpreter == null)
-			eventInterpreter = engine.getAddonsTypedBy(EventInterpreter.class).stream().findFirst().orElse(null);
+			eventInterpreter = engine.getAddonsTypedBy(EventManager.class).stream().findFirst().orElse(null);
 		Platform.runLater(() -> update());
 	}
 
@@ -183,25 +182,25 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		XPacmanDSLEvent event = null;
+		PacmanEvent event = null;
 		final Map<EStructuralFeature, Object> parameters = new HashMap<>();
 		final Pacman p = board.getEntities().stream().filter(entity -> entity instanceof Pacman)
 				.map(entity -> (Pacman) entity).findFirst().orElse(null);
 		switch (e.keyCode) {
 		case SWT.ARROW_UP:
-			parameters.put(XPacmanEventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanUpEvent();
 			break;
 		case SWT.ARROW_LEFT:
-			parameters.put(XPacmanEventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanLeftEvent();
 			break;
 		case SWT.ARROW_DOWN:
-			parameters.put(XPacmanEventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanDownEvent();
 			break;
 		case SWT.ARROW_RIGHT:
-			parameters.put(XPacmanEventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanRightEvent();
 			break;
 //		case SWT.KEYPAD_ADD:
@@ -211,7 +210,8 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 //			break;
 		}
 		if (event != null) {
-			eventInterpreter.queueEvent(new EventInstance(event, parameters));
+			event.setPacman(p);
+			eventInterpreter.queueEvent(event);
 		}
 	}
 

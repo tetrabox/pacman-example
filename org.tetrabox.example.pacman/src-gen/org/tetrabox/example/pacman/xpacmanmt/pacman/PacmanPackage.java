@@ -130,16 +130,6 @@ public interface PacmanPackage extends EPackage {
 	int ABSTRACT_TILE_FEATURE_COUNT = 6;
 
 	/**
-	 * The meta object id for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl <em>Tile</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PacmanPackageImpl#getTile()
-	 * @generated
-	 */
-	int TILE = 6;
-
-	/**
 	 * The meta object id for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.BoardImpl <em>Board</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -541,6 +531,16 @@ public interface PacmanPackage extends EPackage {
 	int PASSABLE_TILE_FEATURE_COUNT = ABSTRACT_TILE_FEATURE_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl <em>Tile</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PacmanPackageImpl#getTile()
+	 * @generated
+	 */
+	int TILE = 6;
+
+	/**
 	 * The feature id for the '<em><b>Top</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -903,38 +903,6 @@ public interface PacmanPackage extends EPackage {
 	EAttribute getAbstractTile_Y();
 
 	/**
-	 * Returns the meta object for class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile <em>Tile</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Tile</em>'.
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile
-	 * @generated
-	 */
-	EClass getTile();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getInitialPellet <em>Initial Pellet</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Initial Pellet</em>'.
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getInitialPellet()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EAttribute getTile_InitialPellet();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getPellet <em>Pellet</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Pellet</em>'.
-	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getPellet()
-	 * @see #getTile()
-	 * @generated
-	 */
-	EReference getTile_Pellet();
-
-	/**
 	 * Returns the meta object for class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Board <em>Board</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1161,6 +1129,38 @@ public interface PacmanPackage extends EPackage {
 	EClass getPassableTile();
 
 	/**
+	 * Returns the meta object for class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile <em>Tile</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tile</em>'.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile
+	 * @generated
+	 */
+	EClass getTile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getInitialPellet <em>Initial Pellet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Initial Pellet</em>'.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getInitialPellet()
+	 * @see #getTile()
+	 * @generated
+	 */
+	EAttribute getTile_InitialPellet();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getPellet <em>Pellet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pellet</em>'.
+	 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.Tile#getPellet()
+	 * @see #getTile()
+	 * @generated
+	 */
+	EReference getTile_Pellet();
+
+	/**
 	 * Returns the meta object for class '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.GhostHouseTile <em>Ghost House Tile</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1299,32 +1299,6 @@ public interface PacmanPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ABSTRACT_TILE__Y = eINSTANCE.getAbstractTile_Y();
-
-		/**
-		 * The meta object literal for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl <em>Tile</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl
-		 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PacmanPackageImpl#getTile()
-		 * @generated
-		 */
-		EClass TILE = eINSTANCE.getTile();
-
-		/**
-		 * The meta object literal for the '<em><b>Initial Pellet</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TILE__INITIAL_PELLET = eINSTANCE.getTile_InitialPellet();
-
-		/**
-		 * The meta object literal for the '<em><b>Pellet</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TILE__PELLET = eINSTANCE.getTile_Pellet();
 
 		/**
 		 * The meta object literal for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.BoardImpl <em>Board</em>}' class.
@@ -1503,6 +1477,32 @@ public interface PacmanPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PASSABLE_TILE = eINSTANCE.getPassableTile();
+
+		/**
+		 * The meta object literal for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl <em>Tile</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.TileImpl
+		 * @see org.tetrabox.example.pacman.xpacmanmt.pacman.impl.PacmanPackageImpl#getTile()
+		 * @generated
+		 */
+		EClass TILE = eINSTANCE.getTile();
+
+		/**
+		 * The meta object literal for the '<em><b>Initial Pellet</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TILE__INITIAL_PELLET = eINSTANCE.getTile_InitialPellet();
+
+		/**
+		 * The meta object literal for the '<em><b>Pellet</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TILE__PELLET = eINSTANCE.getTile_Pellet();
 
 		/**
 		 * The meta object literal for the '{@link org.tetrabox.example.pacman.xpacmanmt.pacman.impl.GhostHouseTileImpl <em>Ghost House Tile</em>}' class.

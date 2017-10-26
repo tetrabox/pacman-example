@@ -5,11 +5,11 @@
 
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated XPacmanEvent -->
+      <!-- @generated pacmanEvent -->
       <package
-            uri="http://org.tetrabox.example.pacman.xpacman/scenario/XPacmanEvent/"
-            class="org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.XPacmanEventPackage"
-            genModel="model/XPacmanEvent.genmodel"/>
+            uri="http://org.tetrabox.example.pacman.xpacman/pacman/event/"
+            class="org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventPackage"
+            genModel="model/pacmanEvent.genmodel"/>
    </extension>
 
 </plugin>

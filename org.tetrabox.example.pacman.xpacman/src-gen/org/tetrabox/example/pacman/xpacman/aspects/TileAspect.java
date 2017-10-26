@@ -1,6 +1,5 @@
 package org.tetrabox.example.pacman.xpacman.aspects;
 
-import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
@@ -12,7 +11,6 @@ import org.tetrabox.example.pacman.xpacman.pacman.Pacman;
 import org.tetrabox.example.pacman.xpacman.pacman.PacmanFactory;
 import org.tetrabox.example.pacman.xpacman.pacman.Pellet;
 import org.tetrabox.example.pacman.xpacman.pacman.PelletType;
-import org.tetrabox.example.pacman.xpacman.pacman.SuperPellet;
 import org.tetrabox.example.pacman.xpacman.pacman.Tile;
 
 @Aspect(className = Tile.class)
@@ -75,12 +73,10 @@ public class TileAspect extends AbstractTileAspect {
     if (_initialPellet != null) {
       switch (_initialPellet) {
         case PELLET:
-          Pellet _createPellet = PacmanFactory.eINSTANCE.createPellet();
-          TileAspect.pellet(_self, _createPellet);
+          TileAspect.pellet(_self, PacmanFactory.eINSTANCE.createPellet());
           break;
         case SUPER_PELLET:
-          SuperPellet _createSuperPellet = PacmanFactory.eINSTANCE.createSuperPellet();
-          TileAspect.pellet(_self, _createSuperPellet);
+          TileAspect.pellet(_self, PacmanFactory.eINSTANCE.createSuperPellet());
           break;
         default:
           break;
@@ -91,10 +87,9 @@ public class TileAspect extends AbstractTileAspect {
   
   protected static void _privk3_eatPellet(final TileAspectTileAspectProperties _self_, final Tile _self, final Pacman pacman) {
     Pellet _pellet = TileAspect.pellet(_self);
-    boolean _notEquals = (!Objects.equal(_pellet, null));
-    if (_notEquals) {
-      Pellet _pellet_1 = TileAspect.pellet(_self);
-      PelletAspect.eat(_pellet_1, pacman);
+    boolean _tripleNotEquals = (_pellet != null);
+    if (_tripleNotEquals) {
+      PelletAspect.eat(TileAspect.pellet(_self), pacman);
       TileAspect.pellet(_self, null);
     }
   }

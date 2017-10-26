@@ -2,7 +2,6 @@
  */
 package org.tetrabox.example.pacman.xpacmanmt.pacman;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->

@@ -10,6 +10,5 @@ Require-Bundle: com.google.guava,
  org.eclipse.xtend.lib.macro,
  fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="3.2.1",
  org.tetrabox.example.pacman.model;bundle-version="0.1.0",
- fr.inria.diverse.melange;bundle-version="0.2.0",
- org.eclipse.gemoc.event.commons.interpreter;bundle-version="1.0.0"
+ fr.inria.diverse.melange;bundle-version="0.2.0"
 

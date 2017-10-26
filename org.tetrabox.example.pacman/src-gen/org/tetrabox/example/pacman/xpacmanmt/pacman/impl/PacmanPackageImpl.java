@@ -5,11 +5,9 @@ package org.tetrabox.example.pacman.xpacmanmt.pacman.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.ETypeParameter;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -49,13 +47,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tileEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass boardEClass = null;
 
 	/**
@@ -85,6 +76,13 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 * @generated
 	 */
 	private EClass passableTileEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tileEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,33 +251,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 */
 	public EAttribute getAbstractTile_Y() {
 		return (EAttribute)abstractTileEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTile() {
-		return tileEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTile_InitialPellet() {
-		return (EAttribute)tileEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTile_Pellet() {
-		return (EReference)tileEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -469,6 +440,33 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 	 */
 	public EClass getPassableTile() {
 		return passableTileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTile() {
+		return tileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTile_InitialPellet() {
+		return (EAttribute)tileEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTile_Pellet() {
+		return (EReference)tileEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**

@@ -7,12 +7,12 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.tetrabox.example.pacman.xpacman.event.XPacmanEvent,
- org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.impl,
- org.tetrabox.example.pacman.xpacman.event.XPacmanEvent.util
+Export-Package: org.tetrabox.example.pacman.xpacman.event.pacmanevent,
+ org.tetrabox.example.pacman.xpacman.event.pacmanevent.impl,
+ org.tetrabox.example.pacman.xpacman.event.pacmanevent.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.gemoc.event.commons.model;visibility:=reexport,
+ org.eclipse.gemoc.executionframework.event.model;visibility:=reexport,
  org.tetrabox.example.pacman.xpacman;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 

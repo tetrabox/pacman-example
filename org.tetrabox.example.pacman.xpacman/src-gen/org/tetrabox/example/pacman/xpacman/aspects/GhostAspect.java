@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.function.Consumer;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Conversions;
@@ -354,11 +353,10 @@ public class GhostAspect extends EntityAspect {
     EntityAspect.speed(_self, 100);
     EObject _eContainer = _self.eContainer();
     GhostAspect.board(_self, ((Board) _eContainer));
-    PassableTile _initialTile = _self.getInitialTile();
-    EntityAspect.currentTile(_self, _initialTile);
+    EntityAspect.currentTile(_self, _self.getInitialTile());
     GhostAspect.previousTile(_self, null);
     GhostAspect.findGhostHouseExit(_self);
-    GhostAspect.chaseMode(_self, true);
+    GhostAspect.chaseMode(_self, false);
     GhostAspect.frightenedMode(_self, false);
     if ((Objects.equal(_self.getPersonnality(), GhostPersonality.SHADOW) || Objects.equal(_self.getPersonnality(), GhostPersonality.SPEEDY))) {
       GhostAspect.activate(_self);
@@ -376,12 +374,10 @@ public class GhostAspect extends EntityAspect {
     boolean _activated = GhostAspect.activated(_self);
     if (_activated) {
       GhostAspect.super_update(_self, deltaTime);
-      Board _board = GhostAspect.board(_self);
-      EList<Entity> _entities = _board.getEntities();
       final Function1<Entity, Boolean> _function = (Entity it) -> {
         return Boolean.valueOf(((it instanceof Pacman) && Objects.equal(EntityAspect.currentTile(it), EntityAspect.currentTile(_self))));
       };
-      final Iterable<Entity> pacmen = IterableExtensions.<Entity>filter(_entities, _function);
+      final Iterable<Entity> pacmen = IterableExtensions.<Entity>filter(GhostAspect.board(_self).getEntities(), _function);
       boolean _isEmpty = IterableExtensions.isEmpty(pacmen);
       boolean _not = (!_isEmpty);
       if (_not) {
@@ -400,10 +396,8 @@ public class GhostAspect extends EntityAspect {
   
   protected static void _privk3_activate(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
     GhostAspect.activated(_self, true);
-    AbstractTile _findTargetTile = GhostAspect.findTargetTile(_self);
-    GhostAspect.changeTargetTile(_self, _findTargetTile);
-    PassableTile _computeNextTile = GhostAspect.computeNextTile(_self);
-    EntityAspect.nextTile(_self, _computeNextTile);
+    GhostAspect.changeTargetTile(_self, GhostAspect.findTargetTile(_self));
+    EntityAspect.nextTile(_self, GhostAspect.computeNextTile(_self));
   }
   
   protected static void _privk3_enterChaseMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
@@ -427,8 +421,7 @@ public class GhostAspect extends EntityAspect {
   
   protected static void _privk3_changeTargetTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self, final AbstractTile targetTile) {
     GhostAspect.targetTile(_self, targetTile);
-    PassableTile _computeNextTile = GhostAspect.computeNextTile(_self);
-    EntityAspect.nextTile(_self, _computeNextTile);
+    EntityAspect.nextTile(_self, GhostAspect.computeNextTile(_self));
   }
   
   protected static void _privk3_eat(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
@@ -437,8 +430,7 @@ public class GhostAspect extends EntityAspect {
   
   protected static void _privk3_findGhostHouseExit(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
     final HashSet<PassableTile> closedSet = CollectionLiterals.<PassableTile>newHashSet();
-    PassableTile _initialTile = _self.getInitialTile();
-    final ArrayList<PassableTile> openList = CollectionLiterals.<PassableTile>newArrayList(_initialTile);
+    final ArrayList<PassableTile> openList = CollectionLiterals.<PassableTile>newArrayList(_self.getInitialTile());
     boolean found = false;
     while (((!openList.isEmpty()) && (!found))) {
       {
@@ -448,14 +440,10 @@ public class GhostAspect extends EntityAspect {
           found = true;
         }
         closedSet.add(t);
-        AbstractTile _top = t.getTop();
-        GhostAspect.addToOpenList(_self, _top, openList, closedSet);
-        AbstractTile _bottom = t.getBottom();
-        GhostAspect.addToOpenList(_self, _bottom, openList, closedSet);
-        AbstractTile _left = t.getLeft();
-        GhostAspect.addToOpenList(_self, _left, openList, closedSet);
-        AbstractTile _right = t.getRight();
-        GhostAspect.addToOpenList(_self, _right, openList, closedSet);
+        GhostAspect.addToOpenList(_self, t.getTop(), openList, closedSet);
+        GhostAspect.addToOpenList(_self, t.getBottom(), openList, closedSet);
+        GhostAspect.addToOpenList(_self, t.getLeft(), openList, closedSet);
+        GhostAspect.addToOpenList(_self, t.getRight(), openList, closedSet);
       }
     }
   }
@@ -481,36 +469,25 @@ public class GhostAspect extends EntityAspect {
           if (_frightenedMode) {
             final PassableTile previousTile = GhostAspect.previousTile(_self);
             final Function1<AbstractTile, Boolean> _function = (AbstractTile t) -> {
-              return Boolean.valueOf(((((!Objects.equal(t, null)) && 
+              return Boolean.valueOf(((((t != null) && 
                 (!Objects.equal(t, previousTile))) && 
                 (t instanceof PassableTile)) && 
                 (!(t instanceof GhostHouseTile))));
             };
             final Function1<AbstractTile, Boolean> filter = _function;
-            AbstractTile _top = selfTile.getTop();
-            AbstractTile _left = selfTile.getLeft();
-            AbstractTile _bottom = selfTile.getBottom();
-            AbstractTile _right = selfTile.getRight();
-            ArrayList<AbstractTile> _newArrayList = CollectionLiterals.<AbstractTile>newArrayList(_top, _left, _bottom, _right);
-            Iterable<AbstractTile> _filter = IterableExtensions.<AbstractTile>filter(_newArrayList, filter);
             final Function1<AbstractTile, PassableTile> _function_1 = (AbstractTile it) -> {
               return ((PassableTile) it);
             };
-            final Iterable<PassableTile> candidateTiles = IterableExtensions.<AbstractTile, PassableTile>map(_filter, _function_1);
-            Random _rand = GhostAspect.rand(_self);
-            int _size = IterableExtensions.size(candidateTiles);
-            int _nextInt = _rand.nextInt(_size);
-            return ((AbstractTile[])Conversions.unwrapArray(candidateTiles, AbstractTile.class))[_nextInt];
+            final Iterable<PassableTile> candidateTiles = IterableExtensions.<AbstractTile, PassableTile>map(IterableExtensions.<AbstractTile>filter(CollectionLiterals.<AbstractTile>newArrayList(selfTile.getTop(), selfTile.getLeft(), 
+              selfTile.getBottom(), selfTile.getRight()), filter), _function_1);
+            return ((AbstractTile[])Conversions.unwrapArray(candidateTiles, AbstractTile.class))[GhostAspect.rand(_self).nextInt(IterableExtensions.size(candidateTiles))];
           } else {
             boolean _chaseMode = GhostAspect.chaseMode(_self);
             if (_chaseMode) {
-              Board _board = GhostAspect.board(_self);
-              EList<Entity> _entities = _board.getEntities();
               final Function1<Entity, Boolean> _function_2 = (Entity it) -> {
                 return Boolean.valueOf((it instanceof Pacman));
               };
-              Iterable<Entity> _filter_1 = IterableExtensions.<Entity>filter(_entities, _function_2);
-              final Entity pacman = IterableExtensions.<Entity>head(_filter_1);
+              final Entity pacman = IterableExtensions.<Entity>head(IterableExtensions.<Entity>filter(GhostAspect.board(_self).getEntities(), _function_2));
               final PassableTile pacmanTile = EntityAspect.currentTile(pacman);
               AbstractTile _switchResult = null;
               GhostPersonality _personnality = _self.getPersonnality();
@@ -524,9 +501,13 @@ public class GhostAspect extends EntityAspect {
                     int _direction = EntityAspect.direction(pacman);
                     switch (_direction) {
                       case 0:
-                        AbstractTile _top_1 = null;
+                        AbstractTile _top = null;
                         if (pacmanTile!=null) {
-                          _top_1=pacmanTile.getTop();
+                          _top=pacmanTile.getTop();
+                        }
+                        AbstractTile _top_1 = null;
+                        if (_top!=null) {
+                          _top_1=_top.getTop();
                         }
                         AbstractTile _top_2 = null;
                         if (_top_1!=null) {
@@ -536,16 +517,16 @@ public class GhostAspect extends EntityAspect {
                         if (_top_2!=null) {
                           _top_3=_top_2.getTop();
                         }
-                        AbstractTile _top_4 = null;
-                        if (_top_3!=null) {
-                          _top_4=_top_3.getTop();
-                        }
-                        _switchResult_1 = _top_4;
+                        _switchResult_1 = _top_3;
                         break;
                       case 1:
-                        AbstractTile _left_1 = null;
+                        AbstractTile _left = null;
                         if (pacmanTile!=null) {
-                          _left_1=pacmanTile.getLeft();
+                          _left=pacmanTile.getLeft();
+                        }
+                        AbstractTile _left_1 = null;
+                        if (_left!=null) {
+                          _left_1=_left.getLeft();
                         }
                         AbstractTile _left_2 = null;
                         if (_left_1!=null) {
@@ -555,16 +536,16 @@ public class GhostAspect extends EntityAspect {
                         if (_left_2!=null) {
                           _left_3=_left_2.getLeft();
                         }
-                        AbstractTile _left_4 = null;
-                        if (_left_3!=null) {
-                          _left_4=_left_3.getLeft();
-                        }
-                        _switchResult_1 = _left_4;
+                        _switchResult_1 = _left_3;
                         break;
                       case 2:
-                        AbstractTile _bottom_1 = null;
+                        AbstractTile _bottom = null;
                         if (pacmanTile!=null) {
-                          _bottom_1=pacmanTile.getBottom();
+                          _bottom=pacmanTile.getBottom();
+                        }
+                        AbstractTile _bottom_1 = null;
+                        if (_bottom!=null) {
+                          _bottom_1=_bottom.getBottom();
                         }
                         AbstractTile _bottom_2 = null;
                         if (_bottom_1!=null) {
@@ -574,20 +555,14 @@ public class GhostAspect extends EntityAspect {
                         if (_bottom_2!=null) {
                           _bottom_3=_bottom_2.getBottom();
                         }
-                        AbstractTile _bottom_4 = null;
-                        if (_bottom_3!=null) {
-                          _bottom_4=_bottom_3.getBottom();
-                        }
-                        _switchResult_1 = _bottom_4;
+                        _switchResult_1 = _bottom_3;
                         break;
                       case 3:
-                        AbstractTile _right_1 = null;
+                        AbstractTile _right = null;
                         if (pacmanTile!=null) {
-                          _right_1=pacmanTile.getRight();
+                          _right=pacmanTile.getRight();
                         }
-                        AbstractTile _right_2 = _right_1.getRight();
-                        AbstractTile _right_3 = _right_2.getRight();
-                        _switchResult_1 = _right_3.getRight();
+                        _switchResult_1 = _right.getRight().getRight().getRight();
                         break;
                       default:
                         _switchResult_1 = null;
@@ -602,65 +577,62 @@ public class GhostAspect extends EntityAspect {
                       int _direction_1 = EntityAspect.direction(pacman);
                       switch (_direction_1) {
                         case 0:
-                          AbstractTile _top_5 = null;
+                          AbstractTile _top_4 = null;
                           if (pacmanTile!=null) {
-                            _top_5=pacmanTile.getTop();
+                            _top_4=pacmanTile.getTop();
                           }
-                          AbstractTile _top_6 = null;
-                          if (_top_5!=null) {
-                            _top_6=_top_5.getTop();
+                          AbstractTile _top_5 = null;
+                          if (_top_4!=null) {
+                            _top_5=_top_4.getTop();
                           }
-                          _switchResult_2 = _top_6;
+                          _switchResult_2 = _top_5;
                           break;
                         case 1:
-                          AbstractTile _left_5 = null;
+                          AbstractTile _left_4 = null;
                           if (pacmanTile!=null) {
-                            _left_5=pacmanTile.getLeft();
+                            _left_4=pacmanTile.getLeft();
                           }
-                          AbstractTile _left_6 = null;
-                          if (_left_5!=null) {
-                            _left_6=_left_5.getLeft();
+                          AbstractTile _left_5 = null;
+                          if (_left_4!=null) {
+                            _left_5=_left_4.getLeft();
                           }
-                          _switchResult_2 = _left_6;
+                          _switchResult_2 = _left_5;
                           break;
                         case 2:
-                          AbstractTile _bottom_5 = null;
+                          AbstractTile _bottom_4 = null;
                           if (pacmanTile!=null) {
-                            _bottom_5=pacmanTile.getBottom();
+                            _bottom_4=pacmanTile.getBottom();
                           }
-                          AbstractTile _bottom_6 = null;
-                          if (_bottom_5!=null) {
-                            _bottom_6=_bottom_5.getBottom();
+                          AbstractTile _bottom_5 = null;
+                          if (_bottom_4!=null) {
+                            _bottom_5=_bottom_4.getBottom();
                           }
-                          _switchResult_2 = _bottom_6;
+                          _switchResult_2 = _bottom_5;
                           break;
                         case 3:
-                          AbstractTile _right_4 = null;
+                          AbstractTile _right_1 = null;
                           if (pacmanTile!=null) {
-                            _right_4=pacmanTile.getRight();
+                            _right_1=pacmanTile.getRight();
                           }
-                          AbstractTile _right_5 = null;
-                          if (_right_4!=null) {
-                            _right_5=_right_4.getRight();
+                          AbstractTile _right_2 = null;
+                          if (_right_1!=null) {
+                            _right_2=_right_1.getRight();
                           }
-                          _switchResult_2 = _right_5;
+                          _switchResult_2 = _right_2;
                           break;
                         default:
                           _switchResult_2 = null;
                           break;
                       }
                       final AbstractTile tile2 = _switchResult_2;
-                      Board _board_1 = GhostAspect.board(_self);
-                      EList<Entity> _entities_1 = _board_1.getEntities();
                       final Function1<Entity, Boolean> _function_3 = (Entity it) -> {
                         return Boolean.valueOf((it instanceof Ghost));
                       };
-                      Iterable<Entity> _filter_2 = IterableExtensions.<Entity>filter(_entities_1, _function_3);
                       final Function1<Entity, Boolean> _function_4 = (Entity it) -> {
                         GhostPersonality _personnality_1 = ((Ghost) it).getPersonnality();
                         return Boolean.valueOf(Objects.equal(_personnality_1, GhostPersonality.SHADOW));
                       };
-                      Entity _findFirst = IterableExtensions.<Entity>findFirst(_filter_2, _function_4);
+                      Entity _findFirst = IterableExtensions.<Entity>findFirst(IterableExtensions.<Entity>filter(GhostAspect.board(_self).getEntities(), _function_3), _function_4);
                       PassableTile _currentTile = null;
                       if (_findFirst!=null) {
                         _currentTile=EntityAspect.currentTile(_findFirst);
@@ -676,12 +648,10 @@ public class GhostAspect extends EntityAspect {
                       int _y_1 = tile1.getY();
                       int _plus_1 = (_multiply_1 + _y_1);
                       final int y = (_plus_1 % 36);
-                      Board _board_2 = GhostAspect.board(_self);
-                      EList<AbstractTile> _tiles = _board_2.getTiles();
                       final Function1<AbstractTile, Boolean> _function_5 = (AbstractTile it) -> {
                         return Boolean.valueOf(((it.getX() == x) && (it.getY() == y)));
                       };
-                      _xblockexpression_1 = IterableExtensions.<AbstractTile>findFirst(_tiles, _function_5);
+                      _xblockexpression_1 = IterableExtensions.<AbstractTile>findFirst(GhostAspect.board(_self).getTiles(), _function_5);
                     }
                     _switchResult = _xblockexpression_1;
                     break;
@@ -724,11 +694,9 @@ public class GhostAspect extends EntityAspect {
   }
   
   protected static void _privk3_enterNextTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
-    PassableTile _currentTile = EntityAspect.currentTile(_self);
-    GhostAspect.previousTile(_self, _currentTile);
+    GhostAspect.previousTile(_self, EntityAspect.currentTile(_self));
     GhostAspect.super_enterNextTile(_self);
-    AbstractTile _findTargetTile = GhostAspect.findTargetTile(_self);
-    GhostAspect.changeTargetTile(_self, _findTargetTile);
+    GhostAspect.changeTargetTile(_self, GhostAspect.findTargetTile(_self));
   }
   
   protected static PassableTile _privk3_computeNextTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
@@ -736,30 +704,23 @@ public class GhostAspect extends EntityAspect {
     if ((GhostAspect.activated(_self) || (!(currentTile instanceof GhostHouseTile)))) {
       final PassableTile previousTile = GhostAspect.previousTile(_self);
       final Function1<AbstractTile, Boolean> _function = (AbstractTile t) -> {
-        return Boolean.valueOf(((((!Objects.equal(t, null)) && 
+        return Boolean.valueOf(((((t != null) && 
           (!Objects.equal(t, previousTile))) && 
           (t instanceof PassableTile)) && ((currentTile instanceof GhostHouseTile) || (!(t instanceof GhostHouseTile)))));
       };
       final Function1<AbstractTile, Boolean> filter = _function;
-      AbstractTile _top = currentTile.getTop();
-      AbstractTile _left = currentTile.getLeft();
-      AbstractTile _bottom = currentTile.getBottom();
-      AbstractTile _right = currentTile.getRight();
-      ArrayList<AbstractTile> _newArrayList = CollectionLiterals.<AbstractTile>newArrayList(_top, _left, _bottom, _right);
-      Iterable<AbstractTile> _filter = IterableExtensions.<AbstractTile>filter(_newArrayList, filter);
       final Function1<AbstractTile, PassableTile> _function_1 = (AbstractTile it) -> {
         return ((PassableTile) it);
       };
-      final Iterable<PassableTile> candidateTiles = IterableExtensions.<AbstractTile, PassableTile>map(_filter, _function_1);
+      final Iterable<PassableTile> candidateTiles = IterableExtensions.<AbstractTile, PassableTile>map(IterableExtensions.<AbstractTile>filter(CollectionLiterals.<AbstractTile>newArrayList(currentTile.getTop(), currentTile.getLeft(), 
+        currentTile.getBottom(), currentTile.getRight()), filter), _function_1);
       PassableTile result = null;
       int _size = IterableExtensions.size(candidateTiles);
       boolean _greaterThan = (_size > 1);
       if (_greaterThan) {
         final AbstractTile targetTile = GhostAspect.targetTile(_self);
-        boolean _notEquals = (!Objects.equal(targetTile, null));
-        if (_notEquals) {
-          PassableTile _head = IterableExtensions.<PassableTile>head(candidateTiles);
-          result = _head;
+        if ((targetTile != null)) {
+          result = IterableExtensions.<PassableTile>head(candidateTiles);
           int d1 = GhostAspect.computeDistanceBetweenTiles(_self, result, targetTile);
           Iterable<PassableTile> _tail = IterableExtensions.<PassableTile>tail(candidateTiles);
           for (final PassableTile tile : _tail) {
@@ -773,26 +734,25 @@ public class GhostAspect extends EntityAspect {
           }
         }
       } else {
-        PassableTile _head_1 = IterableExtensions.<PassableTile>head(candidateTiles);
-        result = _head_1;
+        result = IterableExtensions.<PassableTile>head(candidateTiles);
       }
-      AbstractTile _top_1 = currentTile.getTop();
-      boolean _equals = Objects.equal(result, _top_1);
+      AbstractTile _top = currentTile.getTop();
+      boolean _equals = Objects.equal(result, _top);
       if (_equals) {
         EntityAspect.changeDirection(_self, Integer.valueOf(0));
       } else {
-        AbstractTile _left_1 = currentTile.getLeft();
-        boolean _equals_1 = Objects.equal(result, _left_1);
+        AbstractTile _left = currentTile.getLeft();
+        boolean _equals_1 = Objects.equal(result, _left);
         if (_equals_1) {
           EntityAspect.changeDirection(_self, Integer.valueOf(1));
         } else {
-          AbstractTile _bottom_1 = currentTile.getBottom();
-          boolean _equals_2 = Objects.equal(result, _bottom_1);
+          AbstractTile _bottom = currentTile.getBottom();
+          boolean _equals_2 = Objects.equal(result, _bottom);
           if (_equals_2) {
             EntityAspect.changeDirection(_self, Integer.valueOf(2));
           } else {
-            AbstractTile _right_1 = currentTile.getRight();
-            boolean _equals_3 = Objects.equal(result, _right_1);
+            AbstractTile _right = currentTile.getRight();
+            boolean _equals_3 = Objects.equal(result, _right);
             if (_equals_3) {
               EntityAspect.changeDirection(_self, Integer.valueOf(3));
             }

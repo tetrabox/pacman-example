@@ -70,7 +70,7 @@ abstract class EntityAspect {
 				progress = _self.xTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var yMoveProgress = _self.yMoveProgress - progress
 						if (-yMoveProgress > _self.baseMoveTime) {
@@ -91,7 +91,7 @@ abstract class EntityAspect {
 				progress = _self.yTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var xMoveProgress = _self.xMoveProgress - progress
 						if (-xMoveProgress > _self.baseMoveTime) {
@@ -112,7 +112,7 @@ abstract class EntityAspect {
 				progress = _self.xTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var yMoveProgress = _self.yMoveProgress + progress
 						if (yMoveProgress > _self.baseMoveTime) {
@@ -133,7 +133,7 @@ abstract class EntityAspect {
 				progress = _self.yTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var xMoveProgress = _self.xMoveProgress + progress
 						if (xMoveProgress > _self.baseMoveTime) {
@@ -311,7 +311,7 @@ class GhostAspect extends EntityAspect {
 			} else if (_self.frightenedMode) {
 				val previousTile = _self.previousTile
 				val filter = [AbstractTile t|
-					t != null &&
+					t !== null &&
 					t != previousTile &&
 					t instanceof PassableTile &&
 					!(t instanceof GhostHouseTile)
@@ -398,7 +398,7 @@ class GhostAspect extends EntityAspect {
 		if (_self.activated || !(currentTile instanceof GhostHouseTile)) {
 			val previousTile = _self.previousTile
 			val filter = [AbstractTile t|
-				t != null &&
+				t !== null &&
 				t != previousTile &&
 				t instanceof PassableTile &&
 				(currentTile instanceof GhostHouseTile || !(t instanceof GhostHouseTile))
@@ -408,7 +408,7 @@ class GhostAspect extends EntityAspect {
 			var PassableTile result = null
 			if (candidateTiles.size > 1) {
 				val targetTile = _self.targetTile
-				if (targetTile != null) {
+				if (targetTile !== null) {
 					result = candidateTiles.head
 					var d1 = _self.computeDistanceBetweenTiles(result, targetTile)
 					for (PassableTile tile : candidateTiles.tail) {
@@ -537,14 +537,14 @@ class PacmanAspect extends EntityAspect {
 			}
 			default: null
 		}
-		nextTile != null && !(nextTile instanceof WallTile) && !(nextTile instanceof GhostHouseTile)
+		nextTile !== null && !(nextTile instanceof WallTile) && !(nextTile instanceof GhostHouseTile)
 	}
 	
 	@Step
 	@OverrideAspectMethod
 	def void enterNextTile() {
 		val tile = _self.nextTile
-		if (tile != null && tile instanceof Tile) {
+		if (tile !== null && tile instanceof Tile) {
 			_self.super_enterNextTile;
 			(tile as Tile).eatPellet(_self)
 		}

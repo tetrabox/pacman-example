@@ -14,7 +14,6 @@ package org.tetrabox.example.pacman.xpacmanmt.pacman;
  * @generated
  */
 public interface SuperPellet extends Pellet {
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -22,4 +21,5 @@ public interface SuperPellet extends Pellet {
 	 * @generated
 	 */
 	void eat(Pacman pacman);
+
 } // SuperPellet

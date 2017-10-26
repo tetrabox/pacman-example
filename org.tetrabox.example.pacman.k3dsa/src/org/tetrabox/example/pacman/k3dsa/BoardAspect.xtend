@@ -41,7 +41,7 @@ class BoardAspect {
 	def void initializeModel(EList<String> args) {
 		_self.tiles.forEach[initialize]
 		_self.entities.forEach[initialize]
-		_self.totalPellets = _self.tiles.filter[it instanceof Tile && (it as Tile).pellet != null].length
+		_self.totalPellets = _self.tiles.filter[it instanceof Tile && (it as Tile).pellet !== null].length
 	}
 	
 	@Step
@@ -53,7 +53,7 @@ class BoardAspect {
 	def void run() {
 		var pacmanAlive = _self.entities.exists[it instanceof Pacman && (it as Pacman).lives > 0]
 		var pelletsRemaining = _self.tiles.filter[it instanceof Tile]
-				.map[it as Tile].exists[pellet != null]
+				.map[it as Tile].exists[pellet !== null]
 		_self.previousTime = System.nanoTime
 		while(pacmanAlive && pelletsRemaining) {
 			val currentTime = System.nanoTime
@@ -62,7 +62,7 @@ class BoardAspect {
 			_self.update(deltaTime)
 			pacmanAlive = _self.entities.exists[it instanceof Pacman && (it as Pacman).lives > 0]
 			pelletsRemaining = _self.tiles.filter[it instanceof Tile]
-					.map[it as Tile].exists[pellet != null]
+					.map[it as Tile].exists[pellet !== null]
 			if (deltaTime < _self.targetFrameRate) {
 				val waitTime = _self.targetFrameRate - deltaTime
 				val long millis = waitTime / 1000000
@@ -76,7 +76,7 @@ class BoardAspect {
 	def void update(long deltaTime) {
 		_self.elapsedTime = _self.elapsedTime + deltaTime
 		val totalPellets = _self.totalPellets
-		val remainingPellets = _self.tiles.filter[it instanceof Tile && (it as Tile).pellet != null].length
+		val remainingPellets = _self.tiles.filter[it instanceof Tile && (it as Tile).pellet !== null].length
 		val blueMilestoneReached = remainingPellets == totalPellets - totalPellets / 8
 		val orangeMilestoneReached = remainingPellets == totalPellets - totalPellets / 3
 		val frightenedTimer = _self.frightenedTimer

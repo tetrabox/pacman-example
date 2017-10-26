@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse version="3.4"?><plugin>
-  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
-    <XDSML_Definition modelLoader_class="org.eclipse.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.tetrabox.example.pacman.XPacman" xdsmlFilePath="/org.tetrabox.example.pacman/bin/org/tetrabox/example/pacman/Main.melange"/>
-  </extension>
-  <extension point="org.eclipse.emf.ecore.generated_package">
-    <!-- @generated PacmanMT -->
-    <package class="org.tetrabox.example.pacman.pacmanmt.pacman.PacmanPackage" genModel="model-gen/PacmanMT.genmodel" uri="http://org.tetrabox.example.pacman.pacmanmt/pacman/"/>
+  <extension point="org.eclipse.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition modelLoader_class="org.eclipse.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.tetrabox.example.pacman.XPacman" xdsmlFilePath="platform:/plugin/org.tetrabox.example.pacman.xpacman/model/XPacman.dsl"/>
   </extension>
   <extension point="org.eclipse.emf.ecore.generated_package">
     <!-- @generated XPacmanMT -->

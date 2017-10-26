@@ -120,15 +120,6 @@ public class PacmanFactoryImpl extends EFactoryImpl implements PacmanFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Tile createTile() {
-		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Board createBoard() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
@@ -157,6 +148,15 @@ public class PacmanFactoryImpl extends EFactoryImpl implements PacmanFactory {
 	 * @generated
 	 */
 	public PassableTile createPassableTile() {
+		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tile createTile() {
 		throw new UnsupportedOperationException("Cannot invoke element creation on a model type");
 	}
 

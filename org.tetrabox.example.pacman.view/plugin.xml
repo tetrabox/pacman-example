@@ -2,6 +2,17 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
+         point="org.eclipse.gemoc.gemoc_language_workbench.engine_addon">
+      <Addon
+            AddonGroupId="Sequential.AddonGroup"
+            Class="org.tetrabox.example.pacman.view.PacManViewPart"
+            Default="false"
+            Name="Pac-Man View"
+            ShortDescription="Graphical view for the Pac-Man DSL"
+            id="org.tetrabox.example.pacman.view">
+      </Addon>
+   </extension>
+   <extension
          point="org.eclipse.ui.views">
       <category
             id="org.eclipse.gemoc.executionframework.ui.category"
@@ -10,7 +21,7 @@
       <view
             category="org.eclipse.gemoc.executionframework.ui.category"
             class="org.tetrabox.example.pacman.view.PacManViewPart"
-            icon="icons/IconeGemocModel-16.png"
+            icon="icons/pacman.png"
             id="org.tetrabox.example.pacman.PacManView"
             name="Pac-Man">
       </view>
