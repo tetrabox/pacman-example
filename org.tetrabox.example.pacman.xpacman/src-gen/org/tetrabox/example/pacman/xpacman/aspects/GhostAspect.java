@@ -206,13 +206,13 @@ public class GhostAspect extends EntityAspect {
   
   @Step
   @OverrideAspectMethod
-  public static void enterNextTile(final Ghost _self) {
+  public static void enterNextTile(final Ghost _self, final int x, final int y) {
 	final org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectContext
 			.getSelf(_self);
 	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
 		@Override
 		public void execute() {
-			_privk3_enterNextTile(_self_, _self);
+			_privk3_enterNextTile(_self_, _self, x, y);
 		}
 	};
 	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
@@ -301,6 +301,18 @@ public class GhostAspect extends EntityAspect {
     _privk3_previousTile(_self_, _self,previousTile);;
   }
   
+  private static AbstractTile scatterTile(final Ghost _self) {
+    final org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectContext.getSelf(_self);
+    Object result = null;
+    result = _privk3_scatterTile(_self_, _self);;
+    return (org.tetrabox.example.pacman.xpacman.pacman.AbstractTile)result;
+  }
+  
+  private static void scatterTile(final Ghost _self, final AbstractTile scatterTile) {
+    final org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectContext.getSelf(_self);
+    _privk3_scatterTile(_self_, _self,scatterTile);;
+  }
+  
   private static boolean activated(final Ghost _self) {
     final org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectContext.getSelf(_self);
     Object result = null;
@@ -325,16 +337,16 @@ public class GhostAspect extends EntityAspect {
     _privk3_ghostHouseExit(_self_, _self,ghostHouseExit);;
   }
   
-  private static boolean chaseMode(final Ghost _self) {
+  private static boolean scatterMode(final Ghost _self) {
     final org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectContext.getSelf(_self);
     Object result = null;
-    result = _privk3_chaseMode(_self_, _self);;
+    result = _privk3_scatterMode(_self_, _self);;
     return (boolean)result;
   }
   
-  private static void chaseMode(final Ghost _self, final boolean chaseMode) {
+  private static void scatterMode(final Ghost _self, final boolean scatterMode) {
     final org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.GhostAspectGhostAspectContext.getSelf(_self);
-    _privk3_chaseMode(_self_, _self,chaseMode);;
+    _privk3_scatterMode(_self_, _self,scatterMode);;
   }
   
   private static Random rand(final Ghost _self) {
@@ -355,8 +367,41 @@ public class GhostAspect extends EntityAspect {
     GhostAspect.board(_self, ((Board) _eContainer));
     EntityAspect.currentTile(_self, _self.getInitialTile());
     GhostAspect.previousTile(_self, null);
+    AbstractTile _switchResult = null;
+    GhostPersonality _personnality = _self.getPersonnality();
+    if (_personnality != null) {
+      switch (_personnality) {
+        case SHADOW:
+          final Function1<AbstractTile, Boolean> _function = (AbstractTile it) -> {
+            return Boolean.valueOf(((it.getX() == 24) && (it.getY() == 0)));
+          };
+          _switchResult = IterableExtensions.<AbstractTile>findFirst(GhostAspect.board(_self).getTiles(), _function);
+          break;
+        case SPEEDY:
+          final Function1<AbstractTile, Boolean> _function_1 = (AbstractTile it) -> {
+            return Boolean.valueOf(((it.getX() == 3) && (it.getY() == 0)));
+          };
+          _switchResult = IterableExtensions.<AbstractTile>findFirst(GhostAspect.board(_self).getTiles(), _function_1);
+          break;
+        case BASHFUL:
+          final Function1<AbstractTile, Boolean> _function_2 = (AbstractTile it) -> {
+            return Boolean.valueOf(((it.getX() == 0) && (it.getY() == 35)));
+          };
+          _switchResult = IterableExtensions.<AbstractTile>findFirst(GhostAspect.board(_self).getTiles(), _function_2);
+          break;
+        case POKEY:
+          final Function1<AbstractTile, Boolean> _function_3 = (AbstractTile it) -> {
+            return Boolean.valueOf(((it.getX() == 27) && (it.getY() == 35)));
+          };
+          _switchResult = IterableExtensions.<AbstractTile>findFirst(GhostAspect.board(_self).getTiles(), _function_3);
+          break;
+        default:
+          break;
+      }
+    }
+    _self.setScatterTile(_switchResult);
     GhostAspect.findGhostHouseExit(_self);
-    GhostAspect.chaseMode(_self, false);
+    GhostAspect.scatterMode(_self, true);
     GhostAspect.frightenedMode(_self, false);
     if ((Objects.equal(_self.getPersonnality(), GhostPersonality.SHADOW) || Objects.equal(_self.getPersonnality(), GhostPersonality.SPEEDY))) {
       GhostAspect.activate(_self);
@@ -401,11 +446,11 @@ public class GhostAspect extends EntityAspect {
   }
   
   protected static void _privk3_enterChaseMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
-    GhostAspect.chaseMode(_self, true);
+    GhostAspect.scatterMode(_self, false);
   }
   
   protected static void _privk3_enterScatterMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
-    GhostAspect.chaseMode(_self, false);
+    GhostAspect.scatterMode(_self, true);
   }
   
   protected static void _privk3_switchFrightenedMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
@@ -469,7 +514,7 @@ public class GhostAspect extends EntityAspect {
           if (_frightenedMode) {
             final PassableTile previousTile = GhostAspect.previousTile(_self);
             final Function1<AbstractTile, Boolean> _function = (AbstractTile t) -> {
-              return Boolean.valueOf(((((t != null) && 
+              return Boolean.valueOf(((((!Objects.equal(t, null)) && 
                 (!Objects.equal(t, previousTile))) && 
                 (t instanceof PassableTile)) && 
                 (!(t instanceof GhostHouseTile))));
@@ -482,8 +527,10 @@ public class GhostAspect extends EntityAspect {
               selfTile.getBottom(), selfTile.getRight()), filter), _function_1);
             return ((AbstractTile[])Conversions.unwrapArray(candidateTiles, AbstractTile.class))[GhostAspect.rand(_self).nextInt(IterableExtensions.size(candidateTiles))];
           } else {
-            boolean _chaseMode = GhostAspect.chaseMode(_self);
-            if (_chaseMode) {
+            boolean _scatterMode = GhostAspect.scatterMode(_self);
+            if (_scatterMode) {
+              return _self.getScatterTile();
+            } else {
               final Function1<Entity, Boolean> _function_2 = (Entity it) -> {
                 return Boolean.valueOf((it instanceof Pacman));
               };
@@ -674,8 +721,6 @@ public class GhostAspect extends EntityAspect {
                 }
               }
               return _switchResult;
-            } else {
-              return _self.getScatterTile();
             }
           }
         }
@@ -688,14 +733,14 @@ public class GhostAspect extends EntityAspect {
     return _xifexpression;
   }
   
-  private static void super_enterNextTile(final Ghost _self) {
+  private static void super_enterNextTile(final Ghost _self, final int x, final int y) {
     final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext.getSelf(_self);
-     org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_enterNextTile(_self_, _self);
+     org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_enterNextTile(_self_, _self,x,y);
   }
   
-  protected static void _privk3_enterNextTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
+  protected static void _privk3_enterNextTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self, final int x, final int y) {
     GhostAspect.previousTile(_self, EntityAspect.currentTile(_self));
-    GhostAspect.super_enterNextTile(_self);
+    GhostAspect.super_enterNextTile(_self, x, y);
     GhostAspect.changeTargetTile(_self, GhostAspect.findTargetTile(_self));
   }
   
@@ -704,7 +749,7 @@ public class GhostAspect extends EntityAspect {
     if ((GhostAspect.activated(_self) || (!(currentTile instanceof GhostHouseTile)))) {
       final PassableTile previousTile = GhostAspect.previousTile(_self);
       final Function1<AbstractTile, Boolean> _function = (AbstractTile t) -> {
-        return Boolean.valueOf(((((t != null) && 
+        return Boolean.valueOf(((((!Objects.equal(t, null)) && 
           (!Objects.equal(t, previousTile))) && 
           (t instanceof PassableTile)) && ((currentTile instanceof GhostHouseTile) || (!(t instanceof GhostHouseTile)))));
       };
@@ -719,7 +764,8 @@ public class GhostAspect extends EntityAspect {
       boolean _greaterThan = (_size > 1);
       if (_greaterThan) {
         final AbstractTile targetTile = GhostAspect.targetTile(_self);
-        if ((targetTile != null)) {
+        boolean _notEquals = (!Objects.equal(targetTile, null));
+        if (_notEquals) {
           result = IterableExtensions.<PassableTile>head(candidateTiles);
           int d1 = GhostAspect.computeDistanceBetweenTiles(_self, result, targetTile);
           Iterable<PassableTile> _tail = IterableExtensions.<PassableTile>tail(candidateTiles);
@@ -928,6 +974,43 @@ public class GhostAspect extends EntityAspect {
     }
   }
   
+  protected static AbstractTile _privk3_scatterTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
+    try {
+    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
+    		if (m.getName().equals("getScatterTile") &&
+    			m.getParameterTypes().length == 0) {
+    				Object ret = m.invoke(_self);
+    				if (ret != null) {
+    					return (org.tetrabox.example.pacman.xpacman.pacman.AbstractTile) ret;
+    				} else {
+    					return null;
+    				}
+    		}
+    	}
+    } catch (Exception e) {
+    	// Chut !
+    }
+    return _self_.scatterTile;
+  }
+  
+  protected static void _privk3_scatterTile(final GhostAspectGhostAspectProperties _self_, final Ghost _self, final AbstractTile scatterTile) {
+    boolean setterCalled = false;
+    try {
+    	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
+    		if (m.getName().equals("setScatterTile")
+    				&& m.getParameterTypes().length == 1) {
+    			m.invoke(_self, scatterTile);
+    			setterCalled = true;
+    		}
+    	}
+    } catch (Exception e) {
+    	// Chut !
+    }
+    if (!setterCalled) {
+    	_self_.scatterTile = scatterTile;
+    }
+  }
+  
   protected static boolean _privk3_activated(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
@@ -999,10 +1082,10 @@ public class GhostAspect extends EntityAspect {
     }
   }
   
-  protected static boolean _privk3_chaseMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
+  protected static boolean _privk3_scatterMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self) {
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
-    		if (m.getName().equals("isChaseMode") &&
+    		if (m.getName().equals("isScatterMode") &&
     			m.getParameterTypes().length == 0) {
     				Object ret = m.invoke(_self);
     				if (ret != null) {
@@ -1012,16 +1095,16 @@ public class GhostAspect extends EntityAspect {
     } catch (Exception e) {
     	// Chut !
     }
-    return _self_.chaseMode;
+    return _self_.scatterMode;
   }
   
-  protected static void _privk3_chaseMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self, final boolean chaseMode) {
+  protected static void _privk3_scatterMode(final GhostAspectGhostAspectProperties _self_, final Ghost _self, final boolean scatterMode) {
     boolean setterCalled = false;
     try {
     	for (java.lang.reflect.Method m : _self.getClass().getMethods()) {
-    		if (m.getName().equals("setChaseMode")
+    		if (m.getName().equals("setScatterMode")
     				&& m.getParameterTypes().length == 1) {
-    			m.invoke(_self, chaseMode);
+    			m.invoke(_self, scatterMode);
     			setterCalled = true;
     		}
     	}
@@ -1029,7 +1112,7 @@ public class GhostAspect extends EntityAspect {
     	// Chut !
     }
     if (!setterCalled) {
-    	_self_.chaseMode = chaseMode;
+    	_self_.scatterMode = scatterMode;
     }
   }
   

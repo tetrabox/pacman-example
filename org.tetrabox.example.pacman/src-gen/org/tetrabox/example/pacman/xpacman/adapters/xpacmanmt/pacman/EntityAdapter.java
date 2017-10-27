@@ -56,8 +56,10 @@ public class EntityAdapter extends EObjectAdapter<Entity> implements org.tetrabo
   }
   
   @Override
-  public void enterNextTile() {
-    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.enterNextTile(adaptee);
+  public void enterNextTile(final int x, final int y) {
+    org.tetrabox.example.pacman.xpacman.aspects.EntityAspect.enterNextTile(adaptee, x
+    , y
+    );
   }
   
   @Override

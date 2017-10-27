@@ -227,6 +227,6 @@ public interface Ghost extends Entity {
 	 * @model
 	 * @generated
 	 */
-	void enterNextTile();
+	void enterNextTile(int x, int y);
 
 } // Ghost

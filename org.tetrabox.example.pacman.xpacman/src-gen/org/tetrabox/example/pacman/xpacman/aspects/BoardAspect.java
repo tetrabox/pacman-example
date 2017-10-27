@@ -215,7 +215,7 @@ public class BoardAspect {
     };
     _self.getEntities().forEach(_function_1);
     final Function1<AbstractTile, Boolean> _function_2 = (AbstractTile it) -> {
-      return Boolean.valueOf(((it instanceof Tile) && (TileAspect.pellet(((Tile) it)) != null)));
+      return Boolean.valueOf(((it instanceof Tile) && (!Objects.equal(TileAspect.pellet(((Tile) it)), null))));
     };
     BoardAspect.totalPellets(_self, ((Object[])Conversions.unwrapArray(IterableExtensions.<AbstractTile>filter(_self.getTiles(), _function_2), Object.class)).length);
   }
@@ -241,7 +241,7 @@ public class BoardAspect {
       };
       final Function1<Tile, Boolean> _function_3 = (Tile it) -> {
         Pellet _pellet = TileAspect.pellet(it);
-        return Boolean.valueOf((_pellet != null));
+        return Boolean.valueOf((!Objects.equal(_pellet, null)));
       };
       boolean pelletsRemaining = IterableExtensions.<Tile>exists(IterableExtensions.<AbstractTile, Tile>map(IterableExtensions.<AbstractTile>filter(_self.getTiles(), _function_1), _function_2), _function_3);
       BoardAspect.previousTime(_self, System.nanoTime());
@@ -264,7 +264,7 @@ public class BoardAspect {
           };
           final Function1<Tile, Boolean> _function_7 = (Tile it) -> {
             Pellet _pellet = TileAspect.pellet(it);
-            return Boolean.valueOf((_pellet != null));
+            return Boolean.valueOf((!Objects.equal(_pellet, null)));
           };
           pelletsRemaining = IterableExtensions.<Tile>exists(IterableExtensions.<AbstractTile, Tile>map(IterableExtensions.<AbstractTile>filter(_self.getTiles(), _function_5), _function_6), _function_7);
           long _targetFrameRate = BoardAspect.targetFrameRate(_self);
@@ -289,7 +289,7 @@ public class BoardAspect {
     BoardAspect.elapsedTime(_self, _plus);
     final int totalPellets = BoardAspect.totalPellets(_self);
     final Function1<AbstractTile, Boolean> _function = (AbstractTile it) -> {
-      return Boolean.valueOf(((it instanceof Tile) && (TileAspect.pellet(((Tile) it)) != null)));
+      return Boolean.valueOf(((it instanceof Tile) && (!Objects.equal(TileAspect.pellet(((Tile) it)), null))));
     };
     final int remainingPellets = ((Object[])Conversions.unwrapArray(IterableExtensions.<AbstractTile>filter(_self.getTiles(), _function), Object.class)).length;
     final boolean blueMilestoneReached = (remainingPellets == (totalPellets - (totalPellets / 8)));

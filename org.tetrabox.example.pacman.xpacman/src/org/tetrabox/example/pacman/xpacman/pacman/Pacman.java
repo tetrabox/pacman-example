@@ -138,6 +138,22 @@ public interface Pacman extends Entity {
 	 * @model
 	 * @generated
 	 */
+	void enterNextTile(int x, int y);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void eat();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
 	void up();
 
 	/**
@@ -163,21 +179,5 @@ public interface Pacman extends Entity {
 	 * @generated
 	 */
 	void right();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void enterNextTile();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void eat();
 
 } // Pacman

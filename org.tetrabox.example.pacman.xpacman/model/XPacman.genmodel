@@ -130,6 +130,12 @@
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacman.ecore#//Entity/enterNextTile"/>
+        <genParameters>
+          <ecoreParameter href="XPacman.ecore#//Entity/enterNextTile/x"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="XPacman.ecore#//Entity/enterNextTile/y"/>
+        </genParameters>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -162,6 +168,18 @@
         <ecoreOperation href="XPacman.ecore#//Pacman/energize"/>
       </genOperations>
       <genOperations>
+        <ecoreOperation href="XPacman.ecore#//Pacman/enterNextTile"/>
+        <genParameters>
+          <ecoreParameter href="XPacman.ecore#//Pacman/enterNextTile/x"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="XPacman.ecore#//Pacman/enterNextTile/y"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="XPacman.ecore#//Pacman/eat"/>
+      </genOperations>
+      <genOperations>
         <ecoreOperation href="XPacman.ecore#//Pacman/up"/>
       </genOperations>
       <genOperations>
@@ -172,12 +190,6 @@
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacman.ecore#//Pacman/right"/>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="XPacman.ecore#//Pacman/enterNextTile"/>
-      </genOperations>
-      <genOperations>
-        <ecoreOperation href="XPacman.ecore#//Pacman/eat"/>
       </genOperations>
     </genClasses>
     <genClasses>
@@ -229,6 +241,12 @@
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacman.ecore#//Ghost/enterNextTile"/>
+        <genParameters>
+          <ecoreParameter href="XPacman.ecore#//Ghost/enterNextTile/x"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="XPacman.ecore#//Ghost/enterNextTile/y"/>
+        </genParameters>
       </genOperations>
     </genClasses>
     <genClasses>

@@ -59,8 +59,10 @@ public class PacmanAdapter extends EObjectAdapter<Pacman> implements org.tetrabo
   }
   
   @Override
-  public void enterNextTile() {
-    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.enterNextTile(adaptee);
+  public void enterNextTile(final int x, final int y) {
+    org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.enterNextTile(adaptee, x
+    , y
+    );
   }
   
   @Override

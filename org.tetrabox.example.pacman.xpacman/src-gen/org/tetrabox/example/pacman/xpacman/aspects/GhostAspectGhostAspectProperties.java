@@ -16,11 +16,13 @@ public class GhostAspectGhostAspectProperties {
   
   public PassableTile previousTile;
   
+  public AbstractTile scatterTile;
+  
   public boolean activated;
   
   public Tile ghostHouseExit;
   
-  public boolean chaseMode;
+  public boolean scatterMode;
   
   public final Random rand = new Random();
 }

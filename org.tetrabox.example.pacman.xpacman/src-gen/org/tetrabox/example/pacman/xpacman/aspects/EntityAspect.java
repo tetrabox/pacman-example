@@ -1,5 +1,6 @@
 package org.tetrabox.example.pacman.xpacman.aspects;
 
+import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Abstract;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
@@ -13,12 +14,12 @@ public abstract class EntityAspect {
   public static void initialize(final Entity _self) {
 	final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext
 			.getSelf(_self);
-	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
-		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
-				.initialize((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self);
-	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
+	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
 		org.tetrabox.example.pacman.xpacman.aspects.GhostAspect
 				.initialize((org.tetrabox.example.pacman.xpacman.pacman.Ghost) _self);
+	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
+		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
+				.initialize((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self);
 	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Entity) {
 		org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_initialize(_self_,
 				(org.tetrabox.example.pacman.xpacman.pacman.Entity) _self);
@@ -61,10 +62,7 @@ public abstract class EntityAspect {
   public static void changeDirection(final Entity _self, final Integer newDirection) {
 	final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext
 			.getSelf(_self);
-	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
-		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
-				.changeDirection((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self, newDirection);
-	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
+	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
 			@Override
 			public void execute() {
@@ -80,6 +78,9 @@ public abstract class EntityAspect {
 			command.execute();
 		}
 		;
+	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
+		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
+				.changeDirection((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self, newDirection);
 	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Entity) {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
 			@Override
@@ -107,12 +108,12 @@ public abstract class EntityAspect {
   public static void update(final Entity _self, final long deltaTime) {
 	final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext
 			.getSelf(_self);
-	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
-		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
-				.update((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self, deltaTime);
-	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
+	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
 		org.tetrabox.example.pacman.xpacman.aspects.GhostAspect
 				.update((org.tetrabox.example.pacman.xpacman.pacman.Ghost) _self, deltaTime);
+	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
+		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
+				.update((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self, deltaTime);
 	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Entity) {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
 			@Override
@@ -154,10 +155,10 @@ public abstract class EntityAspect {
   protected static PassableTile computeNextTile(final Entity _self) {
     final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext.getSelf(_self);
     Object result = null;
-     if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost){
-    					result = org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.computeNextTile((org.tetrabox.example.pacman.xpacman.pacman.Ghost)_self);
-    } else  if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman){
+     if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman){
     					result = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect.computeNextTile((org.tetrabox.example.pacman.xpacman.pacman.Pacman)_self);
+    } else  if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost){
+    					result = org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.computeNextTile((org.tetrabox.example.pacman.xpacman.pacman.Ghost)_self);
     } else  if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Entity){
     					result = org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_computeNextTile(_self_, (org.tetrabox.example.pacman.xpacman.pacman.Entity)_self);
     } else  { throw new IllegalArgumentException("Unhandled parameter types: " + java.util.Arrays.<Object>asList(_self).toString()); };
@@ -165,21 +166,21 @@ public abstract class EntityAspect {
   }
   
   @Step
-  public static void enterNextTile(final Entity _self) {
+  public static void enterNextTile(final Entity _self, final int x, final int y) {
 	final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext
 			.getSelf(_self);
-	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
-		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
-				.enterNextTile((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self);
-	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
+	if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Ghost) {
 		org.tetrabox.example.pacman.xpacman.aspects.GhostAspect
-				.enterNextTile((org.tetrabox.example.pacman.xpacman.pacman.Ghost) _self);
+				.enterNextTile((org.tetrabox.example.pacman.xpacman.pacman.Ghost) _self, x, y);
+	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Pacman) {
+		org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect
+				.enterNextTile((org.tetrabox.example.pacman.xpacman.pacman.Pacman) _self, x, y);
 	} else if (_self instanceof org.tetrabox.example.pacman.xpacman.pacman.Entity) {
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
 			@Override
 			public void execute() {
 				org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_enterNextTile(_self_,
-						(org.tetrabox.example.pacman.xpacman.pacman.Entity) _self);
+						(org.tetrabox.example.pacman.xpacman.pacman.Entity) _self, x, y);
 			}
 		};
 		fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
@@ -331,7 +332,7 @@ public abstract class EntityAspect {
         progress = EntityAspect.xTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile = EntityAspect.nextTile(_self);
-          if (((nextTile != null) && (nextTile instanceof PassableTile))) {
+          if (((!Objects.equal(nextTile, null)) && (nextTile instanceof PassableTile))) {
             int _yMoveProgress = EntityAspect.yMoveProgress(_self);
             int yMoveProgress = (_yMoveProgress - progress);
             int _baseMoveTime = EntityAspect.baseMoveTime(_self);
@@ -341,8 +342,7 @@ public abstract class EntityAspect {
               int _multiply_1 = (2 * _baseMoveTime_1);
               int _plus = (_multiply_1 + yMoveProgress);
               yMoveProgress = _plus;
-              EntityAspect.yMoveProgress(_self, yMoveProgress);
-              EntityAspect.enterNextTile(_self);
+              EntityAspect.enterNextTile(_self, 0, yMoveProgress);
               EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.yMoveProgress(_self, yMoveProgress);
@@ -356,7 +356,7 @@ public abstract class EntityAspect {
         progress = EntityAspect.yTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile_1 = EntityAspect.nextTile(_self);
-          if (((nextTile_1 != null) && (nextTile_1 instanceof PassableTile))) {
+          if (((!Objects.equal(nextTile_1, null)) && (nextTile_1 instanceof PassableTile))) {
             int _xMoveProgress = EntityAspect.xMoveProgress(_self);
             int xMoveProgress = (_xMoveProgress - progress);
             int _baseMoveTime_2 = EntityAspect.baseMoveTime(_self);
@@ -366,8 +366,7 @@ public abstract class EntityAspect {
               int _multiply_2 = (2 * _baseMoveTime_3);
               int _plus_1 = (_multiply_2 + xMoveProgress);
               xMoveProgress = _plus_1;
-              EntityAspect.xMoveProgress(_self, xMoveProgress);
-              EntityAspect.enterNextTile(_self);
+              EntityAspect.enterNextTile(_self, xMoveProgress, 0);
               EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.xMoveProgress(_self, xMoveProgress);
@@ -381,7 +380,7 @@ public abstract class EntityAspect {
         progress = EntityAspect.xTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile_2 = EntityAspect.nextTile(_self);
-          if (((nextTile_2 != null) && (nextTile_2 instanceof PassableTile))) {
+          if (((!Objects.equal(nextTile_2, null)) && (nextTile_2 instanceof PassableTile))) {
             int _yMoveProgress_1 = EntityAspect.yMoveProgress(_self);
             int yMoveProgress_1 = (_yMoveProgress_1 + progress);
             int _baseMoveTime_4 = EntityAspect.baseMoveTime(_self);
@@ -392,8 +391,7 @@ public abstract class EntityAspect {
               int _minus = (_multiply_3 - yMoveProgress_1);
               int _minus_1 = (-_minus);
               yMoveProgress_1 = _minus_1;
-              EntityAspect.yMoveProgress(_self, yMoveProgress_1);
-              EntityAspect.enterNextTile(_self);
+              EntityAspect.enterNextTile(_self, 0, yMoveProgress_1);
               EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.yMoveProgress(_self, yMoveProgress_1);
@@ -407,7 +405,7 @@ public abstract class EntityAspect {
         progress = EntityAspect.yTowardCenter(_self, progress);
         if ((progress > 0)) {
           final PassableTile nextTile_3 = EntityAspect.nextTile(_self);
-          if (((nextTile_3 != null) && (nextTile_3 instanceof PassableTile))) {
+          if (((!Objects.equal(nextTile_3, null)) && (nextTile_3 instanceof PassableTile))) {
             int _xMoveProgress_1 = EntityAspect.xMoveProgress(_self);
             int xMoveProgress_1 = (_xMoveProgress_1 + progress);
             int _baseMoveTime_6 = EntityAspect.baseMoveTime(_self);
@@ -418,8 +416,7 @@ public abstract class EntityAspect {
               int _minus_2 = (_multiply_4 - xMoveProgress_1);
               int _minus_3 = (-_minus_2);
               xMoveProgress_1 = _minus_3;
-              EntityAspect.xMoveProgress(_self, xMoveProgress_1);
-              EntityAspect.enterNextTile(_self);
+              EntityAspect.enterNextTile(_self, xMoveProgress_1, 0);
               EntityAspect.nextTile(_self, EntityAspect.computeNextTile(_self));
             } else {
               EntityAspect.xMoveProgress(_self, xMoveProgress_1);
@@ -480,8 +477,14 @@ public abstract class EntityAspect {
     throw new java.lang.RuntimeException("Not implemented");
   }
   
-  protected static void _privk3_enterNextTile(final EntityAspectEntityAspectProperties _self_, final Entity _self) {
+  protected static void _privk3_enterNextTile(final EntityAspectEntityAspectProperties _self_, final Entity _self, final int x, final int y) {
     EntityAspect.currentTile(_self, EntityAspect.nextTile(_self));
+    if ((x != 0)) {
+      EntityAspect.xMoveProgress(_self, x);
+    }
+    if ((y != 0)) {
+      EntityAspect.yMoveProgress(_self, y);
+    }
   }
   
   protected static int _privk3_speed(final EntityAspectEntityAspectProperties _self_, final Entity _self) {

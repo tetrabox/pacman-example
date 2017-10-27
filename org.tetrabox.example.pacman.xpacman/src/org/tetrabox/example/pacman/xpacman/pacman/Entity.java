@@ -228,6 +228,6 @@ public interface Entity extends EObject {
 	 * @model
 	 * @generated
 	 */
-	void enterNextTile();
+	void enterNextTile(int x, int y);
 
 } // Entity

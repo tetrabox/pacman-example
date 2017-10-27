@@ -83,8 +83,10 @@ public class GhostAdapter extends EObjectAdapter<Ghost> implements org.tetrabox.
   }
   
   @Override
-  public void enterNextTile() {
-    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterNextTile(adaptee);
+  public void enterNextTile(final int x, final int y) {
+    org.tetrabox.example.pacman.xpacman.aspects.GhostAspect.enterNextTile(adaptee, x
+    , y
+    );
   }
   
   @Override

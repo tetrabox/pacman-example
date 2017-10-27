@@ -372,7 +372,7 @@ public abstract class EntityImpl extends EObjectImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void enterNextTile() {
+	public void enterNextTile(int x, int y) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

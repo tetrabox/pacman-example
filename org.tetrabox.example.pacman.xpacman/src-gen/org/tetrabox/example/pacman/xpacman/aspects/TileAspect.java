@@ -1,5 +1,6 @@
 package org.tetrabox.example.pacman.xpacman.aspects;
 
+import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
@@ -87,8 +88,8 @@ public class TileAspect extends AbstractTileAspect {
   
   protected static void _privk3_eatPellet(final TileAspectTileAspectProperties _self_, final Tile _self, final Pacman pacman) {
     Pellet _pellet = TileAspect.pellet(_self);
-    boolean _tripleNotEquals = (_pellet != null);
-    if (_tripleNotEquals) {
+    boolean _notEquals = (!Objects.equal(_pellet, null));
+    if (_notEquals) {
       PelletAspect.eat(TileAspect.pellet(_self), pacman);
       TileAspect.pellet(_self, null);
     }

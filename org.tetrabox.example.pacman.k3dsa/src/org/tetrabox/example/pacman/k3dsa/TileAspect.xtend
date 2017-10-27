@@ -40,7 +40,7 @@ class TileAspect extends AbstractTileAspect {
 	
 	@Step
 	def void eatPellet(Pacman pacman) {
-		if (_self.pellet !== null) {
+		if (_self.pellet != null) {
 			_self.pellet.eat(pacman)
 			_self.pellet = null
 		}

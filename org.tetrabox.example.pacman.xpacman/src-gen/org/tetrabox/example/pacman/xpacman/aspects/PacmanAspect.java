@@ -1,5 +1,6 @@
 package org.tetrabox.example.pacman.xpacman.aspects;
 
+import com.google.common.base.Objects;
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect;
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod;
 import fr.inria.diverse.k3.al.annotationprocessor.Step;
@@ -85,6 +86,49 @@ public class PacmanAspect extends EntityAspect {
 			.getInstance().findStepManager(_self);
 	if (manager != null) {
 		manager.executeStep(_self, command, "Pacman", "energize");
+	} else {
+		command.execute();
+	}
+	;
+	;
+}
+  
+  @Step
+  @OverrideAspectMethod
+  public static void enterNextTile(final Pacman _self, final int x, final int y) {
+	final org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectContext
+			.getSelf(_self);
+	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
+		@Override
+		public void execute() {
+			_privk3_enterNextTile(_self_, _self, x, y);
+		}
+	};
+	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
+			.getInstance().findStepManager(_self);
+	if (manager != null) {
+		manager.executeStep(_self, command, "Pacman", "enterNextTile");
+	} else {
+		command.execute();
+	}
+	;
+	;
+}
+  
+  @Step
+  public static void eat(final Pacman _self) {
+	final org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectContext
+			.getSelf(_self);
+	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
+		@Override
+		public void execute() {
+			_privk3_eat(_self_, _self);
+		}
+	};
+	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
+			.getInstance().findStepManager(_self);
+	if (manager != null) {
+		manager.executeStep(_self, command, "Pacman", "eat");
 	} else {
 		command.execute();
 	}
@@ -182,49 +226,6 @@ public class PacmanAspect extends EntityAspect {
     result = _privk3_canTakeDirection(_self_, _self,direction);;
     return (boolean)result;
   }
-  
-  @Step
-  @OverrideAspectMethod
-  public static void enterNextTile(final Pacman _self) {
-	final org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectContext
-			.getSelf(_self);
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
-		@Override
-		public void execute() {
-			_privk3_enterNextTile(_self_, _self);
-		}
-	};
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
-			.getInstance().findStepManager(_self);
-	if (manager != null) {
-		manager.executeStep(_self, command, "Pacman", "enterNextTile");
-	} else {
-		command.execute();
-	}
-	;
-	;
-}
-  
-  @Step
-  public static void eat(final Pacman _self) {
-	final org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.PacmanAspectPacmanAspectContext
-			.getSelf(_self);
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand command = new fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepCommand() {
-		@Override
-		public void execute() {
-			_privk3_eat(_self_, _self);
-		}
-	};
-	fr.inria.diverse.k3.al.annotationprocessor.stepmanager.IStepManager manager = fr.inria.diverse.k3.al.annotationprocessor.stepmanager.StepManagerRegistry
-			.getInstance().findStepManager(_self);
-	if (manager != null) {
-		manager.executeStep(_self, command, "Pacman", "eat");
-	} else {
-		command.execute();
-	}
-	;
-	;
-}
   
   @OverrideAspectMethod
   protected static Tile computeNextTile(final Pacman _self) {
@@ -338,6 +339,32 @@ public class PacmanAspect extends EntityAspect {
     BoardAspect.enterFrightenedMode(((Board) _eContainer));
   }
   
+  private static void super_enterNextTile(final Pacman _self, final int x, final int y) {
+    final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext.getSelf(_self);
+     org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_enterNextTile(_self_, _self,x,y);
+  }
+  
+  protected static void _privk3_enterNextTile(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self, final int x, final int y) {
+    final PassableTile tile = EntityAspect.nextTile(_self);
+    if (((!Objects.equal(tile, null)) && (tile instanceof Tile))) {
+      PacmanAspect.super_enterNextTile(_self, x, y);
+      TileAspect.eatPellet(((Tile) tile), _self);
+    }
+    boolean _canTakeDirection = PacmanAspect.canTakeDirection(_self, Integer.valueOf(PacmanAspect.nextDirection(_self)));
+    if (_canTakeDirection) {
+      PacmanAspect.changeDirection(_self, Integer.valueOf(PacmanAspect.nextDirection(_self)));
+    }
+    PacmanAspect.nextDirection(_self, (-1));
+  }
+  
+  protected static void _privk3_eat(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
+    int _lives = PacmanAspect.lives(_self);
+    int _minus = (_lives - 1);
+    PacmanAspect.lives(_self, _minus);
+    EObject _eContainer = _self.eContainer();
+    BoardAspect.reset(((Board) _eContainer));
+  }
+  
   protected static void _privk3_up(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
     boolean _canTakeDirection = PacmanAspect.canTakeDirection(_self, Integer.valueOf(0));
     if (_canTakeDirection) {
@@ -400,35 +427,9 @@ public class PacmanAspect extends EntityAspect {
         _switchResult = null;
       }
       final AbstractTile nextTile = _switchResult;
-      _xblockexpression = (((nextTile != null) && (!(nextTile instanceof WallTile))) && (!(nextTile instanceof GhostHouseTile)));
+      _xblockexpression = (((!Objects.equal(nextTile, null)) && (!(nextTile instanceof WallTile))) && (!(nextTile instanceof GhostHouseTile)));
     }
     return _xblockexpression;
-  }
-  
-  private static void super_enterNextTile(final Pacman _self) {
-    final org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectProperties _self_ = org.tetrabox.example.pacman.xpacman.aspects.EntityAspectEntityAspectContext.getSelf(_self);
-     org.tetrabox.example.pacman.xpacman.aspects.EntityAspect._privk3_enterNextTile(_self_, _self);
-  }
-  
-  protected static void _privk3_enterNextTile(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
-    final PassableTile tile = EntityAspect.nextTile(_self);
-    if (((tile != null) && (tile instanceof Tile))) {
-      PacmanAspect.super_enterNextTile(_self);
-      TileAspect.eatPellet(((Tile) tile), _self);
-    }
-    boolean _canTakeDirection = PacmanAspect.canTakeDirection(_self, Integer.valueOf(PacmanAspect.nextDirection(_self)));
-    if (_canTakeDirection) {
-      PacmanAspect.changeDirection(_self, Integer.valueOf(PacmanAspect.nextDirection(_self)));
-    }
-    PacmanAspect.nextDirection(_self, (-1));
-  }
-  
-  protected static void _privk3_eat(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {
-    int _lives = PacmanAspect.lives(_self);
-    int _minus = (_lives - 1);
-    PacmanAspect.lives(_self, _minus);
-    EObject _eContainer = _self.eContainer();
-    BoardAspect.reset(((Board) _eContainer));
   }
   
   protected static Tile _privk3_computeNextTile(final PacmanAspectPacmanAspectProperties _self_, final Pacman _self) {

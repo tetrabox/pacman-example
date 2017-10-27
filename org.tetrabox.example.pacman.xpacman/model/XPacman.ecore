@@ -67,6 +67,12 @@
     </eOperations>
     <eOperations name="enterNextTile">
       <eAnnotations source="aspect"/>
+      <eParameters name="x">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="y">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialTile" lowerBound="1" eType="//PassableTile"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="speed" unique="false">
@@ -108,6 +114,18 @@
     <eOperations name="energize">
       <eAnnotations source="aspect"/>
     </eOperations>
+    <eOperations name="enterNextTile">
+      <eAnnotations source="aspect"/>
+      <eParameters name="x">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="y">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="eat">
+      <eAnnotations source="aspect"/>
+    </eOperations>
     <eOperations name="up">
       <eAnnotations source="aspect"/>
     </eOperations>
@@ -118,12 +136,6 @@
       <eAnnotations source="aspect"/>
     </eOperations>
     <eOperations name="right">
-      <eAnnotations source="aspect"/>
-    </eOperations>
-    <eOperations name="enterNextTile">
-      <eAnnotations source="aspect"/>
-    </eOperations>
-    <eOperations name="eat">
       <eAnnotations source="aspect"/>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialLives">
@@ -169,6 +181,12 @@
     </eOperations>
     <eOperations name="enterNextTile">
       <eAnnotations source="aspect"/>
+      <eParameters name="x">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="y">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>

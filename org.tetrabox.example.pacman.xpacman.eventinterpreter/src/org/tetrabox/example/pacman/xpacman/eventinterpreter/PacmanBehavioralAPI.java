@@ -1,22 +1,23 @@
 package org.tetrabox.example.pacman.xpacman.eventinterpreter;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EOperation;
-import org.eclipse.emf.ecore.EParameter;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.gemoc.executionframework.event.manager.IBehavioralAPI;
 import org.eclipse.gemoc.executionframework.event.model.event.Event;
-import org.eclipse.gemoc.trace.commons.model.trace.Step;
-import org.eclipse.gemoc.xdsmlframework.api.core.IExecutionEngine;
-import org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect;
-import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanDownEvent;
+import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventPackage;
 import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanLeftEvent;
+import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanDownEvent;
 import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanRightEvent;
 import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanUpEvent;
-import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventPackage;
 import org.tetrabox.example.pacman.xpacman.pacman.Pacman;
+import org.tetrabox.example.pacman.xpacman.pacman.PacmanPackage;
+import org.tetrabox.example.pacman.xpacman.aspects.PacmanAspect;
 
 public class PacmanBehavioralAPI implements IBehavioralAPI {
 
@@ -84,13 +85,13 @@ public class PacmanBehavioralAPI implements IBehavioralAPI {
 	}
 	
 	@Override
-	public void stepExecuted(IExecutionEngine engine, Step<?> stepExecuted) {
-		final EOperation op = stepExecuted.getMseoccurrence().getMse().getAction();
-		System.out.println(op.getName());
-		for (EParameter param : op.getEParameters()) {
-			System.out.println("  " + param.getName() + ": " + param.getEType().getName());
-		}
-		System.out.println();
+	public Event getOutputEvent(EOperation operation, EObject caller, List<Object> parameters) {
+		return null;
+	}
+	
+	@Override
+	public boolean canHandle(EPackage pkg) {
+		return pkg == PacmanPackage.eINSTANCE;
 	}
 	
 }

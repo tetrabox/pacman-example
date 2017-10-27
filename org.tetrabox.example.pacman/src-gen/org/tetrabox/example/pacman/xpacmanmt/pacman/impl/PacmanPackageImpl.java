@@ -686,7 +686,9 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		op = addEOperation(entityEClass, null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getELong(), "deltaTime", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(entityEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(entityEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "x", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "y", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(pacmanEClass, Pacman.class, "Pacman", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPacman_InitialLives(), ecorePackage.getEInt(), "initialLives", null, 0, 1, Pacman.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -703,6 +705,12 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 
 		addEOperation(pacmanEClass, null, "energize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		op = addEOperation(pacmanEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "x", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "y", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(pacmanEClass, null, "eat", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		addEOperation(pacmanEClass, null, "up", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(pacmanEClass, null, "left", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -710,10 +718,6 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		addEOperation(pacmanEClass, null, "down", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(pacmanEClass, null, "right", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(pacmanEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		addEOperation(pacmanEClass, null, "eat", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(ghostEClass, Ghost.class, "Ghost", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGhost_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ghost.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -740,7 +744,9 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 
 		addEOperation(ghostEClass, null, "eat", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		addEOperation(ghostEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(ghostEClass, null, "enterNextTile", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "x", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "y", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(passableTileEClass, PassableTile.class, "PassableTile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

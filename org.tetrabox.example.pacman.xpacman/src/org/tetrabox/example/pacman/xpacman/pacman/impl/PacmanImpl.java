@@ -185,6 +185,17 @@ public class PacmanImpl extends EntityImpl implements Pacman {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public void eat() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void up() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -219,17 +230,6 @@ public class PacmanImpl extends EntityImpl implements Pacman {
 	 * @generated
 	 */
 	public void right() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void eat() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
