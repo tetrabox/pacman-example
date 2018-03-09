@@ -63,10 +63,7 @@
         <ecoreFeature xsi:type="ecore:EReference" href="XPacmanMT.ecore#//Board/entities"/>
       </genFeatures>
       <genOperations>
-        <ecoreOperation href="XPacmanMT.ecore#//Board/initializeModel"/>
-        <genParameters>
-          <ecoreParameter href="XPacmanMT.ecore#//Board/initializeModel/args"/>
-        </genParameters>
+        <ecoreOperation href="XPacmanMT.ecore#//Board/initialize"/>
       </genOperations>
       <genOperations>
         <ecoreOperation href="XPacmanMT.ecore#//Board/reset"/>

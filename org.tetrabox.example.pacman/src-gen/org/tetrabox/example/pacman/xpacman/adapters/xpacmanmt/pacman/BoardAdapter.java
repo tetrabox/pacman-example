@@ -42,9 +42,8 @@ public class BoardAdapter extends EObjectAdapter<Board> implements org.tetrabox.
   }
   
   @Override
-  public void initializeModel(final org.eclipse.emf.common.util.EList<java.lang.String> args) {
-    org.tetrabox.example.pacman.xpacman.aspects.BoardAspect.initializeModel(adaptee, args
-    );
+  public void initialize() {
+    org.tetrabox.example.pacman.xpacman.aspects.BoardAspect.initialize(adaptee);
   }
   
   @Override

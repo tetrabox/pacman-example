@@ -653,14 +653,13 @@ public class PacmanPackageImpl extends EPackageImpl implements PacmanPackage {
 		initEReference(getBoard_Tiles(), this.getAbstractTile(), null, "tiles", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBoard_Entities(), this.getEntity(), null, "entities", null, 0, -1, Board.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = addEOperation(boardEClass, null, "initializeModel", 0, 1, IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "args", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEOperation(boardEClass, null, "initialize", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(boardEClass, null, "reset", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(boardEClass, null, "run", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		op = addEOperation(boardEClass, null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EOperation op = addEOperation(boardEClass, null, "update", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getELong(), "deltaTime", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		addEOperation(boardEClass, null, "enterFrightenedMode", 0, 1, IS_UNIQUE, IS_ORDERED);

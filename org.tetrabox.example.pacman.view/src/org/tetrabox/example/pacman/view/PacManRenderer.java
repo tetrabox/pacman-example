@@ -13,9 +13,10 @@ import org.eclipse.gemoc.xdsmlframework.api.engine_addon.IEngineAddon;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyEvent;
 import org.eclipse.swt.events.KeyListener;
-import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmanEvent;
-import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventFactory;
-import org.tetrabox.example.pacman.xpacman.event.pacmanevent.PacmaneventPackage;
+import org.tetrabox.example.pacman.xpacman.event.xpacmanevent.PacmanEvent;
+import org.tetrabox.example.pacman.xpacman.event.xpacmanevent.XPacmanDSLEvent;
+import org.tetrabox.example.pacman.xpacman.event.xpacmanevent.XpacmaneventFactory;
+import org.tetrabox.example.pacman.xpacman.event.xpacmanevent.XpacmaneventPackage;
 import org.tetrabox.example.pacman.xpacman.pacman.Board;
 import org.tetrabox.example.pacman.xpacman.pacman.Entity;
 import org.tetrabox.example.pacman.xpacman.pacman.Ghost;
@@ -39,7 +40,7 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 
 	private Board board;
 
-	private PacmaneventFactory eventFactory = PacmaneventFactory.eINSTANCE;
+	private XpacmaneventFactory eventFactory = XpacmaneventFactory.eINSTANCE;
 
 	private EventManager eventInterpreter;
 
@@ -59,7 +60,7 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 	}
 
 	@Override
-	public void stepExecuted(IExecutionEngine engine, Step<?> stepExecuted) {
+	public void aboutToExecuteStep(IExecutionEngine engine, Step<?> stepToExecute) {
 		if (eventInterpreter == null)
 			eventInterpreter = engine.getAddonsTypedBy(EventManager.class).stream().findFirst().orElse(null);
 		Platform.runLater(() -> update());
@@ -182,35 +183,39 @@ public class PacManRenderer extends Pane implements IEngineAddon, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		PacmanEvent event = null;
+		XPacmanDSLEvent event = null;
 		final Map<EStructuralFeature, Object> parameters = new HashMap<>();
 		final Pacman p = board.getEntities().stream().filter(entity -> entity instanceof Pacman)
 				.map(entity -> (Pacman) entity).findFirst().orElse(null);
 		switch (e.keyCode) {
 		case SWT.ARROW_UP:
-			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(XpacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanUpEvent();
+			((PacmanEvent) event).setPacman(p);
 			break;
 		case SWT.ARROW_LEFT:
-			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(XpacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanLeftEvent();
+			((PacmanEvent) event).setPacman(p);
 			break;
 		case SWT.ARROW_DOWN:
-			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(XpacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanDownEvent();
+			((PacmanEvent) event).setPacman(p);
 			break;
 		case SWT.ARROW_RIGHT:
-			parameters.put(PacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
+			parameters.put(XpacmaneventPackage.Literals.PACMAN_EVENT__PACMAN, p);
 			event = eventFactory.createPacmanRightEvent();
+			((PacmanEvent) event).setPacman(p);
 			break;
-//		case SWT.KEYPAD_ADD:
-//			parameters.put(XPacmanEventPackage.Literals.ENTITY_EVENT__ENTITY, p);
-//			parameters.put(XPacmanEventPackage.Literals.ENTITY_MODIFY_SPEED_EVENT__SPEED, 10);
+//		case SWT.SPACE:
+//			parameters.put(XpacmaneventPackage.Literals.ENTITY_EVENT__ENTITY, p);
+//			parameters.put(XpacmaneventPackage.Literals.ENTITY_MODIFY_SPEED_EVENT__SPEED, 10);
 //			event = eventFactory.createEntityModifySpeedEvent();
+//			((EntityEvent) event).setEntity(p);
 //			break;
 		}
 		if (event != null) {
-			event.setPacman(p);
 			eventInterpreter.queueEvent(event);
 		}
 	}

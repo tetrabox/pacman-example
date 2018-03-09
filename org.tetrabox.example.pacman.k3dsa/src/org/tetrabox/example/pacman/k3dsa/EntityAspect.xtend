@@ -3,6 +3,7 @@ package org.tetrabox.example.pacman.k3dsa
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
 import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import fr.inria.diverse.k3.al.annotationprocessor.Step
+import org.eclipse.gemoc.executionframework.engine.annotations.EventHandler
 import java.util.List
 import java.util.Random
 import java.util.Set
@@ -52,17 +53,16 @@ abstract class EntityAspect {
 		_self.yMoveProgress = 0
 	}
 	
-	@Step
 	def void modifySpeed(Integer speed) {
 		_self.speed = _self.speed + speed
 	}
 	
-	@Step
+	
 	def void changeDirection(Integer newDirection) {
 		_self.direction = newDirection
 	}
 	
-	@Step
+	
 	def void update(long deltaTime) {
 		var progress = Math.floor(deltaTime * _self.speed / 100.00) as int
 		switch (_self.direction) {
@@ -70,7 +70,7 @@ abstract class EntityAspect {
 				progress = _self.xTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var yMoveProgress = _self.yMoveProgress - progress
 						if (-yMoveProgress > _self.baseMoveTime) {
@@ -91,7 +91,7 @@ abstract class EntityAspect {
 				progress = _self.yTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var xMoveProgress = _self.xMoveProgress - progress
 						if (-xMoveProgress > _self.baseMoveTime) {
@@ -112,7 +112,7 @@ abstract class EntityAspect {
 				progress = _self.xTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var yMoveProgress = _self.yMoveProgress + progress
 						if (yMoveProgress > _self.baseMoveTime) {
@@ -133,7 +133,7 @@ abstract class EntityAspect {
 				progress = _self.yTowardCenter(progress)
 				if (progress > 0) {
 					val nextTile = _self.nextTile
-					if (nextTile != null && nextTile instanceof PassableTile) {
+					if (nextTile !== null && nextTile instanceof PassableTile) {
 						// proceed normally
 						var xMoveProgress = _self.xMoveProgress + progress
 						if (xMoveProgress > _self.baseMoveTime) {
@@ -183,7 +183,7 @@ abstract class EntityAspect {
 	
 	protected abstract def PassableTile computeNextTile()
 	
-	@Step
+	
 	def void enterNextTile(int x, int y) {
 		_self.currentTile = _self.nextTile
 		if (x != 0) {
@@ -246,7 +246,7 @@ class GhostAspect extends EntityAspect {
 		}
 	}
 	
-	@Step
+	
 	@OverrideAspectMethod
 	def void update(long deltaTime) {
 		if (_self.activated) {
@@ -262,24 +262,24 @@ class GhostAspect extends EntityAspect {
 		}
 	}
 	
-	@Step
+	
 	def void activate() {
 		_self.activated = true
 		_self.changeTargetTile(_self.findTargetTile)
 		_self.nextTile = _self.computeNextTile
 	}
 	
-	@Step
+	
 	def void enterChaseMode() {
 		_self.scatterMode = false
 	}
 	
-	@Step
+	
 	def void enterScatterMode() {
 		_self.scatterMode = true
 	}
 	
-	@Step
+	
 	def void switchFrightenedMode() {
 		if (_self.frightenedMode) {
 			_self.frightenedMode = false
@@ -290,13 +290,13 @@ class GhostAspect extends EntityAspect {
 		}
 	}
 	
-	@Step
+	
 	def void changeTargetTile(AbstractTile targetTile) {
 		_self.targetTile = targetTile
 		_self.nextTile = _self.computeNextTile
 	}
 	
-	@Step
+	
 	def void eat() {
 		_self.reset
 	}
@@ -333,7 +333,7 @@ class GhostAspect extends EntityAspect {
 			} else if (_self.frightenedMode) {
 				val previousTile = _self.previousTile
 				val filter = [AbstractTile t|
-					t != null &&
+					t !== null &&
 					t != previousTile &&
 					t instanceof PassableTile &&
 					!(t instanceof GhostHouseTile)
@@ -405,7 +405,7 @@ class GhostAspect extends EntityAspect {
 		}
 	}
 	
-	@Step
+	
 	@OverrideAspectMethod
 	def void enterNextTile(int x, int y) {
 		_self.previousTile = _self.currentTile
@@ -420,7 +420,7 @@ class GhostAspect extends EntityAspect {
 		if (_self.activated || !(currentTile instanceof GhostHouseTile)) {
 			val previousTile = _self.previousTile
 			val filter = [AbstractTile t|
-				t != null &&
+				t !== null &&
 				t != previousTile &&
 				t instanceof PassableTile &&
 				(currentTile instanceof GhostHouseTile || !(t instanceof GhostHouseTile))
@@ -430,7 +430,7 @@ class GhostAspect extends EntityAspect {
 			var PassableTile result = null
 			if (candidateTiles.size > 1) {
 				val targetTile = _self.targetTile
-				if (targetTile != null) {
+				if (targetTile !== null) {
 					result = candidateTiles.head
 					var d1 = _self.computeDistanceBetweenTiles(result, targetTile)
 					for (PassableTile tile : candidateTiles.tail) {
@@ -484,7 +484,7 @@ class PacmanAspect extends EntityAspect {
 		_self.super_initialize
 	}
 	
-	@Step
+	
 	@OverrideAspectMethod
 	def void update(long deltaTime) {
 		_self.super_update(deltaTime)
@@ -495,23 +495,23 @@ class PacmanAspect extends EntityAspect {
 		}
 	}
 	
-	@Step
+	
 	@OverrideAspectMethod
 	def void changeDirection(Integer newDirection) {
 		_self.direction = newDirection
 		_self.nextTile = _self.computeNextTile
 	}
 	
-	@Step
+	
 	def void energize() {
 		(_self.eContainer as Board).enterFrightenedMode
 	}
 	
-	@Step
+	
 	@OverrideAspectMethod
 	def void enterNextTile(int x, int y) {
 		val tile = _self.nextTile
-		if (tile != null && tile instanceof Tile) {
+		if (tile !== null && tile instanceof Tile) {
 			_self.super_enterNextTile(x, y);
 			(tile as Tile).eatPellet(_self)
 		}
@@ -521,13 +521,14 @@ class PacmanAspect extends EntityAspect {
 		_self.nextDirection = -1
 	}
 	
-	@Step
+	
 	def void eat() {
 		_self.lives = _self.lives - 1
 		(_self.eContainer as Board).reset
 	}
 	
-	@Step(eventHandler = true)
+	@Step
+	@EventHandler
 	def void up() {
 		if (_self.canTakeDirection(0)) {
 			_self.changeDirection(0)
@@ -536,7 +537,8 @@ class PacmanAspect extends EntityAspect {
 		}
 	}
 	
-	@Step(eventHandler = true)
+	@Step
+	@EventHandler
 	def void left() {
 		if (_self.canTakeDirection(1)) {
 			_self.changeDirection(1)
@@ -545,7 +547,8 @@ class PacmanAspect extends EntityAspect {
 		}
 	}
 	
-	@Step(eventHandler = true)
+	@Step
+	@EventHandler
 	def void down() {
 		if (_self.canTakeDirection(2)) {
 			_self.changeDirection(2)
@@ -554,7 +557,8 @@ class PacmanAspect extends EntityAspect {
 		}
 	}
 	
-	@Step(eventHandler = true)
+	@Step
+	@EventHandler
 	def void right() {
 		if (_self.canTakeDirection(3)) {
 			_self.changeDirection(3)
@@ -579,7 +583,7 @@ class PacmanAspect extends EntityAspect {
 			}
 			default: null
 		}
-		nextTile != null && !(nextTile instanceof WallTile) && !(nextTile instanceof GhostHouseTile)
+		nextTile !== null && !(nextTile instanceof WallTile) && !(nextTile instanceof GhostHouseTile)
 	}
 	
 	@OverrideAspectMethod

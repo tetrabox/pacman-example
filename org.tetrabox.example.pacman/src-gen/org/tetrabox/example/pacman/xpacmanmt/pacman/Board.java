@@ -59,10 +59,10 @@ public interface Board extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model argsMany="true"
+	 * @model
 	 * @generated
 	 */
-	void initializeModel(EList<String> args);
+	void initialize();
 
 	/**
 	 * <!-- begin-user-doc -->
